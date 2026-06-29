@@ -3,13 +3,86 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>VisOut – See Beyond. Stand Out.</title>
-    <!-- Google Fonts: Poppins -->
+    
+    <!-- ===== PRIMARY SEO TAGS ===== -->
+    <title>VisOut - Brand Identity Agency | AI Video Creation & Business Consulting</title>
+    <meta name="description" content="VisOut helps businesses break through digital noise with AI video creation, brand consulting, business support, and professional graphic design. See beyond. Stand out." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visout1.pages.dev/" />
+    
+    <!-- ===== KEYWORDS (for search engines) ===== -->
+    <meta name="keywords" content="Brand identity agency, AI video creation, Graphic Design, Branding Agency, African Branding Agency, Business Visual Identity, Business solutions, Business strategy, Business consulting, consulting, consultant" />
+    
+    <!-- ===== OPEN GRAPH (Facebook, WhatsApp, Instagram, LinkedIn) ===== -->
+    <meta property="og:title" content="VisOut - Brand Identity Agency" />
+    <meta property="og:description" content="VisOut helps businesses break through digital noise with AI video creation, brand consulting, business support and professional graphic design. See beyond. Stand out." />
+    <meta property="og:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    <meta property="og:url" content="https://visout1.pages.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VisOut" />
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VisOut - Brand Identity Agency" />
+    <meta name="twitter:description" content="VisOut helps businesses break through digital noise with AI video creation, brand consulting, business support and professional graphic design. See beyond. Stand out." />
+    <meta name="twitter:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    
+    <!-- ===== ORGANIZATION SCHEMA (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VisOut",
+      "description": "Brand identity agency helping African businesses stand out digitally with AI video creation, brand consulting, and professional graphic design.",
+      "url": "https://visout1.pages.dev/",
+      "logo": "https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg",
+      "foundingDate": "2026-04",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+2348145669035",
+        "contactType": "sales",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://facebook.com/visout2",
+        "https://instagram.com/visout1"
+      ]
+    }
+    </script>
+    
+    <!-- ===== LOCAL BUSINESS SCHEMA ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "VisOut",
+      "description": "VisOut is a brand identity agency helping African businesses break through digital noise with AI video creation, brand consulting, and professional graphic design.",
+      "url": "https://visout1.pages.dev/",
+      "logo": "https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NG"
+      },
+      "telephone": "+2348145669035",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "sameAs": [
+        "https://facebook.com/visout2",
+        "https://instagram.com/visout1"
+      ]
+    }
+    </script>
+    
+    <!-- ===== FONTS & STYLES ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
     <style>
         /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -96,187 +169,28 @@
         .portfolio-item .caption p { font-size: 0.88rem; color: #1E2A3A; opacity: 0.7; line-height: 1.5; margin-top: 2px; }
 
         /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            padding: 80px 0 90px;
-            background: #FFFFFF;
-        }
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 10px;
-        }
-        .testimonial-card {
-            background: #FFFFFF;
-            border-radius: 12px;
-            padding: 32px 24px 28px;
-            border: 1px solid rgba(30, 58, 138, 0.08);
-            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(30, 58, 138, 0.10);
-        }
-        .testimonial-card .stars {
-            color: #F59E0B;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
-        .testimonial-card .quote {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #1E2A3A;
-            opacity: 0.85;
-            font-style: italic;
-            margin-bottom: 12px;
-            flex-grow: 1;
-            position: relative;
-            padding-left: 0;
-        }
-        .testimonial-card .quote::before {
-            content: '"';
-            font-size: 2.8rem;
-            color: #1E3A8A;
-            opacity: 0.12;
-            position: absolute;
-            top: -8px;
-            left: -4px;
-            font-style: normal;
-        }
-        .testimonial-card .quote .more-content {
-            display: none;
-            transition: max-height 0.3s ease;
-        }
-        .testimonial-card .quote .more-content.show {
-            display: inline;
-        }
-        .testimonial-card .read-more-btn {
-            color: #1E3A8A;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 4px 0;
-            font-family: 'Poppins', sans-serif;
-            transition: color 0.2s;
-            display: inline-block;
-            margin-top: 4px;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-        .testimonial-card .read-more-btn:hover {
-            color: #3B82F6;
-        }
-        .testimonial-card .client {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2px;
-            margin-top: auto;
-            border-top: 1px solid rgba(30, 58, 138, 0.06);
-            padding-top: 14px;
-        }
-        .testimonial-card .client .avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #1E3A8A;
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .testimonial-card .client .avatar-placeholder {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: rgba(30, 58, 138, 0.10);
-            color: #1E3A8A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-            border: 2px solid rgba(30, 58, 138, 0.15);
-        }
-        .testimonial-card .client .name {
-            font-weight: 700;
-            color: #1E3A8A;
-            font-size: 1rem;
-        }
-        .testimonial-card .client .title {
-            font-size: 0.82rem;
-            color: #1E2A3A;
-            opacity: 0.6;
-            line-height: 1.4;
-        }
-        .testimonial-card .client .result {
-            font-size: 0.82rem;
-            color: #1E3A8A;
-            font-weight: 600;
-            margin-top: 2px;
-            opacity: 0.8;
-        }
+        .testimonials { padding: 80px 0 90px; background: #FFFFFF; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 10px; }
+        .testimonial-card { background: #FFFFFF; border-radius: 12px; padding: 32px 24px 28px; border: 1px solid rgba(30, 58, 138, 0.08); box-shadow: 0 4px 20px rgba(30,58,138,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: left; position: relative; display: flex; flex-direction: column; }
+        .testimonial-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(30,58,138,0.10); }
+        .testimonial-card .stars { color: #F59E0B; font-size: 1.2rem; margin-bottom: 12px; letter-spacing: 2px; }
+        .testimonial-card .quote { font-size: 0.95rem; line-height: 1.8; color: #1E2A3A; opacity: 0.85; font-style: italic; margin-bottom: 12px; flex-grow: 1; position: relative; padding-left: 0; }
+        .testimonial-card .quote::before { content: '"'; font-size: 2.8rem; color: #1E3A8A; opacity: 0.12; position: absolute; top: -8px; left: -4px; font-style: normal; }
+        .testimonial-card .quote .more-content { display: none; }
+        .testimonial-card .quote .more-content.show { display: inline; }
+        .testimonial-card .read-more-btn { color: #1E3A8A; font-weight: 600; font-size: 0.9rem; cursor: pointer; background: none; border: none; padding: 4px 0; font-family: 'Poppins', sans-serif; transition: color 0.2s; display: inline-block; margin-top: 4px; text-decoration: underline; text-underline-offset: 2px; }
+        .testimonial-card .read-more-btn:hover { color: #3B82F6; }
+        .testimonial-card .client { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; margin-top: auto; border-top: 1px solid rgba(30, 58, 138, 0.06); padding-top: 14px; }
+        .testimonial-card .client .avatar-placeholder { width: 48px; height: 48px; border-radius: 50%; background: rgba(30, 58, 138, 0.10); color: #1E3A8A; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; border: 2px solid rgba(30, 58, 138, 0.15); }
+        .testimonial-card .client .name { font-weight: 700; color: #1E3A8A; font-size: 1rem; }
+        .testimonial-card .client .title { font-size: 0.82rem; color: #1E2A3A; opacity: 0.6; line-height: 1.4; }
+        .testimonial-card .client .result { font-size: 0.82rem; color: #1E3A8A; font-weight: 600; margin-top: 2px; opacity: 0.8; }
 
-        /* ===== LIGHTBOX MODAL ===== */
-        .lightbox-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 9999;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            touch-action: pan-y pinch-zoom;
-        }
+        /* ===== LIGHTBOX ===== */
+        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.92); z-index: 9999; display: none; justify-content: center; align-items: center; overflow: hidden; touch-action: pan-y pinch-zoom; }
         .lightbox-overlay.active { display: flex; }
-        .lightbox-overlay img {
-            display: block;
-            max-width: 90vw;
-            max-height: 90vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            padding: 20px;
-            cursor: zoom-out;
-            touch-action: pan-y pinch-zoom;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-        }
-        .lightbox-close {
-            position: fixed;
-            top: 16px;
-            right: 24px;
-            font-size: 2.4rem;
-            color: #FFFFFF;
-            background: rgba(255,255,255,0.15);
-            border: none;
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10000;
-            transition: background 0.2s;
-            font-weight: 300;
-            line-height: 1;
-        }
+        .lightbox-overlay img { display: block; max-width: 90vw; max-height: 90vh; width: auto; height: auto; object-fit: contain; padding: 20px; cursor: zoom-out; touch-action: pan-y pinch-zoom; box-shadow: 0 8px 40px rgba(0,0,0,0.4); }
+        .lightbox-close { position: fixed; top: 16px; right: 24px; font-size: 2.4rem; color: #FFFFFF; background: rgba(255,255,255,0.15); border: none; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; transition: background 0.2s; font-weight: 300; line-height: 1; }
         .lightbox-close:hover { background: rgba(255,255,255,0.25); }
 
         /* ===== CONTACT ===== */
@@ -355,10 +269,6 @@
 
         /* ===== UTILITY ===== */
         .text-center { text-align: center; }
-        .mt-8 { margin-top: 8px; }
-        .mb-8 { margin-bottom: 8px; }
-        .mb-16 { margin-bottom: 16px; }
-        .mb-24 { margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
@@ -393,7 +303,7 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>See Beyond.<br /><span>Stand Out.</span></h1>
+                <h1>VisOut – Brand Identity Agency<br /><span>See Beyond. Stand Out.</span></h1>
                 <p>We help brands break through the digital noise with stunning visuals, AI video creation, and business solutions.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">Get Started</a>
@@ -442,7 +352,7 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <h2>Why VisOut Exists</h2>
-                    <p>VisOut was founded by Triumph M. C. after watching too many promising businesses vanish within their first year. We realized great products fail not because they're bad — but because nobody notices them. So we created VisOut to fix that. Today, we help brands transform their digital presence through bold visuals and smart strategy.</p>
+                    <p>VisOut was founded by Triumph M. C. in April 2026 after watching too many promising businesses vanish within their first year. We realized great products fail not because they're bad — but because nobody notices them. So we created VisOut to fix that. Today, we help African brands transform their digital presence through bold visuals and smart strategy.</p>
                 </div>
                 <div class="about-visual reveal">
                     <img src="https://i.ibb.co/s9HHs2Hp/IMG-20260616-121044-708.jpg" alt="About VisOut" />
@@ -528,15 +438,9 @@
             <h2 class="section-title centered">What Our Clients Say</h2>
             <p class="section-subtitle centered">Real feedback from real businesses we've helped stand out.</p>
             <div class="testimonials-grid">
-                <!-- Testimonial 1: Marcus, NourishFlow (with Read More) -->
+                <!-- Testimonial 1 -->
                 <div class="testimonial-card reveal">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <div class="quote" id="quote1">
                         VisOut didn't just sell me visuals—they saved me from myself.<br /><br />
                         I came to them begging for a quick fix: better product shots, flashier AI videos, a prettier deck. I thought my creative was broken. They told me my strategy was broken. And they had the guts to prove it.
@@ -556,15 +460,9 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 2: Elena, Veridian Homes (with Read More) -->
+                <!-- Testimonial 2 -->
                 <div class="testimonial-card reveal">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <div class="quote" id="quote2">
                         VisOut didn't redesign my homes. They redesigned my entire go-to-market soul.<br /><br />
                         I came in swinging my square footage and my R-values like a weapon. I thought if I just made my renders shinier, the leads would stick. They pulled the chair out from under me and said, 'Your customers don't care about R-values. They care about whether their kids can do homework while they stir a pasta pot without losing their minds.'
@@ -584,15 +482,9 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 3: Tunde Ogunlade, SBSO Agency (full visible) -->
+                <!-- Testimonial 3 -->
                 <div class="testimonial-card reveal">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <div class="quote">
                         Working with VisOut was a game-changer. They took our vision and turned it into a powerful brand presence that our customers love.
                     </div>
@@ -682,12 +574,12 @@
                 </div>
             </div>
             <div class="footer-copy">
-                &copy; 2026 VisOut – See Beyond. Stand Out.
+                &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout1.pages.dev/">VisOut Brand Identity Agency</a>
             </div>
         </div>
     </footer>
 
-    <!-- ===== LIGHTBOX MODAL ===== -->
+    <!-- ===== LIGHTBOX ===== -->
     <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image">&times;</button>
         <img id="lightboxImage" src="" alt="Enlarged view" />
@@ -750,7 +642,7 @@
             });
         });
 
-        // Read More / Show Less toggle
+        // Read More
         function toggleReadMore(moreId, button) {
             const moreContent = document.getElementById(moreId);
             if (moreContent.classList.contains('show')) {
