@@ -110,6 +110,35 @@
         .nav-menu a { transition: color 0.2s; }
         .nav-menu a:hover { color: #3B82F6; }
         .header-actions { display: flex; align-items: center; gap: 20px; }
+        
+        /* ===== HEADER "GET STARTED" BUTTON (hidden by default) ===== */
+        .header-actions .btn-header-cta {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+            background: #1E3A8A;
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, background 0.25s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .header-actions .btn-header-cta:hover {
+            background: #0A2472;
+            transform: translateY(-2px);
+        }
+        .header-actions .btn-header-cta.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { display: block; width: 26px; height: 3px; background: #1E3A8A; border-radius: 4px; transition: 0.25s; }
 
@@ -262,7 +291,12 @@
             .nav-menu { display: none; flex-direction: column; width: 100%; gap: 12px; padding: 16px 0 8px; border-top: 1px solid rgba(30,58,138,0.06); }
             .nav-menu.open { display: flex; }
             .hamburger { display: flex; }
-            .header-actions .btn-primary.small { display: none; }
+            .header-actions .btn-header-cta { 
+                display: inline-block;
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
             .hero { padding: 48px 0 64px; }
             .hero-content h1 { font-size: 2.4rem; }
             .hero-content p { font-size: 1rem; }
@@ -287,6 +321,10 @@
             .container { padding: 0 16px; }
             .testimonial-card .quote { font-size: 0.88rem; }
             .blog-content h3 { font-size: 1rem; }
+            .header-actions .btn-header-cta { 
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
         }
 
         /* ===== UTILITY ===== */
@@ -314,7 +352,7 @@
                 <a href="#contact">Contact</a>
             </nav>
             <div class="header-actions">
-                <a href="#contact" class="btn-primary small">Get Started</a>
+                <a href="#contact" class="btn-header-cta" id="headerCta">Get Started</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                     <span></span><span></span><span></span>
                 </button>
@@ -329,7 +367,7 @@
                 <h1>VisOut – Brand Identity Agency<br /><span>See Beyond. Stand Out.</span></h1>
                 <p>We help brands break through the digital noise with stunning visuals, AI video creation, and business solutions.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Get Started</a>
+                    <a href="#contact" class="btn-primary" id="heroCta">Get Started</a>
                     <a href="#portfolio" class="btn-secondary">View Our Work</a>
                 </div>
             </div>
@@ -521,14 +559,14 @@
         </div>
     </section>
 
-    <!-- ===== BLOG SECTION (UPDATED) ===== -->
+    <!-- ===== BLOG SECTION ===== -->
     <section class="blog" id="blog">
         <div class="container">
             <h2 class="section-title centered">From Our Blog</h2>
             <p class="section-subtitle centered">Insights, strategies, and stories to help your brand stand out.</p>
             <div class="blog-grid">
                 
-                <!-- Blog Post 1 (LINKED) -->
+                <!-- Blog Post 1 -->
                 <article class="blog-card reveal">
                     <div class="blog-image">
                         <div class="blog-image-placeholder">📝</div>
@@ -541,7 +579,7 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 2 (UPDATED – LINKED) -->
+                <!-- Blog Post 2 -->
                 <article class="blog-card reveal">
                     <div class="blog-image">
                         <div class="blog-image-placeholder">🎬</div>
@@ -554,18 +592,18 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 3 (UPDATED – LINKED) -->
-<article class="blog-card reveal">
-    <div class="blog-image">
-        <div class="blog-image-placeholder">🚀</div>
-    </div>
-    <div class="blog-content">
-        <div class="blog-date">June 27, 2026</div>
-        <h3><a href="blog/3-strategies-to-make-your-business-stand-out-digitally">3 Strategies to Make Your Business Stand Out Digitally</a></h3>
-        <p>Standing out in the digital noise isn't about being louder—it's about being clearer. Here are 3 actionable strategies to differentiate your brand and capture attention.</p>
-        <a href="blog/3-strategies-to-make-your-business-stand-out-digitally" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-    </div>
-</article>
+                <!-- Blog Post 3 -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <div class="blog-image-placeholder">🚀</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 27, 2026</div>
+                        <h3><a href="blog/3-strategies-to-make-your-business-stand-out-digitally">3 Strategies to Make Your Business Stand Out Digitally</a></h3>
+                        <p>Standing out in the digital noise isn't about being louder—it's about being clearer. Here are 3 actionable strategies to differentiate your brand and capture attention.</p>
+                        <a href="blog/3-strategies-to-make-your-business-stand-out-digitally" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
             </div>
         </div>
@@ -750,6 +788,49 @@
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
             }
+        });
+
+        // ===== SCROLL-BASED HEADER CTA =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerCta = document.getElementById('headerCta');
+            const heroCta = document.getElementById('heroCta');
+            
+            // Get the position of the hero button
+            function getHeroButtonBottom() {
+                const rect = heroCta.getBoundingClientRect();
+                return rect.bottom;
+            }
+
+            function handleScroll() {
+                // We consider the hero button "visible" if its bottom is above the viewport bottom
+                // and its top is below the header (sticky header height ~ 70px)
+                const heroBottom = getHeroButtonBottom();
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                // If the hero button's bottom is less than the header height + 20px
+                // (meaning it's scrolled past), show the header CTA
+                if (heroBottom < headerHeight + 20) {
+                    headerCta.classList.add('visible');
+                } else {
+                    headerCta.classList.remove('visible');
+                }
+            }
+
+            // Throttle scroll events for performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Also check on load and resize
+            window.addEventListener('resize', handleScroll);
+            handleScroll();
         });
     </script>
 
