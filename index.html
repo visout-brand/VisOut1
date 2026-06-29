@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>VisOut – See Beyond. Stand Out.</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary { display: inline-block; background: #1E3A8A; color: #FFFFFF; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-primary:hover { background: #0A2472; transform: translateY(-2px); }
+        .btn-secondary { display: inline-block; background: transparent; color: #1E3A8A; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: 2px solid #1E3A8A; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-secondary:hover { background: #1E3A8A; color: #FFFFFF; transform: translateY(-2px); }
+        .btn-primary.small, .btn-secondary.small { padding: 10px 24px; font-size: 0.9rem; }
+
+        /* ===== HEADER ===== */
+        header { background: #FFFFFF; padding: 16px 0; border-bottom: 1px solid rgba(30, 58, 138, 0.08); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; color: #1E3A8A; letter-spacing: -0.5px; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .logo span { color: #1E3A8A; }
+        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: #1E2A3A; }
+        .nav-menu a { transition: color 0.2s; }
+        .nav-menu a:hover { color: #3B82F6; }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 26px; height: 3px; background: #1E3A8A; border-radius: 4px; transition: 0.25s; }
+
+        /* ===== HERO ===== */
+        .hero { padding: 80px 0 100px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 0; }
+        .hero::after { content: ''; position: absolute; bottom: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(30,58,138,0.05) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 0; }
+        .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-content h1 { font-size: 3.4rem; font-weight: 800; line-height: 1.15; color: #1E3A8A; margin-bottom: 16px; letter-spacing: -1px; }
+        .hero-content h1 span { color: #3B82F6; }
+        .hero-content p { font-size: 1.2rem; color: #1E2A3A; opacity: 0.85; max-width: 520px; margin-bottom: 32px; font-weight: 400; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
+        .hero-visual { display: flex; justify-content: center; align-items: center; }
+        .hero-visual img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 30px rgba(30,58,138,0.10); }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title { font-size: 2.4rem; font-weight: 700; color: #1E3A8A; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .section-subtitle { font-size: 1.1rem; color: #1E2A3A; opacity: 0.85; max-width: 700px; margin-bottom: 40px; }
+        .section-title.centered, .section-subtitle.centered { text-align: center; margin-left: auto; margin-right: auto; }
+
+        /* ===== SERVICES ===== */
+        .services { padding: 80px 0 90px; background: #FFFFFF; }
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+        .service-card { background: #FFFFFF; border-radius: 12px; padding: 32px 24px 28px; box-shadow: 0 4px 20px rgba(30,58,138,0.07); border: 1px solid rgba(30,58,138,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(30,58,138,0.10); }
+        .service-card .icon { font-size: 2.6rem; color: #1E3A8A; margin-bottom: 16px; }
+        .service-card h3 { font-size: 1.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
+        .service-card p { font-size: 0.95rem; color: #1E2A3A; opacity: 0.75; }
+
+        /* ===== ABOUT ===== */
+        .about { padding: 80px 0 90px; background: #F0F4FA; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-size: 2.4rem; font-weight: 700; color: #1E3A8A; margin-bottom: 16px; }
+        .about-text p { font-size: 1.05rem; color: #1E2A3A; opacity: 0.85; line-height: 1.8; }
+        .about-visual { display: flex; justify-content: center; align-items: center; border-radius: 16px; padding: 8px; }
+        .about-visual img { width: 100%; max-width: 420px; border-radius: 16px; display: block; box-shadow: 0 8px 30px rgba(30,58,138,0.10); }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose { padding: 80px 0 90px; background: #FFFFFF; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 16px; }
+        .benefit { padding: 28px 24px; border-radius: 12px; background: #FFFFFF; border: 1px solid rgba(30,58,138,0.06); box-shadow: 0 4px 16px rgba(30,58,138,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .benefit:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(30,58,138,0.08); }
+        .benefit .icon { font-size: 2.2rem; color: #1E3A8A; margin-bottom: 12px; }
+        .benefit h3 { font-size: 1.15rem; font-weight: 700; color: #1E3A8A; margin-bottom: 6px; }
+        .benefit p { font-size: 0.95rem; color: #1E2A3A; opacity: 0.75; }
+
+        /* ===== PORTFOLIO ===== */
+        .portfolio { padding: 80px 0 90px; background: #F0F4FA; }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .portfolio-item { border-radius: 12px; overflow: hidden; background: #FFFFFF; box-shadow: 0 4px 16px rgba(30,58,138,0.06); border: 1px solid rgba(30,58,138,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .portfolio-item:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,58,138,0.10); }
+        .portfolio-item .image-wrapper { cursor: zoom-in; display: block; overflow: hidden; }
+        .portfolio-item .image-wrapper img { width: 100%; height: 200px; object-fit: cover; display: block; transition: opacity 0.2s ease; }
+        .portfolio-item .image-wrapper:hover img { opacity: 0.92; }
+        .portfolio-item .caption { padding: 16px 20px 18px; background: #FFFFFF; border-top: 1px solid rgba(30,58,138,0.04); }
+        .portfolio-item .caption h3 { font-size: 1.05rem; font-weight: 700; color: #1E3A8A; margin-bottom: 4px; }
+        .portfolio-item .caption p { font-size: 0.88rem; color: #1E2A3A; opacity: 0.7; line-height: 1.5; margin-top: 2px; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 80px 0 90px;
+            background: #FFFFFF;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 10px;
+        }
+        .testimonial-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 32px 24px 28px;
+            border: 1px solid rgba(30, 58, 138, 0.08);
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(30, 58, 138, 0.10);
+        }
+        .testimonial-card .stars {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .testimonial-card .quote {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #1E2A3A;
+            opacity: 0.85;
+            font-style: italic;
+            margin-bottom: 12px;
+            flex-grow: 1;
+            position: relative;
+            padding-left: 0;
+        }
+        .testimonial-card .quote::before {
+            content: '"';
+            font-size: 2.8rem;
+            color: #1E3A8A;
+            opacity: 0.12;
+            position: absolute;
+            top: -8px;
+            left: -4px;
+            font-style: normal;
+        }
+        .testimonial-card .quote .more-content {
+            display: none;
+            transition: max-height 0.3s ease;
+        }
+        .testimonial-card .quote .more-content.show {
+            display: inline;
+        }
+        .testimonial-card .read-more-btn {
+            color: #1E3A8A;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px 0;
+            font-family: 'Poppins', sans-serif;
+            transition: color 0.2s;
+            display: inline-block;
+            margin-top: 4px;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .testimonial-card .read-more-btn:hover {
+            color: #3B82F6;
+        }
+        .testimonial-card .client {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            margin-top: auto;
+            border-top: 1px solid rgba(30, 58, 138, 0.06);
+            padding-top: 14px;
+        }
+        .testimonial-card .client .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #1E3A8A;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .testimonial-card .client .avatar-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(30, 58, 138, 0.10);
+            color: #1E3A8A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            border: 2px solid rgba(30, 58, 138, 0.15);
+        }
+        .testimonial-card .client .name {
+            font-weight: 700;
+            color: #1E3A8A;
+            font-size: 1rem;
+        }
+        .testimonial-card .client .title {
+            font-size: 0.82rem;
+            color: #1E2A3A;
+            opacity: 0.6;
+            line-height: 1.4;
+        }
+        .testimonial-card .client .result {
+            font-size: 0.82rem;
+            color: #1E3A8A;
+            font-weight: 600;
+            margin-top: 2px;
+            opacity: 0.8;
+        }
+
+        /* ===== LIGHTBOX MODAL ===== */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+        }
+        .lightbox-overlay.active { display: flex; }
+        .lightbox-overlay img {
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            padding: 20px;
+            cursor: zoom-out;
+            touch-action: pan-y pinch-zoom;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            font-size: 2.4rem;
+            color: #FFFFFF;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000;
+            transition: background 0.2s;
+            font-weight: 300;
+            line-height: 1;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+        /* ===== CONTACT ===== */
+        .contact { padding: 80px 0 90px; background: #FFFFFF; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-form h2 { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
+        .contact-form p { color: #1E2A3A; opacity: 0.75; margin-bottom: 28px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 500; font-size: 0.9rem; color: #1E2A3A; margin-bottom: 4px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px 16px; border: 1px solid rgba(30,58,138,0.15); border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 1rem; transition: border-color 0.25s; background: #FFFFFF; color: #1E2A3A; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59,130,246,0.15); }
+        .form-group textarea { min-height: 140px; resize: vertical; }
+        .contact-info h3 { font-size: 1.6rem; font-weight: 700; color: #1E3A8A; margin-bottom: 20px; }
+        .contact-info p { color: #1E2A3A; opacity: 0.75; margin-bottom: 28px; }
+        .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; font-size: 1rem; color: #1E2A3A; }
+        .contact-detail i { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(30,58,138,0.07); border-radius: 50%; color: #1E3A8A; font-size: 1.1rem; flex-shrink: 0; }
+        .contact-detail a { color: #1E3A8A; font-weight: 500; transition: color 0.2s; }
+        .contact-detail a:hover { color: #3B82F6; }
+        .social-links { display: flex; gap: 16px; margin-top: 24px; }
+        .social-links a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(30,58,138,0.07); border-radius: 50%; color: #1E3A8A; font-size: 1.2rem; transition: background 0.25s, color 0.25s, transform 0.2s; }
+        .social-links a:hover { background: #1E3A8A; color: #FFFFFF; transform: translateY(-3px); }
+
+        /* ===== FOOTER ===== */
+        footer { background: #1E3A8A; color: #FFFFFF; padding: 48px 0 32px; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+        .footer-brand img { height: 34px; width: auto; display: block; }
+        .footer-links { display: flex; gap: 28px; font-weight: 400; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { transition: color 0.2s; }
+        .footer-links a:hover { color: #93BBFC; }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.10); border-radius: 50%; color: #FFFFFF; font-size: 1rem; transition: background 0.25s, transform 0.2s; }
+        .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+        .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual img { max-width: 360px; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-visual { order: -1; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { display: none; flex-direction: column; width: 100%; gap: 12px; padding: 16px 0 8px; border-top: 1px solid rgba(30,58,138,0.06); }
+            .nav-menu.open { display: flex; }
+            .hamburger { display: flex; }
+            .header-actions .btn-primary.small { display: none; }
+            .hero { padding: 48px 0 64px; }
+            .hero-content h1 { font-size: 2.4rem; }
+            .hero-content p { font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .service-card { padding: 24px 16px 20px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-social { justify-content: center; }
+            .about-text h2 { font-size: 1.8rem; }
+            .contact-form h2 { font-size: 1.8rem; }
+            .contact-info h3 { font-size: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2rem; }
+            .btn-primary, .btn-secondary { padding: 12px 24px; font-size: 0.9rem; }
+            .container { padding: 0 16px; }
+            .testimonial-card .quote { font-size: 0.88rem; }
+        }
+
+        /* ===== UTILITY ===== */
+        .text-center { text-align: center; }
+        .mt-8 { margin-top: 8px; }
+        .mb-8 { margin-bottom: 8px; }
+        .mb-16 { margin-bottom: 16px; }
+        .mb-24 { margin-bottom: 24px; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="VisOut Home">
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <span>VisOut</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#why-choose">Why Us</a>
+                <a href="#portfolio">Work</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" class="btn-primary small">Get Started</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>See Beyond.<br /><span>Stand Out.</span></h1>
+                <p>We help brands break through the digital noise with stunning visuals, AI video creation, and business solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                    <a href="#portfolio" class="btn-secondary">View Our Work</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://i.ibb.co/ZpjfKj4Q/IMG-20260613-104905-436.jpg" alt="VisOut hero graphic" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title centered">What We Do</h2>
+            <p class="section-subtitle centered">We turn invisible brands into unforgettable ones. Services include graphics design, AI video creation, brand consulting, and ongoing business support.</p>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3>Graphics Design</h3>
+                    <p>Logos, social templates, brand kits — everything you need to look polished and professional.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-video"></i></div>
+                    <h3>AI Video Creation</h3>
+                    <p>Short‑form videos, explainers, and AI avatars that capture attention in seconds.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Brand Consulting</h3>
+                    <p>Identity workshops, positioning strategy, and messaging that resonates with your audience.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Business Support</h3>
+                    <p>Ongoing assistance, performance tracking, and strategic guidance to keep you growing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2>Why VisOut Exists</h2>
+                    <p>VisOut was founded by Triumph M. C. after watching too many promising businesses vanish within their first year. We realized great products fail not because they're bad — but because nobody notices them. So we created VisOut to fix that. Today, we help brands transform their digital presence through bold visuals and smart strategy.</p>
+                </div>
+                <div class="about-visual reveal">
+                    <img src="https://i.ibb.co/s9HHs2Hp/IMG-20260616-121044-708.jpg" alt="About VisOut" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2 class="section-title centered">Why Choose VisOut</h2>
+            <p class="section-subtitle centered">We don't just decorate brands — we build them for the long haul.</p>
+            <div class="benefits-grid">
+                <div class="benefit reveal">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Built for Real Businesses</h3>
+                    <p>We study why brands fail, not just how to decorate. Every decision is grounded in strategy.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <h3>AI‑Powered + Human‑Led</h3>
+                    <p>Stunning video and graphics, guided by creative strategy and human insight.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Ongoing Support</h3>
+                    <p>You never get left alone with a folder of files. We're with you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title centered">Our Work</h2>
+            <p class="section-subtitle centered">Real results for real brands.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')">
+                        <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks for Modern Businesses" />
+                    </div>
+                    <div class="caption">
+                        <h3>Logo Gallery – Brand Marks for Modern Businesses</h3>
+                        <p>A showcase of custom logo concepts for brands in tech, lifestyle, and professional services. Each mark is crafted to be distinctive and scalable.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')">
+                        <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral – Event Flyers & Brand Materials" />
+                    </div>
+                    <div class="caption">
+                        <h3>Print & Promo Collateral – Event Flyers & Brand Materials</h3>
+                        <p>High-impact event and product flyers designed for print and digital use. Bold layouts, clear hierarchy, and brand-consistent styling.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')">
+                        <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business cards and stationery" />
+                    </div>
+                    <div class="caption">
+                        <h3>Business cards and stationery</h3>
+                        <p>Business card and stationery mockup showing brand identity applied to print materials.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')">
+                        <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="social media design" />
+                    </div>
+                    <div class="caption">
+                        <h3>social media design</h3>
+                        <p>Social media post design mockup on smartphone – digital brand graphics example.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title centered">What Our Clients Say</h2>
+            <p class="section-subtitle centered">Real feedback from real businesses we've helped stand out.</p>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1: Marcus, NourishFlow (with Read More) -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quote" id="quote1">
+                        VisOut didn't just sell me visuals—they saved me from myself.<br /><br />
+                        I came to them begging for a quick fix: better product shots, flashier AI videos, a prettier deck. I thought my creative was broken. They told me my strategy was broken. And they had the guts to prove it.
+                        <span class="more-content" id="more1">
+                            <br /><br />
+                            Instead of opening Photoshop, they opened my skull. They forced me to articulate the real emotional pain my customers feel (the 3 PM static, the nervous-system burnout) and handed me 4 killer ad hooks that actually stop the scroll. They didn't give me a fish; they taught me how to fish—and then gave me a better spear.<br /><br />
+                            Within a week, we rewrote our entire messaging around those hooks. Our next Meta test? 3.1% CTR. Our HR pitch deck? We led with the 'silent quitting at 4 PM' story they suggested—and closed our first corporate deal in 2 days.<br /><br />
+                            If you want a vendor who just makes things 'pretty,' call someone else. If you want a partner who makes you smart first and beautiful second, call VisOut. They're the only agency that ever told me 'no' to my face—and I'm now their biggest fan because of it.
+                        </span>
+                        <button class="read-more-btn" onclick="toggleReadMore('more1', this)">Read more</button>
+                    </div>
+                    <div class="client">
+                        <div class="avatar-placeholder">M</div>
+                        <div class="name">Marcus</div>
+                        <div class="title">Founder, NourishFlow</div>
+                        <div class="result">Revenue up 40% MoM • Ad spend cut by 20%</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2: Elena, Veridian Homes (with Read More) -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quote" id="quote2">
+                        VisOut didn't redesign my homes. They redesigned my entire go-to-market soul.<br /><br />
+                        I came in swinging my square footage and my R-values like a weapon. I thought if I just made my renders shinier, the leads would stick. They pulled the chair out from under me and said, 'Your customers don't care about R-values. They care about whether their kids can do homework while they stir a pasta pot without losing their minds.'
+                        <span class="more-content" id="more2">
+                            <br /><br />
+                            They handed me four ad angles that completely reframed our value: price certainty over contractor chaos, sanctuary over square footage, carbon handprint over carbon footprint. Our new homepage tagline alone (which they ghostwrote) boosted our average session duration by 2.4x in one week.<br /><br />
+                            But the real win? Our sales team used their '6 months of anticipation vs 18 months of agony' script on a prospect who was 48 hours away from signing with our cheaper competitor. That prospect signed with us at full asking price because—for the first time—they felt understood, not sold to.<br /><br />
+                            VisOut is the only agency that will slap you across the face with truth, hand you a scalpel to fix the wound, and then stick around to make sure you don't bleed out. They're not decorators. They're diagnosticians. And I'm never hiring anyone else.
+                        </span>
+                        <button class="read-more-btn" onclick="toggleReadMore('more2', this)">Read more</button>
+                    </div>
+                    <div class="client">
+                        <div class="avatar-placeholder">E</div>
+                        <div class="name">Elena</div>
+                        <div class="title">CEO, Veridian Homes</div>
+                        <div class="result">Inquiries up 55% • Cost-per-lead down 32%</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3: Tunde Ogunlade, SBSO Agency (full visible) -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quote">
+                        Working with VisOut was a game-changer. They took our vision and turned it into a powerful brand presence that our customers love.
+                    </div>
+                    <div class="client">
+                        <div class="avatar-placeholder">TO</div>
+                        <div class="name">Tunde Ogunlade</div>
+                        <div class="title">Director, SBSO Agency</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form reveal">
+                    <h2>Let's Work Together</h2>
+                    <p>Ready to stand out? Drop us a message and we'll get back to you within 24 hours.</p>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Triumph M. C." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="hello@visout.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us about your brand and goals..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info reveal">
+                    <h3>Connect with us</h3>
+                    <p>We'd love to hear from you. Reach out through any of the channels below.</p>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:visout.brand@gmail.com">visout.brand@gmail.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/2348145669035" target="_blank">+234 814 566 9035</a>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fab fa-facebook-f"></i>
+                        <a href="https://facebook.com/visout2" target="_blank">VisOut</a>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://instagram.com/visout1" target="_blank">@VisOut</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/visout2" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/visout1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                    VisOut
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#why-choose">Why Us</a>
+                    <a href="#portfolio">Work</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://facebook.com/visout2" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/visout1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 VisOut – See Beyond. Stand Out.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image">&times;</button>
+        <img id="lightboxImage" src="" alt="Enlarged view" />
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Contact form
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            const subject = 'VisOut Contact Form Submission';
+            const body = 'Name: ' + name + '%0A' + 'Email: ' + email + '%0A' + 'Message: ' + message;
+            window.open('mailto:visout.brand@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + body, '_blank');
+            alert('Thank you, ' + name + '! Your email client will open in a new tab with the details pre-filled. Just hit send!');
+            document.getElementById('contactForm').reset();
+        }
+
+        // Smooth anchor scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Read More / Show Less toggle
+        function toggleReadMore(moreId, button) {
+            const moreContent = document.getElementById(moreId);
+            if (moreContent.classList.contains('show')) {
+                moreContent.classList.remove('show');
+                button.textContent = 'Read more';
+            } else {
+                moreContent.classList.add('show');
+                button.textContent = 'Show less';
+            }
+        }
+
+        // Lightbox
+        const overlay = document.getElementById('lightboxOverlay');
+        const lightboxImg = document.getElementById('lightboxImage');
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (e.target === overlay || e.target.tagName === 'BUTTON' || e.target === lightboxImg) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
