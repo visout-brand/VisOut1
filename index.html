@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     
+    <!-- ===== FAVICON (Website Icon) ===== -->
+    <link rel="icon" href="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    
     <!-- ===== PRIMARY SEO TAGS ===== -->
     <title>VisOut - Brand Identity Agency | AI Video Creation & Business Consulting</title>
     <meta name="description" content="VisOut helps businesses break through digital noise with AI video creation, brand consulting, business support, and professional graphic design. See beyond. Stand out." />
@@ -197,6 +201,12 @@
         .portfolio-item .caption h3 { font-size: 1.05rem; font-weight: 700; color: #1E3A8A; margin-bottom: 4px; }
         .portfolio-item .caption p { font-size: 0.88rem; color: #1E2A3A; opacity: 0.7; line-height: 1.5; margin-top: 2px; }
 
+        /* ===== CASE STUDIES (NEW) ===== */
+        .case-studies { padding: 60px 0 70px; background: #FFFFFF; text-align: center; }
+        .case-studies .cta-text { font-size: 1.2rem; color: #1E2A3A; opacity: 0.85; }
+        .case-studies .cta-text .highlight-link { color: #1E3A8A; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+        .case-studies .cta-text .highlight-link:hover { color: #3B82F6; }
+
         /* ===== TESTIMONIALS ===== */
         .testimonials { padding: 80px 0 90px; background: #FFFFFF; }
         .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 10px; }
@@ -313,6 +323,7 @@
             .about-text h2 { font-size: 1.8rem; }
             .contact-form h2 { font-size: 1.8rem; }
             .contact-info h3 { font-size: 1.3rem; }
+            .case-studies .cta-text { font-size: 1rem; }
         }
         @media (max-width: 480px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -325,6 +336,7 @@
                 padding: 6px 12px;
                 font-size: 0.75rem;
             }
+            .case-studies .cta-text { font-size: 0.95rem; }
         }
 
         /* ===== UTILITY ===== */
@@ -490,6 +502,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES (NEW) ===== -->
+    <section class="case-studies reveal">
+        <div class="container">
+            <p class="cta-text">
+                Want to see real results? <a href="/case-studies" class="highlight-link">Here</a>
+            </p>
         </div>
     </section>
 
