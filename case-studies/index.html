@@ -109,16 +109,17 @@
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
         .case-card { background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(30,58,138,0.06); box-shadow: 0 4px 20px rgba(30,58,138,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
         .case-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(30,58,138,0.10); }
-        .case-card .image { width: 100%; height: 220px; background: linear-gradient(135deg, #1E3A8A, #3B82F6); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 3.5rem; flex-shrink: 0; }
-        .case-card .image .placeholder-icon { opacity: 0.3; }
+        .case-card .image { width: 100%; height: 220px; background: linear-gradient(135deg, #1E3A8A, #3B82F6); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 3.5rem; flex-shrink: 0; overflow: hidden; }
         .case-card .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .case-card .content { padding: 24px 28px 28px; flex-grow: 1; display: flex; flex-direction: column; }
         .case-card .content .client { font-size: 0.8rem; color: #1E3A8A; font-weight: 600; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
         .case-card .content h3 { font-size: 1.25rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; line-height: 1.3; }
         .case-card .content .industry { font-size: 0.85rem; color: #1E2A3A; opacity: 0.6; margin-bottom: 12px; }
-        .case-card .content .challenge, .case-card .content .solution, .case-card .content .results { font-size: 0.92rem; color: #1E2A3A; opacity: 0.8; line-height: 1.7; margin-bottom: 6px; }
-        .case-card .content .label { font-weight: 600; color: #1E3A8A; font-size: 0.85rem; }
-        .case-card .content .results { font-weight: 600; color: #1E3A8A; opacity: 0.9; margin-bottom: 16px; }
+        .case-card .content .challenge, 
+        .case-card .content .solution { font-size: 0.92rem; color: #1E2A3A; opacity: 0.8; line-height: 1.7; margin-bottom: 6px; }
+        .case-card .content .challenge .label,
+        .case-card .content .solution .label { font-weight: 600; color: #1E3A8A; }
+        .case-card .content .results { font-size: 0.92rem; font-weight: 600; color: #1E3A8A; opacity: 0.9; margin: 8px 0 16px; }
         .case-card .content .btn-secondary.small { padding: 8px 20px; font-size: 0.85rem; display: inline-block; margin-top: auto; align-self: flex-start; }
 
         /* ===== FOOTER ===== */
@@ -207,88 +208,40 @@
                 <!-- ===== CASE STUDY 1 ===== -->
                 <div class="case-card reveal">
                     <div class="image">
-                        <span class="placeholder-icon"><i class="fas fa-building"></i></span>
+                        <img src="https://i.ibb.co/Zp3R2p4t/IMG-20260630-115211-295.jpg" alt="NourishFlow case study" />
                     </div>
                     <div class="content">
-                        <div class="client">Client Name</div>
+                        <div class="client">Marcus, Founder NourishFlow</div>
                         <h3>Brand Identity &amp; Visual Strategy</h3>
-                        <div class="industry">Industry: Fashion / Retail</div>
+                        <div class="industry">Industry: Health &amp; Wellness</div>
                         <div class="challenge">
-                            <span class="label">Challenge:</span> Placeholder description of the client's challenge.
+                            <span class="label">Challenge:</span> We have a stellar product (3x repeat purchase rate) and a clear mission. But we are bleeding money on Meta ads because our CTR is 0.8% (industry avg is 2.5%).
                         </div>
                         <div class="solution">
-                            <span class="label">Solution:</span> Placeholder description of the solution provided.
+                            <span class="label">Solution:</span> A Valid Working strategy and Attention grabbing visuals.
                         </div>
-                        <div class="results">
-                            <span class="label">Results:</span> Placeholder results metric.
-                        </div>
-                        <a href="#" class="btn-secondary small">Read Full Case Study</a>
+                        <div class="results">Revenue up 40% MoM, ad spend cut by 20%</div>
+                        <a href="/case-studies/1" class="btn-secondary small">Read Full Case Study</a>
                     </div>
                 </div>
 
                 <!-- ===== CASE STUDY 2 ===== -->
                 <div class="case-card reveal">
                     <div class="image">
-                        <span class="placeholder-icon"><i class="fas fa-video"></i></span>
+                        <img src="https://i.ibb.co/PZtzDxwV/IMG-20260630-120605-300.jpg" alt="Veridian Homes case study" />
                     </div>
                     <div class="content">
-                        <div class="client">Client Name</div>
-                        <h3>AI Video Creation &amp; Campaign Launch</h3>
-                        <div class="industry">Industry: Tech / SaaS</div>
+                        <div class="client">Elena, CEO Veridian Homes</div>
+                        <h3>Identity Repositioning &amp; Ad Strategy</h3>
+                        <div class="industry">Industry: Real Estate / Construction</div>
                         <div class="challenge">
-                            <span class="label">Challenge:</span> Placeholder description of the client's challenge.
+                            <span class="label">Challenge:</span> We get tons of website traffic (4,500 visits/mo) from Instagram-loving millennials who drool over our renders. But our inquiry-to-sale conversion is anemic (0.7%). Our average lead costs us $118 to acquire, and they ghost us after the first Zoom call. Now here's the real kicker. Our biggest competitor just launched a "semi-custom" line with cheaper finishes and faster delivery. They're eating our lunch on price. But we know our craftsmanship is better. We just can't prove it visually without sounding arrogant.
                         </div>
                         <div class="solution">
-                            <span class="label">Solution:</span> Placeholder description of the solution provided.
+                            <span class="label">Solution:</span> Identity repositioning. A ready to use ad template. Changing the way you see your business to align with the way customers see it. No more much of introducing your products or hyping your business but much of providing solutions to customer's problems. In that way, you don't tell your expertise, your customers speak for you.
                         </div>
-                        <div class="results">
-                            <span class="label">Results:</span> Placeholder results metric.
-                        </div>
-                        <a href="#" class="btn-secondary small">Read Full Case Study</a>
-                    </div>
-                </div>
-
-                <!-- ===== CASE STUDY 3 ===== -->
-                <div class="case-card reveal">
-                    <div class="image">
-                        <span class="placeholder-icon"><i class="fas fa-handshake"></i></span>
-                    </div>
-                    <div class="content">
-                        <div class="client">Client Name</div>
-                        <h3>Brand Consulting &amp; Strategy Refresh</h3>
-                        <div class="industry">Industry: Professional Services</div>
-                        <div class="challenge">
-                            <span class="label">Challenge:</span> Placeholder description of the client's challenge.
-                        </div>
-                        <div class="solution">
-                            <span class="label">Solution:</span> Placeholder description of the solution provided.
-                        </div>
-                        <div class="results">
-                            <span class="label">Results:</span> Placeholder results metric.
-                        </div>
-                        <a href="#" class="btn-secondary small">Read Full Case Study</a>
-                    </div>
-                </div>
-
-                <!-- ===== CASE STUDY 4 ===== -->
-                <div class="case-card reveal">
-                    <div class="image">
-                        <span class="placeholder-icon"><i class="fas fa-chart-line"></i></span>
-                    </div>
-                    <div class="content">
-                        <div class="client">Client Name</div>
-                        <h3>Business Support &amp; Performance Tracking</h3>
-                        <div class="industry">Industry: E-commerce / Retail</div>
-                        <div class="challenge">
-                            <span class="label">Challenge:</span> Placeholder description of the client's challenge.
-                        </div>
-                        <div class="solution">
-                            <span class="label">Solution:</span> Placeholder description of the solution provided.
-                        </div>
-                        <div class="results">
-                            <span class="label">Results:</span> Placeholder results metric.
-                        </div>
-                        <a href="#" class="btn-secondary small">Read Full Case Study</a>
+                        <div class="results">Inquiries up 55%, cost-per-lead down 32%, and I actually slept through the night for the first time this quarter</div>
+                        <a href="/case-studies/2" class="btn-secondary small">Read Full Case Study</a>
                     </div>
                 </div>
 
@@ -311,7 +264,7 @@
                 <a href="https://visout1.pages.dev/#portfolio">Work</a>
                 <a href="https://visout1.pages.dev/#testimonials">Testimonials</a>
                 <a href="https://visout1.pages.dev/#blog">Blog</a>
-                <a href="https://visout1.pages.dev/case-studies/">Case Studies</a>
+                <a href="/case-studies">Case Studies</a>
                 <a href="https://visout1.pages.dev/#contact">Contact</a>
             </div>
             <div class="footer-social">
