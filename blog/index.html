@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    
+    <!-- ===== PRIMARY SEO TAGS ===== -->
+    <title>Blog – VisOut Brand Identity Agency</title>
+    <meta name="description" content="Read insights, strategies, and stories from VisOut. Learn how to build a standout brand, create AI videos, and grow your business digitally." />
+    <link rel="canonical" href="https://visout.com.ng/blog/" />
+    
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content="Blog – VisOut Brand Identity Agency" />
+    <meta property="og:description" content="Read insights, strategies, and stories from VisOut. Learn how to build a standout brand, create AI videos, and grow your business digitally." />
+    <meta property="og:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    <meta property="og:url" content="https://visout.com.ng/blog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VisOut" />
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog – VisOut Brand Identity Agency" />
+    <meta name="twitter:description" content="Read insights, strategies, and stories from VisOut. Learn how to build a standout brand, create AI videos, and grow your business digitally." />
+    <meta name="twitter:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    
+    <!-- ===== SCHEMA ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog – VisOut",
+      "description": "Read insights, strategies, and stories from VisOut. Learn how to build a standout brand, create AI videos, and grow your business digitally.",
+      "url": "https://visout.com.ng/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "VisOut"
+      }
+    }
+    </script>
+    
+    <!-- ===== FONTS & STYLES ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary { display: inline-block; background: #1E3A8A; color: #FFFFFF; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-primary:hover { background: #0A2472; transform: translateY(-2px); }
+        .btn-secondary { display: inline-block; background: transparent; color: #1E3A8A; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: 2px solid #1E3A8A; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-secondary:hover { background: #1E3A8A; color: #FFFFFF; transform: translateY(-2px); }
+
+        /* ===== HEADER (FIXED MOBILE MENU) ===== */
+        header { background: #FFFFFF; padding: 16px 0; border-bottom: 1px solid rgba(30, 58, 138, 0.08); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; color: #1E3A8A; letter-spacing: -0.5px; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .logo span { color: #1E3A8A; }
+        
+        /* Desktop navigation */
+        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: #1E2A3A; }
+        .nav-menu a { transition: color 0.2s; }
+        .nav-menu a:hover { color: #3B82F6; }
+        
+        .header-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 26px; height: 3px; background: #1E3A8A; border-radius: 4px; transition: 0.25s; }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero { padding: 60px 0 50px; background: #FFFFFF; text-align: center; }
+        .page-hero h1 { font-size: 3rem; font-weight: 800; color: #1E3A8A; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .page-hero p { font-size: 1.15rem; color: #1E2A3A; opacity: 0.75; max-width: 600px; margin: 0 auto; }
+
+        /* ===== BLOG GRID ===== */
+        .blog-grid-section { padding: 40px 0 80px; background: #F0F4FA; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .blog-card { background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(30,58,138,0.06); box-shadow: 0 4px 20px rgba(30,58,138,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(30,58,138,0.10); }
+        .blog-card .image { width: 100%; height: 200px; overflow: hidden; flex-shrink: 0; }
+        .blog-card .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .blog-card .content { padding: 24px 24px 28px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-card .content .date { font-size: 0.8rem; color: #1E3A8A; font-weight: 600; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .blog-card .content h3 { font-size: 1.15rem; font-weight: 700; color: #1E3A8A; margin-bottom: 10px; line-height: 1.4; }
+        .blog-card .content h3 a { transition: color 0.2s; }
+        .blog-card .content h3 a:hover { color: #3B82F6; }
+        .blog-card .content p { font-size: 0.92rem; color: #1E2A3A; opacity: 0.75; line-height: 1.7; margin-bottom: 16px; flex-grow: 1; }
+        .blog-card .content .read-more { color: #1E3A8A; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .blog-card .content .read-more:hover { color: #3B82F6; }
+        .blog-card .content .read-more i { font-size: 0.7rem; transition: transform 0.2s; }
+        .blog-card .content .read-more:hover i { transform: translateX(4px); }
+
+        /* ===== CONTACT CTA ===== */
+        .blog-cta { padding: 60px 0 70px; background: #FFFFFF; text-align: center; }
+        .blog-cta h2 { font-size: 2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
+        .blog-cta p { font-size: 1.1rem; color: #1E2A3A; opacity: 0.75; margin-bottom: 24px; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #1E3A8A; color: #FFFFFF; padding: 48px 0 32px; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+        .footer-brand img { height: 34px; width: auto; display: block; }
+        .footer-links { display: flex; gap: 28px; font-weight: 400; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { transition: color 0.2s; }
+        .footer-links a:hover { color: #93BBFC; }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.10); border-radius: 50%; color: #FFFFFF; font-size: 1rem; transition: background 0.25s, transform 0.2s; }
+        .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+        .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            /* Mobile Menu Fix */
+            .header-inner { 
+                display: flex; 
+                flex-wrap: wrap; 
+                align-items: center; 
+                justify-content: space-between; 
+            }
+            
+            /* Logo and actions stay on one line */
+            .logo { flex: 1; }
+            .header-actions { display: flex; align-items: center; gap: 12px; }
+            
+            /* Hamburger always visible on mobile */
+            .hamburger { display: flex; }
+            
+            /* Navigation becomes full-width dropdown */
+            .nav-menu { 
+                display: none; 
+                flex-direction: column; 
+                width: 100%; 
+                gap: 12px; 
+                padding: 16px 0 8px; 
+                border-top: 1px solid rgba(30,58,138,0.06); 
+                order: 10; /* Push menu to the bottom */
+                align-items: flex-start;
+            }
+            .nav-menu.open { display: flex; }
+            .nav-menu a { 
+                padding: 4px 0; 
+                width: 100%; 
+                font-size: 1rem; 
+            }
+            
+            /* Button size on mobile */
+            .header-actions .btn-primary { 
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+            
+            .page-hero h1 { font-size: 2.2rem; }
+            .page-hero p { font-size: 1rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-card .content h3 { font-size: 1.1rem; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-social { justify-content: center; }
+            .blog-cta h2 { font-size: 1.6rem; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .container { padding: 0 16px; }
+            .blog-card .image { height: 160px; }
+            .header-actions { gap: 8px; }
+            .header-actions .btn-primary { 
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .logo { font-size: 1.2rem; }
+            .logo img { height: 32px; }
+        }
+
+        /* ===== UTILITY ===== */
+        .text-center { text-align: center; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="header-inner">
+            <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <span>VisOut</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="https://visout.com.ng/#services">Services</a>
+                <a href="https://visout.com.ng/#about">About</a>
+                <a href="https://visout.com.ng/#why-choose">Why Us</a>
+                <a href="https://visout.com.ng/#portfolio">Work</a>
+                <a href="https://visout.com.ng/#testimonials">Testimonials</a>
+                <a href="https://visout.com.ng/blog/">Blog</a>
+                <a href="https://visout.com.ng/#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>From Our Blog</h1>
+            <p>Insights, strategies, and stories to help your brand stand out.</p>
+        </div>
+    </section>
+
+    <!-- ===== BLOG GRID ===== -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card reveal">
+                    <div class="image">
+                        <img src="https://i.ibb.co/1GjC7RRK/IMG-20260630-130320-827.jpg" alt="Why African Brands Need Bold Visual Identity" />
+                    </div>
+                    <div class="content">
+                        <div class="date">June 29, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity/">Why African Brands Need Bold Visual Identity</a></h3>
+                        <p>African brands face unique challenges in standing out globally. Discover why bold visual identity is essential for capturing attention, building trust, and competing internationally.</p>
+                        <a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card reveal">
+                    <div class="image">
+                        <img src="https://i.ibb.co/1GmJbybW/IMG-20260630-124542-630.jpg" alt="AI Video Creation: The Future of Brand Storytelling" />
+                    </div>
+                    <div class="content">
+                        <div class="date">June 28, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling/">AI Video Creation: The Future of Brand Storytelling</a></h3>
+                        <p>Video content is taking over. Discover how AI-powered video creation can help your brand produce high-quality, engaging content at scale without breaking the bank.</p>
+                        <a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card reveal">
+                    <div class="image">
+                        <img src="https://i.ibb.co/0pT6690r/IMG-20260630-125549-898.jpg" alt="3 Strategies to Make Your Business Stand Out Digitally" />
+                    </div>
+                    <div class="content">
+                        <div class="date">June 27, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally/">3 Strategies to Make Your Business Stand Out Digitally</a></h3>
+                        <p>Standing out in the digital noise isn't about being louder—it's about being clearer. Here are 3 actionable strategies to differentiate your brand and capture attention.</p>
+                        <a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT CTA ===== -->
+    <section class="blog-cta reveal">
+        <div class="container">
+            <h2>Ready to Make Your Brand Stand Out?</h2>
+            <p>Let's talk about how VisOut can help you build a brand that gets noticed.</p>
+            <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                VisOut
+            </div>
+            <div class="footer-links">
+                <a href="https://visout.com.ng/#home">Home</a>
+                <a href="https://visout.com.ng/#services">Services</a>
+                <a href="https://visout.com.ng/#about">About</a>
+                <a href="https://visout.com.ng/#why-choose">Why Us</a>
+                <a href="https://visout.com.ng/#portfolio">Work</a>
+                <a href="https://visout.com.ng/#testimonials">Testimonials</a>
+                <a href="https://visout.com.ng/blog/">Blog</a>
+                <a href="https://visout.com.ng/case-studies/">Case Studies</a>
+                <a href="https://visout.com.ng/#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout.com.ng/">VisOut Brand Identity Agency</a>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+
+</body>
+</html>
