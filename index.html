@@ -176,6 +176,31 @@
         .service-card h3 { font-size: 1.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
         .service-card p { font-size: 0.95rem; color: #1E2A3A; opacity: 0.75; }
 
+        /* ===== SERVICE "LEARN MORE" LINK ===== */
+        .service-learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #3B82F6;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(59, 130, 246, 0.3);
+        }
+        .service-learn-more:hover {
+            color: #1E3A8A;
+        }
+        .service-learn-more i {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        .service-learn-more:hover i {
+            transform: translate(3px, -3px);
+        }
+
         /* ===== ABOUT ===== */
         .about { padding: 80px 0 90px; background: #F0F4FA; }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -392,39 +417,39 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-<section class="services" id="services">
-    <div class="container">
-        <h2 class="section-title centered">What We Do</h2>
-        <p class="section-subtitle centered">We turn invisible brands into unforgettable ones. Services include graphics design, AI video creation, brand consulting, and ongoing business support.</p>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <div class="icon"><i class="fas fa-pen-fancy"></i></div>
-                <h3>Graphics Design</h3>
-                <p>Logos, social templates, brand kits — everything you need to look polished and professional.</p>
-                <a href="https://visout.com.ng/services/graphic-design/" class="service-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card reveal">
-                <div class="icon"><i class="fas fa-video"></i></div>
-                <h3>AI Video Creation</h3>
-                <p>Short‑form videos, explainers, and AI avatars that capture attention in seconds.</p>
-                <a href="https://visout.com.ng/services/ai-video/" class="service-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card reveal">
-                <div class="icon"><i class="fas fa-lightbulb"></i></div>
-                <h3>Brand Consulting</h3>
-                <p>Identity workshops, positioning strategy, and messaging that resonates with your audience.</p>
-                <a href="https://visout.com.ng/services/brand-consulting/" class="service-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card reveal">
-                <div class="icon"><i class="fas fa-handshake"></i></div>
-                <h3>Business Support</h3>
-                <p>Ongoing assistance, performance tracking, and strategic guidance to keep you growing.</p>
-                <a href="https://visout.com.ng/services/business-support/" class="service-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+    <!-- ===== SERVICES (UPDATED WITH BLUE "LEARN MORE" LINKS) ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title centered">What We Do</h2>
+            <p class="section-subtitle centered">We turn invisible brands into unforgettable ones. Services include graphics design, AI video creation, brand consulting, and ongoing business support.</p>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3>Graphics Design</h3>
+                    <p>Logos, social templates, brand kits — everything you need to look polished and professional.</p>
+                    <a href="https://visout.com.ng/services/graphic-design/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-video"></i></div>
+                    <h3>AI Video Creation</h3>
+                    <p>Short‑form videos, explainers, and AI avatars that capture attention in seconds.</p>
+                    <a href="https://visout.com.ng/services/ai-video/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Brand Consulting</h3>
+                    <p>Identity workshops, positioning strategy, and messaging that resonates with your audience.</p>
+                    <a href="https://visout.com.ng/services/brand-consulting/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Business Support</h3>
+                    <p>Ongoing assistance, performance tracking, and strategic guidance to keep you growing.</p>
+                    <a href="https://visout.com.ng/services/business-support/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== ABOUT ===== -->
     <section class="about" id="about">
@@ -467,45 +492,46 @@
     </section>
 
     <!-- ===== PORTFOLIO ===== -->
-<section class="portfolio" id="portfolio">
-    <div class="container">
-        <h2 class="section-title centered">Our Work</h2>
-        <p class="section-subtitle centered">Real results for real brands.</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')">
-                    <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks for Modern Businesses" />
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title centered">Our Work</h2>
+            <p class="section-subtitle centered">Real results for real brands.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')">
+                        <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks for Modern Businesses" />
+                    </div>
+                    <div class="caption">
+                        <h3>Logo Gallery – Brand Marks for Modern Businesses</h3>
+                        <p>A showcase of custom logo concepts for brands in tech, lifestyle, and professional services. Each mark is crafted to be distinctive and scalable.</p>
+                    </div>
                 </div>
-                <div class="caption">
-                    <h3>Logo Gallery – Brand Marks for Modern Businesses</h3>
-                    <p>A showcase of custom logo concepts for brands in tech, lifestyle, and professional services. Each mark is crafted to be distinctive and scalable.</p>
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')">
+                        <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral – Event Flyers & Brand Materials" />
+                    </div>
+                    <div class="caption">
+                        <h3>Print & Promo Collateral – Event Flyers & Brand Materials</h3>
+                        <p>High-impact event and product flyers designed for print and digital use. Bold layouts, clear hierarchy, and brand-consistent styling.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')">
-                    <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral – Event Flyers & Brand Materials" />
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')">
+                        <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business cards and stationery" />
+                    </div>
+                    <div class="caption">
+                        <h3>Business cards and stationery</h3>
+                        <p>Business card and stationery mockup showing brand identity applied to print materials.</p>
+                    </div>
                 </div>
-                <div class="caption">
-                    <h3>Print & Promo Collateral – Event Flyers & Brand Materials</h3>
-                    <p>High-impact event and product flyers designed for print and digital use. Bold layouts, clear hierarchy, and brand-consistent styling.</p>
-                </div>
-            </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')">
-                    <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business cards and stationery" />
-                </div>
-                <div class="caption">
-                    <h3>Business cards and stationery</h3>
-                    <p>Business card and stationery mockup showing brand identity applied to print materials.</p>
-                </div>
-            </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')">
-                    <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="social media design" />
-                </div>
-                <div class="caption">
-                    <h3>social media design</h3>
-                    <p>Social media post design mockup on smartphone – digital brand graphics example.</p>
+                <div class="portfolio-item reveal">
+                    <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')">
+                        <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="social media design" />
+                    </div>
+                    <div class="caption">
+                        <h3>social media design</h3>
+                        <p>Social media post design mockup on smartphone – digital brand graphics example.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -515,9 +541,8 @@
             <a href="https://visout.com.ng/portfolio/" class="btn-primary">View All Work</a>
         </div>
         
-    </div>
-</section>
-    
+    </section>
+
     <!-- ===== CASE STUDIES ===== -->
     <section class="case-studies reveal">
         <div class="container">
@@ -594,61 +619,58 @@
     </section>
 
     <!-- ===== BLOG SECTION ===== -->
-<section class="blog" id="blog">
-    <div class="container">
-        <h2 class="section-title centered">From Our Blog</h2>
-        <p class="section-subtitle centered">Insights, strategies, and stories to help your brand stand out.</p>
-        <div class="blog-grid">
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title centered">From Our Blog</h2>
+            <p class="section-subtitle centered">Insights, strategies, and stories to help your brand stand out.</p>
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://i.ibb.co/1GjC7RRK/IMG-20260630-130320-827.jpg" alt="Why African Brands Need Bold Visual Identity" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 29, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity">Why African Brands Need Bold Visual Identity</a></h3>
+                        <p>African brands face unique challenges in standing out globally. Discover why bold visual identity is essential for capturing attention, building trust, and competing internationally.</p>
+                        <a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://i.ibb.co/1GmJbybW/IMG-20260630-124542-630.jpg" alt="AI Video Creation: The Future of Brand Storytelling" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 28, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling">AI Video Creation: The Future of Brand Storytelling</a></h3>
+                        <p>Video content is taking over. Discover how AI-powered video creation can help your brand produce high-quality, engaging content at scale without breaking the bank.</p>
+                        <a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://i.ibb.co/0pT6690r/IMG-20260630-125549-898.jpg" alt="3 Strategies to Make Your Business Stand Out Digitally" />
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 27, 2026</div>
+                        <h3><a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally">3 Strategies to Make Your Business Stand Out Digitally</a></h3>
+                        <p>Standing out in the digital noise isn't about being louder—it's about being clearer. Here are 3 actionable strategies to differentiate your brand and capture attention.</p>
+                        <a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
             
-            <!-- Blog Post 1 -->
-            <article class="blog-card reveal">
-                <div class="blog-image">
-                    <img src="https://i.ibb.co/1GjC7RRK/IMG-20260630-130320-827.jpg" alt="Why African Brands Need Bold Visual Identity" />
-                </div>
-                <div class="blog-content">
-                    <div class="blog-date">June 29, 2026</div>
-                    <h3><a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity">Why African Brands Need Bold Visual Identity</a></h3>
-                    <p>African brands face unique challenges in standing out globally. Discover why bold visual identity is essential for capturing attention, building trust, and competing internationally.</p>
-                    <a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Blog Post 2 -->
-            <article class="blog-card reveal">
-                <div class="blog-image">
-                    <img src="https://i.ibb.co/1GmJbybW/IMG-20260630-124542-630.jpg" alt="AI Video Creation: The Future of Brand Storytelling" />
-                </div>
-                <div class="blog-content">
-                    <div class="blog-date">June 28, 2026</div>
-                    <h3><a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling">AI Video Creation: The Future of Brand Storytelling</a></h3>
-                    <p>Video content is taking over. Discover how AI-powered video creation can help your brand produce high-quality, engaging content at scale without breaking the bank.</p>
-                    <a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Blog Post 3 -->
-            <article class="blog-card reveal">
-                <div class="blog-image">
-                    <img src="https://i.ibb.co/0pT6690r/IMG-20260630-125549-898.jpg" alt="3 Strategies to Make Your Business Stand Out Digitally" />
-                </div>
-                <div class="blog-content">
-                    <div class="blog-date">June 27, 2026</div>
-                    <h3><a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally">3 Strategies to Make Your Business Stand Out Digitally</a></h3>
-                    <p>Standing out in the digital noise isn't about being louder—it's about being clearer. Here are 3 actionable strategies to differentiate your brand and capture attention.</p>
-                    <a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
+            <!-- ===== VIEW ALL POSTS BUTTON ===== -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://visout.com.ng/blog/" class="btn-primary">View All Posts</a>
+            </div>
         </div>
-        
-        <!-- ===== VIEW ALL POSTS BUTTON ===== -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://visout.com.ng/blog/" class="btn-primary">View All Posts</a>
-        </div>
-        
-    </div>
     </section>
-    
+
     <!-- ===== CONTACT ===== -->
     <section class="contact" id="contact">
         <div class="container">
