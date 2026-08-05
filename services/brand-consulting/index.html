@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- ===== PRIMARY SEO TAGS ===== -->
+    <title>Brand Consulting – VisOut Brand Identity Agency</title>
+    <meta name="description" content="Strategic brand consulting services to define your positioning, refine your message, and build a brand that resonates. We help you stand out with clarity and purpose." />
+    <link rel="canonical" href="https://visout.com.ng/services/brand-consulting/" />
+    
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content="Brand Consulting – VisOut Brand Identity Agency" />
+    <meta property="og:description" content="Strategic brand consulting services to define your positioning, refine your message, and build a brand that resonates. We help you stand out with clarity and purpose." />
+    <meta property="og:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    <meta property="og:url" content="https://visout.com.ng/services/brand-consulting/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VisOut" />
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brand Consulting – VisOut Brand Identity Agency" />
+    <meta name="twitter:description" content="Strategic brand consulting services to define your positioning, refine your message, and build a brand that resonates. We help you stand out with clarity and purpose." />
+    <meta name="twitter:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    
+    <!-- ===== SCHEMA ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Brand Consulting Services",
+      "description": "Strategic brand consulting to define your positioning, refine your message, and build a brand that resonates.",
+      "provider": {
+        "@type": "Organization",
+        "name": "VisOut",
+        "url": "https://visout.com.ng/"
+      }
+    }
+    </script>
+    
+    <!-- ===== FONTS & STYLES ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary { display: inline-block; background: #1E3A8A; color: #FFFFFF; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-primary:hover { background: #0A2472; transform: translateY(-2px); }
+        .btn-secondary { display: inline-block; background: transparent; color: #1E3A8A; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: 2px solid #1E3A8A; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; text-align: center; }
+        .btn-secondary:hover { background: #1E3A8A; color: #FFFFFF; transform: translateY(-2px); }
+
+        /* ===== HEADER ===== */
+        header { background: #FFFFFF; padding: 16px 0; border-bottom: 1px solid rgba(30, 58, 138, 0.08); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; color: #1E3A8A; letter-spacing: -0.5px; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .logo span { color: #1E3A8A; }
+        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: #1E2A3A; flex-wrap: wrap; }
+        .nav-menu a { transition: color 0.2s; }
+        .nav-menu a:hover { color: #3B82F6; }
+        .header-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 26px; height: 3px; background: #1E3A8A; border-radius: 4px; transition: 0.25s; }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero { padding: 60px 0 60px; background: #FFFFFF; text-align: center; border-bottom: 1px solid rgba(30,58,138,0.06); }
+        .page-hero h1 { font-size: 3rem; font-weight: 800; color: #1E3A8A; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .page-hero p { font-size: 1.15rem; color: #1E2A3A; opacity: 0.75; max-width: 700px; margin: 0 auto; }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .service-section { padding: 70px 0; }
+        .service-section:nth-child(even) { background: #F0F4FA; }
+        .service-section .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .service-section h2 { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 16px; }
+        .service-section p { font-size: 1.05rem; color: #1E2A3A; opacity: 0.85; line-height: 1.8; margin-bottom: 16px; }
+        .service-section .highlight { background: rgba(30,58,138,0.06); padding: 4px 12px; border-left: 4px solid #1E3A8A; font-style: italic; margin: 20px 0; }
+
+        /* Process steps */
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 30px; }
+        .process-step { text-align: center; padding: 24px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(30,58,138,0.06); box-shadow: 0 4px 20px rgba(30,58,138,0.04); }
+        .process-step .step-number { display: inline-block; width: 48px; height: 48px; line-height: 48px; border-radius: 50%; background: #1E3A8A; color: #FFFFFF; font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; }
+        .process-step h4 { font-size: 1.1rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
+        .process-step p { font-size: 0.92rem; color: #1E2A3A; opacity: 0.7; line-height: 1.6; }
+
+        /* Portfolio examples (mini) - with lightbox */
+        .portfolio-examples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 16px; }
+        .portfolio-example { border-radius: 12px; overflow: hidden; background: #FFFFFF; border: 1px solid rgba(30,58,138,0.06); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .portfolio-example:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(30,58,138,0.10); }
+        .portfolio-example img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .portfolio-example .caption { padding: 12px 16px; font-weight: 600; color: #1E3A8A; font-size: 0.9rem; background: #FFFFFF; border-top: 1px solid rgba(30,58,138,0.04); }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+        }
+        .lightbox-overlay.active { display: flex; }
+        .lightbox-overlay img {
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            padding: 20px;
+            cursor: zoom-out;
+            touch-action: pan-y pinch-zoom;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            font-size: 2.4rem;
+            color: #FFFFFF;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000;
+            transition: background 0.2s;
+            font-weight: 300;
+            line-height: 1;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+        /* CTA */
+        .cta-section { padding: 70px 0; background: #1E3A8A; color: #FFFFFF; text-align: center; }
+        .cta-section h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+        .cta-section p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 28px; }
+        .cta-section .btn-primary { background: #FFFFFF; color: #1E3A8A; }
+        .cta-section .btn-primary:hover { background: #e8edf5; transform: translateY(-2px); }
+
+        /* ===== FOOTER ===== */
+        footer { background: #1E3A8A; color: #FFFFFF; padding: 48px 0 32px; margin-top: 0; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+        .footer-brand img { height: 34px; width: auto; display: block; }
+        .footer-links { display: flex; gap: 28px; font-weight: 400; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { transition: color 0.2s; }
+        .footer-links a:hover { color: #93BBFC; }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.10); border-radius: 50%; color: #FFFFFF; font-size: 1rem; transition: background 0.25s, transform 0.2s; }
+        .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+        .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .service-section .grid-2 { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-examples { grid-template-columns: repeat(2, 1fr); }
+            .service-section h2 { text-align: center; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { display: none; flex-direction: column; width: 100%; gap: 12px; padding: 16px 0 8px; border-top: 1px solid rgba(30,58,138,0.06); order: 10; }
+            .nav-menu.open { display: flex; }
+            .hamburger { display: flex; }
+            .header-inner { flex-wrap: wrap; }
+            .header-actions .btn-primary { padding: 8px 16px; font-size: 0.8rem; white-space: nowrap; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .page-hero p { font-size: 1rem; }
+            .service-section { padding: 50px 0; }
+            .service-section h2 { font-size: 1.8rem; }
+            .process-grid { grid-template-columns: 1fr; }
+            .portfolio-examples { grid-template-columns: 1fr; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-social { justify-content: center; }
+            .cta-section h2 { font-size: 1.8rem; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .header-actions .btn-primary { padding: 6px 12px; font-size: 0.75rem; }
+            .logo { font-size: 1.2rem; }
+            .logo img { height: 32px; }
+            .service-section h2 { font-size: 1.5rem; }
+            .cta-section h2 { font-size: 1.5rem; }
+        }
+
+        /* ===== UTILITY ===== */
+        .text-center { text-align: center; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="header-inner">
+            <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <span>VisOut</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="https://visout.com.ng/#services">Services</a>
+                <a href="https://visout.com.ng/#about">About</a>
+                <a href="https://visout.com.ng/#why-choose">Why Us</a>
+                <a href="https://visout.com.ng/#portfolio">Work</a>
+                <a href="https://visout.com.ng/#testimonials">Testimonials</a>
+                <a href="https://visout.com.ng/blog/">Blog</a>
+                <a href="https://visout.com.ng/#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Brand Consulting That Builds Clarity & Confidence</h1>
+            <p>We help you define your brand's purpose, position, and message — so you can stand out with clarity and connect with the right audience.</p>
+        </div>
+    </section>
+
+    <!-- ===== WHAT WE DO ===== -->
+    <section class="service-section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>What We Do</h2>
+                    <p>Our brand consulting services go beyond aesthetics. We dig deep to understand your business, your customers, and your market — then we build a strategy that makes your brand impossible to ignore.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px;">
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-bullseye" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Positioning</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Define your unique space in the market.</p></div>
+                        </div>
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-comment-dots" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Messaging</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Craft a compelling brand story.</p></div>
+                        </div>
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-users" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Audience Insight</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Understand your ideal customers deeply.</p></div>
+                        </div>
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-chart-line" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Strategy</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Build a roadmap for brand growth.</p></div>
+                        </div>
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-flag" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Differentiation</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Stand out from competitors.</p></div>
+                        </div>
+                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-file-alt" style="color: #1E3A8A; font-size: 1.2rem;"></i>
+                            <div><strong style="font-size: 0.85rem;">Brand Guidelines</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">A clear playbook for your team.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: linear-gradient(135deg, #1E3A8A, #3B82F6); border-radius: 16px; padding: 40px; color: #FFFFFF; text-align: center; min-height: 260px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <i class="fas fa-lightbulb" style="font-size: 4rem; opacity: 0.5; margin-bottom: 12px;"></i>
+                        <p style="font-size: 1.2rem; font-weight: 600; opacity: 0.8;">Strategy first. Always.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.6; max-width: 300px;">We build the foundation before we build the visuals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY WE'RE DIFFERENT ===== -->
+    <section class="service-section" style="background: #F0F4FA;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Why We're Different -->
+                <div style="margin-bottom: 50px;">
+                    <h2 style="text-align: center;">Why We're Different</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto 16px;">Most consultants give you a report and walk away. We partner with you to build a strategy that's actionable, measurable, and aligned with your business goals.</p>
+                    <div class="highlight" style="text-align: center;">
+                        "We don't just tell you what to do — we show you how to do it and we stay with you until it's done."
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
+                            <i class="fas fa-user-check" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                            <strong style="font-size: 0.9rem;">Customised</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">Every brand is unique — our approach is too.</p>
+                        </div>
+                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
+                            <i class="fas fa-clock" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                            <strong style="font-size: 0.9rem;">Actionable</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">You'll walk away with a clear roadmap.</p>
+                        </div>
+                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
+                            <i class="fas fa-hand-holding-heart" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                            <strong style="font-size: 0.9rem;">Supportive</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">We guide you through every step.</p>
+                        </div>
+                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
+                            <i class="fas fa-sync-alt" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
+                            <strong style="font-size: 0.9rem;">Iterative</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">We test, learn, and refine together.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What You Get -->
+                <div style="background: #FFFFFF; padding: 40px 48px; border-radius: 12px; border: 1px solid rgba(30,58,138,0.06);">
+                    <h2 style="text-align: center; margin-top: 0;">What You Get</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; max-width: 700px; margin: 0 auto;">
+                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                            <span><strong>Brand Positioning</strong> – A clear, defensible position.</span>
+                        </div>
+                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                            <span><strong>Messaging Framework</strong> – Consistent, compelling communication.</span>
+                        </div>
+                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                            <span><strong>Audience Personas</strong> – Deep understanding of your customers.</span>
+                        </div>
+                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem;"></i>
+                            <span><strong>Actionable Strategy</strong> – A roadmap to brand growth.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUR PROCESS ===== -->
+    <section class="service-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem;">Our Process</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">We follow a structured process to ensure every brand strategy is grounded in research, insight, and clarity.</p>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="step-number">1</div>
+                    <h4>Discovery & Audit</h4>
+                    <p>We analyse your business, your competitors, and your market to understand where you stand today.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">2</div>
+                    <h4>Insights & Opportunity</h4>
+                    <p>We identify gaps, opportunities, and the unique value you bring to your audience.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">3</div>
+                    <h4>Strategy Development</h4>
+                    <p>We craft a brand strategy — including positioning, messaging, and personality — that sets you apart.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">4</div>
+                    <h4>Delivery & Activation</h4>
+                    <p>We deliver a clear strategy document and guide you through implementation.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">5</div>
+                    <h4>Ongoing Partnership</h4>
+                    <p>We stay available to help you refine and evolve your brand as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO EXAMPLES (WITH LIGHTBOX) ===== -->
+    <section class="service-section" style="background: #F0F4FA;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem;">Brand Consulting Results</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">Real outcomes from brands we've helped reposition and refine.</p>
+            <div class="portfolio-examples">
+                <div class="portfolio-example" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')">
+                    <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Brand Strategy Workshop">
+                    <div class="caption">Brand Strategy Workshop</div>
+                </div>
+                <div class="portfolio-example" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')">
+                    <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Positioning & Messaging">
+                    <div class="caption">Positioning & Messaging</div>
+                </div>
+                <div class="portfolio-example" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')">
+                    <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Brand Guidelines">
+                    <div class="caption">Brand Guidelines</div>
+                </div>
+                <div class="portfolio-example" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')">
+                    <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="Audience Personas">
+                    <div class="caption">Audience Personas</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://visout.com.ng/portfolio/" class="btn-secondary">View Full Portfolio →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build a Brand That Stands on Solid Ground?</h2>
+            <p>Let's define your strategy, refine your message, and set you up for long‑term success.</p>
+            <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- ===== LIGHTBOX OVERLAY ===== -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image">&times;</button>
+        <img id="lightboxImage" src="" alt="Enlarged view" />
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                VisOut
+            </div>
+            <div class="footer-links">
+                <a href="https://visout.com.ng/#home">Home</a>
+                <a href="https://visout.com.ng/#services">Services</a>
+                <a href="https://visout.com.ng/#about">About</a>
+                <a href="https://visout.com.ng/#why-choose">Why Us</a>
+                <a href="https://visout.com.ng/#portfolio">Work</a>
+                <a href="https://visout.com.ng/#testimonials">Testimonials</a>
+                <a href="https://visout.com.ng/blog/">Blog</a>
+                <a href="https://visout.com.ng/case-studies/">Case Studies</a>
+                <a href="https://visout.com.ng/#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout.com.ng/">VisOut Brand Identity Agency</a>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== LIGHTBOX FUNCTIONS =====
+        const overlay = document.getElementById('lightboxOverlay');
+        const lightboxImg = document.getElementById('lightboxImage');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (e.target === overlay || e.target.tagName === 'BUTTON' || e.target === lightboxImg) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
