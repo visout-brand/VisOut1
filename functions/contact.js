@@ -2,7 +2,6 @@ console.log('✅ Function is being called!');
 console.log('API Token exists:', !!context.env.CLOUDFLARE_API_TOKEN);
 console.log('Account ID exists:', !!context.env.CLOUDFLARE_ACCOUNT_ID);
 
-// functions/contact.js
 export async function onRequest(context) {
     const { request } = context;
     
@@ -24,6 +23,21 @@ export async function onRequest(context) {
                 JSON.stringify({ 
                     success: false, 
                     message: 'Please fill in all fields.' 
+                }),
+                { 
+                    status: 400,
+                    headers: { 'Content-Type': 'application/json' }
+                }
+            );
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return new Response(
+                JSON.stringify({ 
+                    success: false, 
+                    message: 'Please enter a valid email address.' 
                 }),
                 { 
                     status: 400,
