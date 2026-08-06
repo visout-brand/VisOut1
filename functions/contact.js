@@ -1,7 +1,3 @@
-console.log('✅ Function is being called!');
-console.log('API Token exists:', !!context.env.CLOUDFLARE_API_TOKEN);
-console.log('Account ID exists:', !!context.env.CLOUDFLARE_ACCOUNT_ID);
-
 export async function onRequest(context) {
     const { request } = context;
     
