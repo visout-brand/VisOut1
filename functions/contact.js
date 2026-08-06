@@ -28,30 +28,42 @@ export async function onRequest(context) {
             );
         }
         
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
+        // Get API credentials from environment
+        const apiToken = context.env.CLOUDFLARE_API_TOKEN;
+        const accountId = context.env.CLOUDFLARE_ACCOUNT_ID;
+        
+        if (!apiToken || !accountId) {
+            console.error('Missing API credentials');
             return new Response(
                 JSON.stringify({ 
                     success: false, 
-                    message: 'Please enter a valid email address.' 
+                    message: 'Configuration error. Please contact the site owner.' 
                 }),
                 { 
-                    status: 400,
+                    status: 500,
                     headers: { 'Content-Type': 'application/json' }
                 }
             );
         }
         
-        // Send email via Cloudflare's Email API
-        // You'll need to create an API token (instructions below)
-        const apiToken = context.env.CLOUDFLARE_API_TOKEN;
-        const accountId = context.env.CLOUDFLARE_ACCOUNT_ID;
+        // Prepare email data
+        const emailData = {
+            personalization: {
+                to: [{ email: 'hello@visout.com.ng' }]
+            },
+            from: {
+                email: 'hello@visout.com.ng'
+            },
+            subject: `New Contact Form Submission from ${name}`,
+            content: [
+                {
+                    type: 'text/plain',
+                    value: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+                }
+            ]
+        };
         
-        if (!apiToken || !accountId) {
-            throw new Error('Missing API credentials');
-        }
-        
+        // Send email using Cloudflare's Email API
         const emailResponse = await fetch(
             `https://api.cloudflare.com/client/v4/accounts/${accountId}/email/routing/email`,
             {
@@ -60,28 +72,15 @@ export async function onRequest(context) {
                     'Authorization': `Bearer ${apiToken}`,
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    personalization: {
-                        to: [{ email: 'hello@visout.com.ng' }]
-                    },
-                    from: {
-                        email: 'hello@visout.com.ng'
-                    },
-                    subject: `New Contact Form Submission from ${name}`,
-                    content: [
-                        {
-                            type: 'text/plain',
-                            value: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-                        }
-                    ]
-                })
+                body: JSON.stringify(emailData)
             }
         );
         
+        const emailResult = await emailResponse.text();
+        console.log('Email API response:', emailResult);
+        
         if (!emailResponse.ok) {
-            const errorData = await emailResponse.text();
-            console.error('Email API error:', errorData);
-            throw new Error('Failed to send email');
+            throw new Error(`Email API error: ${emailResponse.status} - ${emailResult}`);
         }
         
         // Return success
@@ -97,7 +96,7 @@ export async function onRequest(context) {
         );
         
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error:', error.message);
         return new Response(
             JSON.stringify({ 
                 success: false, 
