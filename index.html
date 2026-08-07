@@ -672,65 +672,61 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT (UPDATED WITH FORMSUBMIT) ===== -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form reveal">
-                    <h2>Let's Work Together</h2>
-                    <p>Ready to stand out? Drop us a message and we'll get back to you within 24 hours.</p>
-                    <form id="contactForm" action="https://formsubmit.co/b543d2846314d4bdccc105256286d085" method="POST">
-                        <!-- Honeypot (spam protection) -->
-                        <input type="text" name="_honey" style="display:none;">
-                        <!-- Disable CAPTCHA (remove this line if you want CAPTCHA) -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Redirect after submission (stay on page) -->
-                        <input type="hidden" name="_next" value="https://visout.com.ng/#contact">
-                        
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Triumph M. C." required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="hello@visout.com.ng" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your brand and goals..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
-                    </form>
-                    <div id="form-status" style="display:none; margin-top: 16px; padding: 12px; border-radius: 8px; text-align: center; font-weight: 500;"></div>
+    <!-- ===== CONTACT (UPDATED) ===== -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form reveal">
+                <h2>Let's Work Together</h2>
+                <p>Ready to stand out? Drop us a message and we'll get back to you within 24 hours.</p>
+                <form id="contactForm" action="https://formsubmit.co/hello@visout.com.ng" method="POST">
+                    <!-- Honeypot (spam protection) -->
+                    <input type="text" name="_honey" style="display:none;">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Triumph M. C." required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="hello@visout.com.ng" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your brand and goals..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                </form>
+                <div id="form-status" style="display:none; margin-top: 16px; padding: 12px; border-radius: 8px; text-align: center; font-weight: 500;"></div>
+            </div>
+            <div class="contact-info reveal">
+                <h3>Connect with us</h3>
+                <p>We'd love to hear from you. Reach out through any of the channels below.</p>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:hello@visout.com.ng">hello@visout.com.ng</a>
                 </div>
-                <div class="contact-info reveal">
-                    <h3>Connect with us</h3>
-                    <p>We'd love to hear from you. Reach out through any of the channels below.</p>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:hello@visout.com.ng">hello@visout.com.ng</a>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/2348145669035" target="_blank">+234 814 566 9035</a>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fab fa-facebook-f"></i>
-                        <a href="https://facebook.com/visoutbrand" target="_blank">VisOut</a>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fab fa-instagram"></i>
-                        <a href="https://instagram.com/visoutbrand" target="_blank">VisOut</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+                <div class="contact-detail">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/2348145669035" target="_blank">+234 814 566 9035</a>
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="https://facebook.com/visoutbrand" target="_blank">VisOut</a>
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://instagram.com/visoutbrand" target="_blank">VisOut</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -823,9 +819,12 @@
                         statusDiv.style.color = response.ok ? '#1E3A8A' : '#c62828';
                         statusDiv.textContent = response.ok ? 'Thank you! Your message has been sent. We\'ll get back to you soon.' : 'Oops! Something went wrong. Please try again.';
                         
+                        // Inside the fetch response handler
                         if (response.ok) {
-                            form.reset();
-                        }
+                        form.reset();
+                        // Show success message without redirecting
+                     }
+                        
                     } catch (error) {
                         statusDiv.style.display = 'block';
                         statusDiv.style.background = '#ffebee';
