@@ -37,7 +37,7 @@
     <meta name="twitter:description" content="VisOut helps businesses break through digital noise with AI video creation, brand consulting, web design, and professional graphic design. See beyond. Stand out." />
     <meta name="twitter:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
     
-    <!-- ===== ORGANIZATION SCHEMA ===== -->
+    <!-- ===== ORGANIZATION SCHEMA (removed foundingDate) ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,7 +47,6 @@
       "url": "https://visout.com.ng/",
       "logo": "https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg",
       "email": "hello@visout.com.ng",
-      "foundingDate": "2026-04",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "NG"
@@ -92,14 +91,31 @@
     <!-- ===== FONTS & STYLES ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Load Poppins only for headings and specific elements, with swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome – deferred to avoid render blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <style>
         /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        /* System font stack for body, Poppins for headings and specific elements */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #1E2A3A;
+            background: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6,
+        .logo, .btn-primary, .btn-secondary, .btn-header-cta,
+        .nav-menu a, .service-card h3, .benefit h3, .portfolio-item .caption h3,
+        .testimonial-card .client .name, .blog-content h3, .contact-form h2,
+        .contact-info h3, .footer-brand, .section-title, .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+        }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; }
@@ -123,11 +139,11 @@
         .nav-menu a:hover { color: #3B82F6; }
         .header-actions { display: flex; align-items: center; gap: 20px; }
         
-        /* ===== HEADER "CONTACT US" BUTTON ===== */
+        /* ===== HEADER "CONTACT US" BUTTON – visible by default, hidden when hero in view ===== */
         .header-actions .btn-header-cta {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-6px);
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
             transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
             background: #1E3A8A;
             color: #FFFFFF;
@@ -137,18 +153,19 @@
             font-size: 0.9rem;
             border: none;
             cursor: pointer;
-            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, background 0.25s ease;
             text-align: center;
             white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
         }
         .header-actions .btn-header-cta:hover {
             background: #0A2472;
             transform: translateY(-2px);
         }
-        .header-actions .btn-header-cta.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        /* Hidden state when hero is in view */
+        .header-actions .btn-header-cta.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
         }
         
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
@@ -222,20 +239,38 @@
         .benefit h3 { font-size: 1.15rem; font-weight: 700; color: #1E3A8A; margin-bottom: 6px; }
         .benefit p { font-size: 0.95rem; color: #1E2A3A; opacity: 0.75; }
 
-        /* ===== PORTFOLIO (FIXED) ===== */
+        /* ===== PORTFOLIO ===== */
         .portfolio { padding: 80px 0 90px; background: #F0F4FA; }
         .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
         .portfolio-item { border-radius: 12px; overflow: hidden; background: #FFFFFF; box-shadow: 0 4px 16px rgba(30,58,138,0.06); border: 1px solid rgba(30,58,138,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .portfolio-item:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,58,138,0.10); }
-        .portfolio-item .image-wrapper { cursor: zoom-in; display: block; overflow: hidden; }
-        .portfolio-item .image-wrapper img { width: 100%; height: 200px; object-fit: cover; display: block; transition: opacity 0.2s ease; }
+        /* Make image wrapper a button for accessibility */
+        .portfolio-item .image-wrapper {
+            cursor: zoom-in;
+            display: block;
+            overflow: hidden;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 100%;
+            text-align: left;
+        }
+        .portfolio-item .image-wrapper:focus-visible {
+            outline: 2px solid #3B82F6;
+            outline-offset: 2px;
+        }
+        .portfolio-item .image-wrapper img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.2s ease;
+        }
         .portfolio-item .image-wrapper:hover img { opacity: 0.92; }
         .portfolio-item .caption { padding: 16px 20px 18px; background: #FFFFFF; border-top: 1px solid rgba(30,58,138,0.04); }
         .portfolio-item .caption h3 { font-size: 1.05rem; font-weight: 700; color: #1E3A8A; margin-bottom: 4px; }
         .portfolio-item .caption p { font-size: 0.88rem; color: #1E2A3A; opacity: 0.7; line-height: 1.5; margin-top: 2px; }
-        .section-subtitle .highlight-link:hover {
-    color: #3B82F6 !important;
-    }
+
         /* ===== CASE STUDIES ===== */
         .case-studies { padding: 60px 0 70px; background: #FFFFFF; text-align: center; }
         .case-studies .cta-text { font-size: 1.2rem; color: #1E2A3A; opacity: 0.85; }
@@ -279,11 +314,59 @@
         .blog-read-more:hover i { transform: translateX(4px); }
 
         /* ===== LIGHTBOX ===== */
-        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.92); z-index: 9999; display: none; justify-content: center; align-items: center; overflow: hidden; touch-action: pan-y pinch-zoom; }
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+            /* focus trap will be handled by JS */
+        }
         .lightbox-overlay.active { display: flex; }
-        .lightbox-overlay img { display: block; max-width: 90vw; max-height: 90vh; width: auto; height: auto; object-fit: contain; padding: 20px; cursor: zoom-out; touch-action: pan-y pinch-zoom; box-shadow: 0 8px 40px rgba(0,0,0,0.4); }
-        .lightbox-close { position: fixed; top: 16px; right: 24px; font-size: 2.4rem; color: #FFFFFF; background: rgba(255,255,255,0.15); border: none; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; transition: background 0.2s; font-weight: 300; line-height: 1; }
+        .lightbox-overlay img {
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            padding: 20px;
+            cursor: zoom-out;
+            touch-action: pan-y pinch-zoom;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 24px;
+            font-size: 2.4rem;
+            color: #FFFFFF;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000;
+            transition: background 0.2s;
+            font-weight: 300;
+            line-height: 1;
+        }
         .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-close:focus-visible {
+            outline: 2px solid #FFFFFF;
+            outline-offset: 2px;
+        }
 
         /* ===== CONTACT ===== */
         .contact { padding: 80px 0 90px; background: #FFFFFF; }
@@ -434,25 +517,25 @@
                     <div class="icon"><i class="fas fa-pen-fancy"></i></div>
                     <h3>Graphic Design</h3>
                     <p>Logos, social templates, brand kits — everything you need to look polished and professional.</p>
-                    <a href="https://visout.com.ng/services/graphic-design/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://visout.com.ng/services/graphic-design/" class="service-learn-more" target="_blank" rel="noopener noreferrer">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <div class="icon"><i class="fas fa-video"></i></div>
                     <h3>AI Video Creation</h3>
                     <p>Short‑form videos, explainers, and AI avatars that capture attention in seconds.</p>
-                    <a href="https://visout.com.ng/services/ai-video/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://visout.com.ng/services/ai-video/" class="service-learn-more" target="_blank" rel="noopener noreferrer">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <div class="icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>Brand Consulting</h3>
                     <p>Identity workshops, positioning strategy, and messaging that resonates with your audience.</p>
-                    <a href="https://visout.com.ng/services/brand-consulting/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://visout.com.ng/services/brand-consulting/" class="service-learn-more" target="_blank" rel="noopener noreferrer">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <div class="icon"><i class="fas fa-code"></i></div>
                     <h3>Web Design</h3>
                     <p>Beautiful, fast, SEO-Optimized, brand-focused websites that tell your story and convert visitors.</p>
-                    <a href="https://visout.com.ng/services/web-design/" class="service-learn-more">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://visout.com.ng/services/web-design/" class="service-learn-more" target="_blank" rel="noopener noreferrer">Learn More <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -464,7 +547,7 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <h2>Why VisOut Exists</h2>
-                    <p>VisOut was founded by Triumph M. C. in April 2026 after watching too many promising businesses vanish within their first year. We realized great products fail not because they're bad — but because nobody notices them. So we created VisOut to fix that. Today, we help African brands transform their digital presence through bold visuals and smart strategy.</p>
+                    <p>VisOut is a brand identity agency that believes great products deserve to be seen. We specialize in turning invisible brands into unforgettable ones through a powerful combination of AI-driven creativity and human strategy. Our team brings years of experience in design, consulting, and digital marketing to help African businesses stand out in a crowded market. We don't just decorate brands—we build them for the long haul. From logos and websites to AI video and brand positioning, we provide the tools and insight you need to capture attention, build trust, and drive growth.</p>
                 </div>
                 <div class="about-visual reveal">
                     <img src="https://i.ibb.co/s9HHs2Hp/IMG-20260616-121044-708.jpg" alt="About VisOut" />
@@ -498,57 +581,56 @@
         </div>
     </section>
 
-    <!-- ===== PORTFOLIO (FIXED) ===== -->
     <!-- ===== PORTFOLIO ===== -->
-<section class="portfolio" id="portfolio">
-    <div class="container">
-        <h2 class="section-title centered">Our Work</h2>
-        <p class="section-subtitle centered">A curated selection of our graphic design projects. To explore our full range of services — including AI video creation, brand consulting, and web design — <a href="https://visout.com.ng/#services" class="highlight-link" style="color: #1E3A8A; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease;">click here</a>.</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')">
-                    <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks for Modern Businesses" />
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title centered">Our Work</h2>
+            <p class="section-subtitle centered">A curated selection of our graphic design projects. To explore our full range of services — including AI video creation, brand consulting, and web design — <a href="https://visout.com.ng/#services" class="highlight-link" style="color: #1E3A8A; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease;">click here</a>.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal">
+                    <button class="image-wrapper" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Logo Gallery" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg'); }">
+                        <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks for Modern Businesses" />
+                    </button>
+                    <div class="caption">
+                        <h3>Logo Gallery – Brand Marks for Modern Businesses</h3>
+                        <p>A showcase of custom logo concepts for brands in tech, lifestyle, and professional services. Each mark is crafted to be distinctive and scalable.</p>
+                    </div>
                 </div>
-                <div class="caption">
-                    <h3>Logo Gallery – Brand Marks for Modern Businesses</h3>
-                    <p>A showcase of custom logo concepts for brands in tech, lifestyle, and professional services. Each mark is crafted to be distinctive and scalable.</p>
+                <div class="portfolio-item reveal">
+                    <button class="image-wrapper" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Print & Promo Collateral" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg'); }">
+                        <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral – Event Flyers & Brand Materials" />
+                    </button>
+                    <div class="caption">
+                        <h3>Print & Promo Collateral – Event Flyers & Brand Materials</h3>
+                        <p>High-impact event and product flyers designed for print and digital use. Bold layouts, clear hierarchy, and brand-consistent styling.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <button class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')" role="button" tabindex="0" aria-label="View full size image of Business cards and stationery" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg'); }">
+                        <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business cards and stationery" />
+                    </button>
+                    <div class="caption">
+                        <h3>Business cards and stationery</h3>
+                        <p>Business card and stationery mockup showing brand identity applied to print materials.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <button class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Social media design" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg'); }">
+                        <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="social media design" />
+                    </button>
+                    <div class="caption">
+                        <h3>social media design</h3>
+                        <p>Social media post design mockup on smartphone – digital brand graphics example.</p>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')">
-                    <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral – Event Flyers & Brand Materials" />
-                </div>
-                <div class="caption">
-                    <h3>Print & Promo Collateral – Event Flyers & Brand Materials</h3>
-                    <p>High-impact event and product flyers designed for print and digital use. Bold layouts, clear hierarchy, and brand-consistent styling.</p>
-                </div>
-            </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')">
-                    <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business cards and stationery" />
-                </div>
-                <div class="caption">
-                    <h3>Business cards and stationery</h3>
-                    <p>Business card and stationery mockup showing brand identity applied to print materials.</p>
-                </div>
-            </div>
-            <div class="portfolio-item reveal">
-                <div class="image-wrapper" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')">
-                    <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="social media design" />
-                </div>
-                <div class="caption">
-                    <h3>social media design</h3>
-                    <p>Social media post design mockup on smartphone – digital brand graphics example.</p>
-                </div>
+            
+            <!-- ===== VIEW ALL WORK BUTTON ===== -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://visout.com.ng/portfolio/" class="btn-primary">View All Work</a>
             </div>
         </div>
-        
-        <!-- ===== VIEW ALL WORK BUTTON ===== -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://visout.com.ng/portfolio/" class="btn-primary">View All Work</a>
-        </div>
-    </div>
-</section>
+    </section>
     
     <!-- ===== CASE STUDIES ===== -->
     <section class="case-studies reveal">
@@ -772,8 +854,8 @@
     </footer>
 
     <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image">&times;</button>
+    <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
         <img id="lightboxImage" src="" alt="Enlarged view" />
     </div>
 
@@ -874,27 +956,88 @@
             }
         }
 
-        // Lightbox
+        // ===== LIGHTBOX (with focus management and keyboard support) =====
         const overlay = document.getElementById('lightboxOverlay');
         const lightboxImg = document.getElementById('lightboxImage');
+        const closeBtn = document.getElementById('lightboxClose');
+        let focusableElements = [];
+        let firstFocusable = null;
+        let lastFocusable = null;
 
         function openLightbox(imageSrc) {
             lightboxImg.src = imageSrc;
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            // Move focus to the close button
+            closeBtn.focus();
+            // Trap focus inside the lightbox
+            trapFocus(true);
         }
 
-        function closeLightbox(e) {
-            if (e.target === overlay || e.target.tagName === 'BUTTON' || e.target === lightboxImg) {
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
+        function closeLightbox() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Return focus to the triggering element if possible
+            // We'll store the active element before opening? For simplicity, we just return focus to body.
+            // But better: we can store the last focused button.
+            // We'll implement a simple approach: focus the first image wrapper if found.
+            const firstWrapper = document.querySelector('.portfolio-item .image-wrapper');
+            if (firstWrapper) firstWrapper.focus();
+            trapFocus(false);
+        }
+
+        // Trap focus inside the overlay
+        function trapFocus(enable) {
+            if (enable) {
+                // Get all focusable elements inside overlay (only close button and img? img isn't focusable)
+                // Actually we want to trap only the close button and maybe the image is not focusable.
+                // We'll focus the close button and prevent tab from leaving.
+                const focusable = overlay.querySelectorAll('button, [tabindex="0"]');
+                if (focusable.length > 0) {
+                    firstFocusable = focusable[0];
+                    lastFocusable = focusable[focusable.length - 1];
+                }
+                // Add keydown listener to overlay
+                overlay.addEventListener('keydown', trapKeydown);
+            } else {
+                overlay.removeEventListener('keydown', trapKeydown);
             }
         }
 
+        function trapKeydown(e) {
+            if (e.key === 'Tab') {
+                // Shift+Tab
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        }
+
+        // Close on overlay click (but not on image click)
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeLightbox();
+            }
+        });
+
+        // Close on close button click
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Keyboard shortcut for Escape (already handled in trapKeydown, but also global)
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
+                closeLightbox();
             }
         });
 
@@ -911,10 +1054,12 @@
             function handleScroll() {
                 const heroBottom = getHeroButtonBottom();
                 const headerHeight = document.querySelector('header').offsetHeight;
+                // If hero button bottom is above header (i.e., scrolled past), show the CTA.
+                // Otherwise hide it.
                 if (heroBottom < headerHeight + 20) {
-                    headerCta.classList.add('visible');
+                    headerCta.classList.remove('hidden');
                 } else {
-                    headerCta.classList.remove('visible');
+                    headerCta.classList.add('hidden');
                 }
             }
 
