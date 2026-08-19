@@ -13,7 +13,11 @@
     <!-- ===== PRIMARY SEO TAGS ===== -->
     <title>Web Design – VisOut Brand Identity Agency</title>
     <meta name="description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors. We build websites that work as hard as your brand." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://visout.com.ng/services/web-design/" />
+    
+    <!-- ===== HREFLANG (Fixes Agent Blocking) ===== -->
+    <link rel="alternate" hreflang="en" href="https://visout.com.ng/services/web-design/" />
     
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Web Design – VisOut Brand Identity Agency" />
@@ -44,20 +48,39 @@
     }
     </script>
     
-    <!-- ===== FONTS & STYLES ===== -->
+    <!-- ===== FONTS & STYLES (NON-RENDER-BLOCKING) ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Poppins loads asynchronously so it doesn't block page paint -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
+    </noscript>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <style>
         /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1E2A3A;
+            background: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6,
+        .logo, .btn-primary, .btn-secondary,
+        .nav-menu a, .process-step h4,
+        .cta-section h2, .footer-brand, .page-hero h1,
+        .showcase-caption {
+            font-family: 'Poppins', sans-serif;
+        }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; height: auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ===== BUTTONS ===== */
@@ -218,7 +241,7 @@
     <header>
         <div class="header-inner">
             <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="40" height="40" loading="eager" />
                 <span>VisOut</span>
             </a>
             <nav class="nav-menu" id="navMenu">
@@ -232,7 +255,7 @@
             </nav>
             <div class="header-actions">
                 <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -393,7 +416,7 @@
             <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">Every website we create is crafted to reflect your brand's unique identity and drive real results.</p>
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="showcase-image" onclick="openLightbox('https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg')" style="cursor: pointer;">
-                    <img src="https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg" alt="Example of a brand-focused website design" />
+                    <img src="https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg" alt="Example of a brand-focused website design" width="800" height="450" loading="lazy" />
                 </div>
                 <p class="showcase-caption">An example of what we can build for your brand — clean, modern, and designed to convert.</p>
             </div>
@@ -419,7 +442,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="34" height="34" loading="lazy" />
                 VisOut
             </div>
             <div class="footer-links">
@@ -450,11 +473,13 @@
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
         });
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -480,12 +505,18 @@
         }
 
         function closeLightbox(e) {
-            if (e.target === overlay || e.target.tagName === 'BUTTON' || e.target === lightboxImg) {
+            // Only close if clicking the overlay background or the close button
+            if (e.target === overlay || e.target.tagName === 'BUTTON') {
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
             }
+            // Prevent closing when clicking the image itself
+            if (e.target === lightboxImg) {
+                e.stopPropagation();
+            }
         }
 
+        // Keyboard escape
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && overlay.classList.contains('active')) {
                 overlay.classList.remove('active');
