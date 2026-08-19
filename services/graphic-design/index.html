@@ -13,7 +13,11 @@
     <!-- ===== PRIMARY SEO TAGS ===== -->
     <title>Graphic Design – VisOut Brand Identity Agency</title>
     <meta name="description" content="Professional graphic design services including logos, brand kits, social templates, and more. We create visuals that make your brand unforgettable." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://visout.com.ng/services/graphic-design/" />
+    
+    <!-- ===== HREFLANG (Fixes Agent Blocking) ===== -->
+    <link rel="alternate" hreflang="en" href="https://visout.com.ng/services/graphic-design/" />
     
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Graphic Design – VisOut Brand Identity Agency" />
@@ -44,10 +48,15 @@
     }
     </script>
     
-    <!-- ===== FONTS & STYLES ===== -->
+    <!-- ===== FONTS & STYLES (NON-RENDER-BLOCKING) ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <!-- Poppins loads asynchronously so it doesn't block page paint -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
+    </noscript>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
@@ -69,7 +78,7 @@
         }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; height: auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         .btn-primary { display: inline-block; background: #1E3A8A; color: #FFFFFF; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.25s ease, transform 0.2s ease; text-align: center; }
@@ -325,7 +334,7 @@
     <header>
         <div class="header-inner">
             <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="40" height="40" loading="eager" />
                 <span>VisOut</span>
             </a>
             <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
@@ -524,19 +533,19 @@
                 <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">A glimpse of our work — each project is tailored to the brand's unique identity.</p>
                 <div class="portfolio-examples">
                     <button class="portfolio-example" onclick="openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Logo Gallery" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg'); }">
-                        <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks">
+                        <img src="https://i.ibb.co/jknpYP4J/20260617-093631-transcpr.jpg" alt="Logo Gallery – Brand Marks" width="600" height="400" loading="lazy" />
                         <div class="caption">Logo Gallery – Brand Marks</div>
                     </button>
                     <button class="portfolio-example" onclick="openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Print & Promo Collateral" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg'); }">
-                        <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral">
+                        <img src="https://i.ibb.co/twfZbP5t/20260615-141239-transcpr.jpg" alt="Print & Promo Collateral" width="600" height="400" loading="lazy" />
                         <div class="caption">Print & Promo Collateral</div>
                     </button>
                     <button class="portfolio-example" onclick="openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg')" role="button" tabindex="0" aria-label="View full size image of Business Cards" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg'); }">
-                        <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business Cards">
+                        <img src="https://i.ibb.co/SwZjd1mm/IMG-20260615-154046-868.jpg" alt="Business Cards" width="600" height="400" loading="lazy" />
                         <div class="caption">Business Cards & Stationery</div>
                     </button>
                     <button class="portfolio-example" onclick="openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg')" role="button" tabindex="0" aria-label="View full size image of Social Media Design" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg'); }">
-                        <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="Social Media Design">
+                        <img src="https://i.ibb.co/SXFwNXk6/20260615-162611-transcpr.jpg" alt="Social Media Design" width="600" height="400" loading="lazy" />
                         <div class="caption">Social Media Design</div>
                     </button>
                 </div>
@@ -564,7 +573,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="34" height="34" loading="lazy" />
                 VisOut
             </div>
             <div class="footer-links">
