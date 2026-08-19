@@ -1,0 +1,15 @@
+# VisOut – Brand Identity Agency
+
+> VisOut helps African businesses stand out with AI video creation, brand consulting, graphic design, and web design. We build brands that get noticed.
+
+## Core Services
+- [Graphic Design](https://visout.com.ng/services/graphic-design/) – Logos, brand kits, and social templates.
+- [AI Video Creation](https://visout.com.ng/services/ai-video/) – Short-form videos and AI avatars.
+- [Brand Consulting](https://visout.com.ng/services/brand-consulting/) – Positioning, messaging, and strategy.
+- [Web Design](https://visout.com.ng/services/web-design/) – Fast, SEO-optimized websites.
+
+## Key Pages
+- [About VisOut](https://visout.com.ng/#about) – Our mission and team.
+- [Portfolio](https://visout.com.ng/portfolio/) – Recent design projects.
+- [Blog](https://visout.com.ng/blog/) – Branding insights and strategies.
+- [Contact](https://visout.com.ng/#contact) – Get in touch.
