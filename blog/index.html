@@ -16,7 +16,11 @@
     <!-- ===== PRIMARY SEO TAGS ===== -->
     <title>Blog – VisOut Brand Identity Agency</title>
     <meta name="description" content="Read insights, strategies, and stories from VisOut. Learn how to build a standout brand, create AI videos, and grow your business digitally." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://visout.com.ng/blog/" />
+    
+    <!-- ===== HREFLANG (Fixes Agent Blocking) ===== -->
+    <link rel="alternate" hreflang="en" href="https://visout.com.ng/blog/" />
     
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Blog – VisOut Brand Identity Agency" />
@@ -47,20 +51,41 @@
     }
     </script>
     
-    <!-- ===== FONTS & STYLES ===== -->
+    <!-- ===== FONTS & STYLES (NON-RENDER-BLOCKING) ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Poppins loads asynchronously so it doesn't block page paint -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
+    </noscript>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <style>
         /* ===== RESET & BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: #1E2A3A; background: #FFFFFF; line-height: 1.6; overflow-x: hidden; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1E2A3A;
+            background: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6,
+        .logo, .btn-primary, .btn-secondary,
+        .nav-menu a, .blog-card .content h3,
+        .blog-card .content .date,
+        .blog-card .content .read-more,
+        .footer-brand, .page-hero h1,
+        .blog-cta h2 {
+            font-family: 'Poppins', sans-serif;
+        }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; height: auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ===== BUTTONS ===== */
@@ -164,7 +189,7 @@
     <header>
         <div class="header-inner">
             <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="40" height="40" loading="eager" />
                 <span>VisOut</span>
             </a>
             <nav class="nav-menu" id="navMenu">
@@ -178,7 +203,7 @@
             </nav>
             <div class="header-actions">
                 <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -202,7 +227,7 @@
                 <article class="blog-card reveal">
                     <div class="image">
                         <a href="https://visout.com.ng/blog/the-psychology-of-color-in-branding/">
-                            <img src="https://i.ibb.co/4R9bywWx/IMG-20260804-200630-324.jpg" alt="The Psychology of Color in Branding" />
+                            <img src="https://i.ibb.co/4R9bywWx/IMG-20260804-200630-324.jpg" alt="The Psychology of Color in Branding" width="600" height="400" loading="lazy" />
                         </a>
                     </div>
                     <div class="content">
@@ -217,7 +242,7 @@
                 <article class="blog-card reveal">
                     <div class="image">
                         <a href="https://visout.com.ng/blog/why-african-brands-need-bold-visual-identity/">
-                            <img src="https://i.ibb.co/1GjC7RRK/IMG-20260630-130320-827.jpg" alt="Why African Brands Need Bold Visual Identity" />
+                            <img src="https://i.ibb.co/1GjC7RRK/IMG-20260630-130320-827.jpg" alt="Why African Brands Need Bold Visual Identity" width="600" height="400" loading="lazy" />
                         </a>
                     </div>
                     <div class="content">
@@ -232,7 +257,7 @@
                 <article class="blog-card reveal">
                     <div class="image">
                         <a href="https://visout.com.ng/blog/ai-video-creation-future-of-brand-storytelling/">
-                            <img src="https://i.ibb.co/1GmJbybW/IMG-20260630-124542-630.jpg" alt="AI Video Creation: The Future of Brand Storytelling" />
+                            <img src="https://i.ibb.co/1GmJbybW/IMG-20260630-124542-630.jpg" alt="AI Video Creation: The Future of Brand Storytelling" width="600" height="400" loading="lazy" />
                         </a>
                     </div>
                     <div class="content">
@@ -247,7 +272,7 @@
                 <article class="blog-card reveal">
                     <div class="image">
                         <a href="https://visout.com.ng/blog/3-strategies-to-make-your-business-stand-out-digitally/">
-                            <img src="https://i.ibb.co/0pT6690r/IMG-20260630-125549-898.jpg" alt="3 Strategies to Make Your Business Stand Out Digitally" />
+                            <img src="https://i.ibb.co/0pT6690r/IMG-20260630-125549-898.jpg" alt="3 Strategies to Make Your Business Stand Out Digitally" width="600" height="400" loading="lazy" />
                         </a>
                     </div>
                     <div class="content">
@@ -275,7 +300,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" />
+                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="34" height="34" loading="lazy" />
                 VisOut
             </div>
             <div class="footer-links">
@@ -306,11 +331,13 @@
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
+            const isOpen = navMenu.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
         });
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 
