@@ -51,7 +51,6 @@
     <!-- ===== FONTS & STYLES (NON-RENDER-BLOCKING) ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Poppins loads asynchronously so it doesn't block page paint -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
@@ -532,18 +531,31 @@
                 <h2 style="text-align: center; font-size: 2rem;">Recent Graphic Design Projects</h2>
                 <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">A glimpse of our work — each project is tailored to the brand's unique identity.</p>
                 <div class="portfolio-examples">
+                    <!-- 1. Logo Gallery -->
                     <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/20260617_093631_transcpr.webp')" role="button" tabindex="0" aria-label="View full size image of Logo Gallery" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/20260617_093631_transcpr.webp'); }">
                         <img src="https://visout.com.ng/20260617_093631_transcpr.webp" alt="Logo Gallery – Brand Marks" width="600" height="400" loading="lazy" />
                         <div class="caption">Logo Gallery – Brand Marks</div>
                     </button>
-                    <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/20260615_141239_transcpr.webp')" role="button" tabindex="0" aria-label="View full size image of Print & Promo Collateral" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/20260615_141239_transcpr.webp'); }">
-                        <img src="https://visout.com.ng/20260615_141239_transcpr.webp" alt="Print & Promo Collateral" width="600" height="400" loading="lazy" />
-                        <div class="caption">Print & Promo Collateral</div>
+
+                    <!-- 2. Brand Flyers (NEW) -->
+                    <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/20260627_223628_transcpr.webp')" role="button" tabindex="0" aria-label="View full size image of Brand Flyers" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/20260627_223628_transcpr.webp'); }">
+                        <img src="https://visout.com.ng/20260627_223628_transcpr.webp" alt="Brand Flyers – Professional Flyer Designs" width="600" height="400" loading="lazy" />
+                        <div class="caption">Brand Flyers – Professional Flyer Designs</div>
                     </button>
+
+                    <!-- 3. Event Flyers (NEW) -->
+                    <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/20260627_223422_transcpr.webp')" role="button" tabindex="0" aria-label="View full size image of Event Flyers" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/20260627_223422_transcpr.webp'); }">
+                        <img src="https://visout.com.ng/20260627_223422_transcpr.webp" alt="Event Flyers – High-Impact Event Designs" width="600" height="400" loading="lazy" />
+                        <div class="caption">Event Flyers – High-Impact Event Designs</div>
+                    </button>
+
+                    <!-- 4. Business Cards & Stationery -->
                     <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/IMG_20260615_154046_868.webp')" role="button" tabindex="0" aria-label="View full size image of Business Cards" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/IMG_20260615_154046_868.webp'); }">
                         <img src="https://visout.com.ng/IMG_20260615_154046_868.webp" alt="Business Cards" width="600" height="400" loading="lazy" />
                         <div class="caption">Business Cards & Stationery</div>
                     </button>
+
+                    <!-- 5. Social Media Design -->
                     <button class="portfolio-example" onclick="openLightbox('https://visout.com.ng/20260615-162611-transcpr.webp')" role="button" tabindex="0" aria-label="View full size image of Social Media Design" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLightbox('https://visout.com.ng/20260615-162611-transcpr.webp'); }">
                         <img src="https://visout.com.ng/20260615-162611-transcpr.webp" alt="Social Media Design" width="600" height="400" loading="lazy" />
                         <div class="caption">Social Media Design</div>
