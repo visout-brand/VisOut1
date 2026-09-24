@@ -101,7 +101,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <style>
-        /* ===== RESET & TOKENS (same as homepage) ===== */
+        /* ===== RESET & TOKENS ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
 
@@ -130,7 +130,7 @@
         h1, h2, h3, h4, h5, h6,
         .logo, .btn-primary, .btn-secondary, .btn-header-cta,
         .nav-menu a, .section-title, .section-eyebrow,
-        .footer-brand, .faq-item summary, .step-number {
+        .footer-brand, .faq-item summary, .step-number, .process-num {
             font-family: 'Poppins', sans-serif;
         }
         a { text-decoration: none; color: inherit; }
@@ -307,7 +307,7 @@
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { display: block; width: 26px; height: 3px; background: var(--blue-800); border-radius: 4px; transition: 0.25s; }
 
-        /* ===== PAGE HERO — subpage version of the V ===== */
+        /* ===== PAGE HERO ===== */
         .page-hero {
             padding: 60px 0 160px;
             background: #FFFFFF;
@@ -320,11 +320,9 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(180deg, var(--blue-700) 0%, var(--blue-900) 100%);
-            /* shallower, symmetric V than homepage — decorative band at the bottom */
             clip-path: polygon(0 68%, 50% 82%, 100% 68%, 100% 100%, 0 100%);
             z-index: 0;
         }
-        /* Faint grid inside the blue band */
         .page-hero-grid {
             position: absolute;
             top: 62%; left: 0; right: 0; bottom: 0;
@@ -370,7 +368,7 @@
         }
         .page-hero-actions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
-        /* ===== SECTION HEADINGS (same pattern as homepage) ===== */
+        /* ===== SECTION HEADINGS ===== */
         .section-eyebrow {
             display: inline-block;
             font-size: 0.78rem;
@@ -421,7 +419,7 @@
         .section { padding: 80px 0; }
         .section.alt { background: var(--muted); }
 
-        /* ===== WHAT WE DO — features + video mockup ===== */
+        /* ===== WHAT WE DO ===== */
         .what-grid {
             display: grid;
             grid-template-columns: 1.15fr 1fr;
@@ -475,7 +473,7 @@
             line-height: 1.5;
         }
 
-        /* ===== VIDEO MOCKUP PANEL (replaces the gradient card) ===== */
+        /* ===== VIDEO MOCKUP (with real video) ===== */
         .video-mockup {
             position: relative;
             background: var(--blue-900);
@@ -486,7 +484,6 @@
                 0 8px 20px rgba(10, 36, 114, 0.18);
             overflow: hidden;
         }
-        /* Soft inner highlight top-right */
         .video-mockup::before {
             content: '';
             position: absolute;
@@ -502,8 +499,6 @@
             border: 1px solid rgba(255,255,255,0.10);
             border-radius: 14px;
             padding: 14px;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
         }
         .video-screen {
             position: relative;
@@ -514,26 +509,46 @@
                 #0A2472;
             border-radius: 10px;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        /* Faint scanline texture for "video" feel */
+
+        /* The actual video element */
+        .video-screen video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            z-index: 1;
+            background: #0A2472;
+            border-radius: 10px;
+        }
+
+        /* Faint scanline texture (sits above video, below controls) */
         .video-screen::after {
             content: '';
             position: absolute;
             inset: 0;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(255,255,255,0.025) 0px,
-                rgba(255,255,255,0.025) 1px,
+                rgba(255,255,255,0.02) 0px,
+                rgba(255,255,255,0.02) 1px,
                 transparent 1px,
                 transparent 3px
             );
             pointer-events: none;
+            z-index: 1;
+            transition: opacity 0.4s var(--ease);
         }
+        /* Hide scanlines while playing for a cleaner picture */
+        .video-screen.playing::after { opacity: 0; }
+
+        /* Custom play overlay */
         .video-play {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 62px; height: 62px;
             border-radius: 50%;
             background: #FFFFFF;
@@ -544,17 +559,22 @@
             justify-content: center;
             font-size: 1.2rem;
             cursor: pointer;
-            z-index: 2;
+            z-index: 3;
             box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-            transition: transform 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease);
+            transition: transform 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease), opacity 0.3s var(--ease);
             padding-left: 4px;
         }
         .video-play:hover {
-            transform: scale(1.08);
+            transform: translate(-50%, -50%) scale(1.08);
             background: var(--blue-500);
             color: #FFFFFF;
         }
         .video-play:focus-visible { outline: 3px solid rgba(255,255,255,0.5); outline-offset: 3px; }
+        .video-screen.playing .video-play {
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0.7);
+        }
 
         .video-badge {
             position: absolute;
@@ -572,22 +592,11 @@
             border-radius: 6px;
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
+            transition: opacity 0.3s var(--ease);
         }
-        .video-duration {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            z-index: 2;
-            background: rgba(0,0,0,0.45);
-            color: #FFFFFF;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
-        }
+        .video-screen.playing .video-badge { opacity: 0; }
 
-        /* Controls bar under the screen */
+        /* Controls bar below the screen (decorative) */
         .video-controls {
             margin-top: 14px;
             display: flex;
@@ -611,12 +620,13 @@
         .video-progress span {
             display: block;
             height: 100%;
-            width: 34%;
+            width: 0%;
             background: linear-gradient(90deg, var(--blue-500), #FFFFFF);
             border-radius: 3px;
+            transition: width 0.2s linear;
         }
 
-        /* Platform chips below the frame */
+        /* Platform chips */
         .video-platforms {
             display: flex;
             flex-wrap: wrap;
@@ -694,7 +704,6 @@
         .different-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue-800); margin-bottom: 6px; font-family: 'Poppins', sans-serif; }
         .different-card p { font-size: 0.88rem; opacity: 0.75; line-height: 1.6; }
 
-        /* Pull quote */
         .pull-quote {
             max-width: 760px;
             margin: 40px auto 0;
@@ -770,7 +779,7 @@
         }
         .deliverable span { font-size: 0.88rem; opacity: 0.75; }
 
-        /* ===== OUR PROCESS — vertical timeline ===== */
+        /* ===== OUR PROCESS ===== */
         .process-timeline {
             max-width: 780px;
             margin: 20px auto 0;
@@ -802,7 +811,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 1.4rem;
             box-shadow: 0 6px 20px rgba(59,130,246,0.15);
@@ -815,9 +823,7 @@
             border-color: var(--blue-800);
             transform: scale(1.05);
         }
-        .process-body {
-            padding-top: 12px;
-        }
+        .process-body { padding-top: 12px; }
         .process-body h4 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.15rem;
@@ -825,17 +831,10 @@
             color: var(--blue-800);
             margin-bottom: 6px;
         }
-        .process-body p {
-            font-size: 0.95rem;
-            opacity: 0.78;
-            line-height: 1.7;
-        }
+        .process-body p { font-size: 0.95rem; opacity: 0.78; line-height: 1.7; }
 
         /* ===== FAQ ===== */
-        .faq-list {
-            max-width: 800px;
-            margin: 20px auto 0;
-        }
+        .faq-list { max-width: 800px; margin: 20px auto 0; }
         .faq-item {
             background: #FFFFFF;
             border: 1px solid rgba(30,58,138,0.08);
@@ -882,16 +881,12 @@
             color: #FFFFFF;
         }
         .faq-answer {
-            padding: 0 24px 22px;
+            padding: 18px 24px 22px;
             font-size: 0.95rem;
             opacity: 0.82;
             line-height: 1.75;
             color: var(--ink);
             border-top: 1px solid rgba(30,58,138,0.05);
-            padding-top: 18px;
-            margin: 0 24px 0;
-            padding-left: 0;
-            padding-right: 0;
         }
 
         /* ===== CTA ===== */
@@ -993,7 +988,7 @@
             .process-num { width: 56px; height: 56px; font-size: 1.15rem; }
             .process-item:not(:last-child)::before { left: 27px; top: 56px; }
             .faq-item summary { padding: 16px 18px; font-size: 0.95rem; }
-            .faq-answer { margin: 0 18px; padding-top: 16px; padding-bottom: 18px; }
+            .faq-answer { padding: 16px 18px 18px; }
             .cta-section h2 { font-size: 1.75rem; }
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; }
@@ -1118,21 +1113,29 @@
                         </div>
                     </div>
 
-                    <!-- Video mockup panel — replaces the old gradient card -->
+                    <!-- Video mockup with real video -->
                     <div class="reveal">
                         <div class="video-mockup">
                             <div class="video-mockup-frame">
-                                <div class="video-screen">
+                                <div class="video-screen" id="videoScreen">
+                                    <video
+                                        id="aiVideo"
+                                        preload="metadata"
+                                        playsinline
+                                        poster="https://visout.com.ng/IMG_20260613_104905_436.webp"
+                                    >
+                                        <source src="https://visout.com.ng/AI_Video_from_visout.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
                                     <span class="video-badge">Preview</span>
-                                    <span class="video-duration">01:24</span>
-                                    <button class="video-play" aria-label="Play preview">
+                                    <button class="video-play" id="videoPlayBtn" aria-label="Play AI video preview">
                                         <i class="fas fa-play"></i>
                                     </button>
                                 </div>
                                 <div class="video-controls">
-                                    <span class="time">00:28</span>
-                                    <div class="video-progress"><span></span></div>
-                                    <span class="time">01:24</span>
+                                    <span class="time" id="currentTime">00:00</span>
+                                    <div class="video-progress"><span id="progressFill"></span></div>
+                                    <span class="time" id="durationTime">00:00</span>
                                 </div>
                             </div>
                             <div class="video-platforms">
@@ -1439,7 +1442,71 @@
             window.addEventListener('resize', toggleWa);
             toggleWa();
         })();
+
+        // ===== AI VIDEO PLAYER =====
+        (function() {
+            const videoScreen = document.getElementById('videoScreen');
+            const aiVideo = document.getElementById('aiVideo');
+            const videoPlayBtn = document.getElementById('videoPlayBtn');
+            const currentTime = document.getElementById('currentTime');
+            const durationTime = document.getElementById('durationTime');
+            const progressFill = document.getElementById('progressFill');
+
+            if (!aiVideo || !videoPlayBtn) return;
+
+            function formatTime(sec) {
+                if (!isFinite(sec) || sec < 0) return '00:00';
+                const m = Math.floor(sec / 60);
+                const s = Math.floor(sec % 60);
+                return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+            }
+
+            // Play button click
+            videoPlayBtn.addEventListener('click', function() {
+                aiVideo.controls = true;
+                videoScreen.classList.add('playing');
+                const playPromise = aiVideo.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function() {
+                        // If play is blocked, fall back to native controls
+                        videoScreen.classList.remove('playing');
+                    });
+                }
+            });
+
+            // Metadata ready -> show duration
+            aiVideo.addEventListener('loadedmetadata', function() {
+                durationTime.textContent = formatTime(aiVideo.duration);
+            });
+
+            // Time update -> progress bar
+            aiVideo.addEventListener('timeupdate', function() {
+                currentTime.textContent = formatTime(aiVideo.currentTime);
+                if (aiVideo.duration > 0) {
+                    const pct = (aiVideo.currentTime / aiVideo.duration) * 100;
+                    progressFill.style.width = pct + '%';
+                }
+            });
+
+            // When ended -> reset overlay so user can replay
+            aiVideo.addEventListener('ended', function() {
+                videoScreen.classList.remove('playing');
+                aiVideo.controls = false;
+                progressFill.style.width = '0%';
+                currentTime.textContent = '00:00';
+            });
+
+            // Clicking the video itself toggles play/pause after first play
+            aiVideo.addEventListener('click', function() {
+                if (!videoScreen.classList.contains('playing')) return;
+                if (aiVideo.paused) {
+                    aiVideo.play();
+                } else {
+                    aiVideo.pause();
+                }
+            });
+        })();
     </script>
 
 </body>
-</html>
+        </html>
