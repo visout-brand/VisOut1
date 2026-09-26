@@ -10,19 +10,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- ===== PRIMARY SEO TAGS ===== -->
+    <!-- ===== PRIMARY SEO ===== -->
     <title>Web Design – VisOut Brand Identity Agency</title>
     <meta name="description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors. We build websites that work as hard as your brand." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://visout.com.ng/services/web-design/" />
-    
-    <!-- ===== HREFLANG (Fixes Agent Blocking) ===== -->
     <link rel="alternate" hreflang="en" href="https://visout.com.ng/services/web-design/" />
     
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Web Design – VisOut Brand Identity Agency" />
-    <meta property="og:description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors. We build websites that work as hard as your brand." />
-    <meta property="og:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    <meta property="og:description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors." />
+    <meta property="og:image" content="https://visout.com.ng/IMG_20260520_153947_814.webp" />
     <meta property="og:url" content="https://visout.com.ng/services/web-design/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VisOut" />
@@ -30,52 +28,110 @@
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Web Design – VisOut Brand Identity Agency" />
-    <meta name="twitter:description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors. We build websites that work as hard as your brand." />
-    <meta name="twitter:image" content="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" />
+    <meta name="twitter:description" content="Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors." />
+    <meta name="twitter:image" content="https://visout.com.ng/IMG_20260520_153947_814.webp" />
     
-    <!-- ===== SCHEMA ===== -->
+    <!-- ===== SERVICE SCHEMA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Web Design Services",
       "description": "Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors.",
-      "provider": {
-        "@type": "Organization",
-        "name": "VisOut",
-        "url": "https://visout.com.ng/"
-      }
+      "provider": { "@type": "Organization", "name": "VisOut", "url": "https://visout.com.ng/" },
+      "areaServed": { "@type": "Country", "name": "Nigeria" },
+      "serviceType": "Web Design & Development"
     }
     </script>
     
-    <!-- ===== FONTS & STYLES (NON-RENDER-BLOCKING) ===== -->
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a website?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A typical business website takes 3–6 weeks from discovery to launch. Larger, multi-page sites or e-commerce builds take 6–12 weeks depending on scope." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build on WordPress or custom code?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Both. We recommend the right platform based on your goals — WordPress or a CMS for content-heavy sites, and hand-coded HTML/CSS for high-performance marketing sites." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my website work on mobile devices?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Every site we build is mobile-first and tested across phones, tablets, and desktops. Over 70% of your visitors will be on mobile — we design for them first." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle hosting and domain setup?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle domain configuration, hosting setup, SSL, and deployment. Your site goes live ready to use with no technical work on your end." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I update the website myself after launch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We build with easy-to-edit CMS options and give you a walkthrough so you can update content, images, and pages without touching code." }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visout.com.ng/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://visout.com.ng/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Web Design", "item": "https://visout.com.ng/services/web-design/" }
+      ]
+    }
+    </script>
+    
+    <!-- ===== FONTS & ICONS ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Poppins loads asynchronously so it doesn't block page paint -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" />
-    </noscript>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ===== RESET & TOKENS ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
+        :root {
+            --blue-900: #0A2472;
+            --blue-800: #1E3A8A;
+            --blue-700: #1E40AF;
+            --blue-500: #3B82F6;
+            --blue-100: #DBEAFE;
+            --blue-50: #EEF2FF;
+            --ink: #1E2A3A;
+            --muted: #F0F4FA;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #1E2A3A;
+            color: var(--ink);
             background: #FFFFFF;
             line-height: 1.6;
             overflow-x: hidden;
         }
+
         h1, h2, h3, h4, h5, h6,
-        .logo, .btn-primary, .btn-secondary,
-        .nav-menu a, .process-step h4,
-        .cta-section h2, .footer-brand, .page-hero h1,
-        .showcase-caption {
+        .logo, .btn-primary, .btn-secondary, .btn-header-cta,
+        .nav-menu a, .section-title, .section-eyebrow,
+        .footer-brand, .faq-item summary, .process-num,
+        .browser-url, .showcase-caption {
             font-family: 'Poppins', sans-serif;
         }
         a { text-decoration: none; color: inherit; }
@@ -83,57 +139,891 @@
         img { max-width: 100%; display: block; height: auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
+        /* ===== SCROLL PROGRESS ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-800));
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 12px rgba(59,130,246,0.6);
+        }
+
+        /* ===== STICKY WHATSAPP ===== */
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            z-index: 9998;
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(0, 0, 0, 0.18);
+            transition: transform 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
+            opacity: 0;
+            transform: translateY(20px) scale(0.85);
+            pointer-events: none;
+        }
+        .whatsapp-float.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+        .whatsapp-float:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 14px 34px rgba(18, 140, 126, 0.5), 0 6px 16px rgba(0, 0, 0, 0.22);
+        }
+        .whatsapp-float:focus-visible { outline: 3px solid rgba(37, 211, 102, 0.5); outline-offset: 3px; }
+        .whatsapp-float i { transform: translateY(1px); }
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid var(--whatsapp);
+            opacity: 0;
+            animation: whatsappPulse 2.6s ease-out infinite;
+            pointer-events: none;
+        }
+        @keyframes whatsappPulse {
+            0%   { transform: scale(1);   opacity: 0.55; }
+            70%  { transform: scale(1.7); opacity: 0;    }
+            100% { transform: scale(1.7); opacity: 0;    }
+        }
+        .whatsapp-float .whatsapp-label {
+            position: absolute;
+            right: calc(100% + 12px);
+            top: 50%;
+            transform: translateY(-50%) translateX(6px);
+            background: var(--blue-800);
+            color: #FFFFFF;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+            box-shadow: 0 6px 20px rgba(15, 37, 87, 0.25);
+        }
+        .whatsapp-float .whatsapp-label::after {
+            content: '';
+            position: absolute;
+            right: -5px; top: 50%;
+            transform: translateY(-50%);
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid var(--blue-800);
+        }
+        .whatsapp-float:hover .whatsapp-label,
+        .whatsapp-float:focus-visible .whatsapp-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+        @media (max-width: 480px) {
+            .whatsapp-float { width: 52px; height: 52px; font-size: 1.55rem; right: 16px; bottom: 16px; }
+            .whatsapp-float .whatsapp-label { display: none; }
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1 !important; transform: none !important; }
+            .whatsapp-float::before { animation: none; }
+        }
+
         /* ===== BUTTONS ===== */
-        .btn-primary { display: inline-block; background: #1E3A8A; color: #FFFFFF; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: background 0.25s ease, transform 0.2s ease; text-align: center; }
-        .btn-primary:hover { background: #0A2472; transform: translateY(-2px); }
-        .btn-secondary { display: inline-block; background: transparent; color: #1E3A8A; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: 2px solid #1E3A8A; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; text-align: center; }
-        .btn-secondary:hover { background: #1E3A8A; color: #FFFFFF; transform: translateY(-2px); }
+        .btn-primary {
+            display: inline-block;
+            background: var(--blue-800);
+            color: #FFFFFF;
+            padding: 14px 34px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-primary:hover { background: var(--blue-900); transform: translateY(-2px); }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--blue-800);
+            padding: 14px 34px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--blue-800);
+            cursor: pointer;
+            transition: background 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-secondary:hover { background: var(--blue-800); color: #FFFFFF; transform: translateY(-2px); }
 
         /* ===== HEADER ===== */
-        header { background: #FFFFFF; padding: 16px 0; border-bottom: 1px solid rgba(30, 58, 138, 0.08); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; color: #1E3A8A; letter-spacing: -0.5px; }
+        header {
+            background: #FFFFFF;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.6rem; color: var(--blue-800); letter-spacing: -0.5px; }
         .logo img { height: 40px; width: auto; display: block; }
-        .logo span { color: #1E3A8A; }
-        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: #1E2A3A; flex-wrap: wrap; }
-        .nav-menu a { transition: color 0.2s; }
-        .nav-menu a:hover { color: #3B82F6; }
-        .header-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        .logo span { color: var(--blue-800); }
+        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: var(--ink); flex-wrap: wrap; }
+        .nav-menu a { transition: color 0.25s var(--ease); }
+        .nav-menu a:hover { color: var(--blue-500); }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .header-actions .btn-header-cta {
+            background: var(--blue-800);
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+        .header-actions .btn-header-cta:hover { background: var(--blue-900); transform: translateY(-2px); }
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-        .hamburger span { display: block; width: 26px; height: 3px; background: #1E3A8A; border-radius: 4px; transition: 0.25s; }
+        .hamburger span { display: block; width: 26px; height: 3px; background: var(--blue-800); border-radius: 4px; transition: 0.25s; }
 
         /* ===== PAGE HERO ===== */
-        .page-hero { padding: 20px 0 60px; background: #FFFFFF; text-align: center; border-bottom: 1px solid rgba(30,58,138,0.06); }
-        .page-hero h1 { font-size: 3rem; font-weight: 800; color: #1E3A8A; margin-bottom: 8px; letter-spacing: -0.5px; }
-        .page-hero p { font-size: 1.15rem; color: #1E2A3A; opacity: 0.75; max-width: 700px; margin: 0 auto; }
+        .page-hero {
+            padding: 60px 0 160px;
+            background: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, var(--blue-700) 0%, var(--blue-900) 100%);
+            clip-path: polygon(0 68%, 50% 82%, 100% 68%, 100% 100%, 0 100%);
+            z-index: 0;
+        }
+        .page-hero-grid {
+            position: absolute;
+            top: 62%; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+        .breadcrumbs {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--ink);
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a { transition: color 0.25s var(--ease); }
+        .breadcrumbs a:hover { color: var(--blue-500); }
+        .breadcrumbs .sep { color: var(--blue-500); opacity: 0.6; }
+        .breadcrumbs .current { color: var(--blue-800); font-weight: 600; }
 
-        /* ===== CONTENT SECTIONS ===== */
-        .service-section { padding: 70px 0; }
-        .service-section:nth-child(even) { background: #F0F4FA; }
-        .service-section .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .service-section h2 { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 16px; }
-        .service-section p { font-size: 1.05rem; color: #1E2A3A; opacity: 0.85; line-height: 1.8; margin-bottom: 16px; }
-        .service-section .highlight { background: rgba(30,58,138,0.06); padding: 4px 12px; border-left: 4px solid #1E3A8A; font-style: italic; margin: 20px 0; }
+        .page-hero .section-eyebrow { padding-left: 40px; padding-right: 0; }
+        .page-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--blue-800);
+            margin: 0 auto 16px;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            max-width: 900px;
+        }
+        .page-hero h1 span { color: var(--blue-500); }
+        .page-hero > .container > p {
+            font-size: 1.15rem;
+            color: var(--ink);
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto 28px;
+        }
+        .page-hero-actions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
-        /* Process steps */
-        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 30px; }
-        .process-step { text-align: center; padding: 24px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(30,58,138,0.06); box-shadow: 0 4px 20px rgba(30,58,138,0.04); }
-        .process-step .step-number { display: inline-block; width: 48px; height: 48px; line-height: 48px; border-radius: 50%; background: #1E3A8A; color: #FFFFFF; font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; }
-        .process-step h4 { font-size: 1.1rem; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; }
-        .process-step p { font-size: 0.92rem; color: #1E2A3A; opacity: 0.7; line-height: 1.6; }
+        /* ===== SECTION HEADINGS ===== */
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--blue-500);
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 40px;
+            padding-right: 0;
+        }
+        .section-eyebrow::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 50%;
+            width: 30px;
+            height: 2px;
+            background: var(--blue-500);
+            transform: translateY(-50%);
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--blue-800);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--ink);
+            opacity: 0.85;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+        .section-title.centered, .section-subtitle.centered { text-align: center; margin-left: auto; margin-right: auto; }
+        .section-title.centered::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-800));
+            border-radius: 2px;
+            margin: 18px auto 0;
+        }
 
-        /* Showcase image */
-        .showcase-image { margin-top: 30px; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(30,58,138,0.10); }
-        .showcase-image img { width: 100%; height: auto; display: block; }
-        .showcase-caption { text-align: center; margin-top: 16px; font-size: 0.95rem; color: #1E2A3A; opacity: 0.7; font-style: italic; }
+        /* ===== SECTION WRAPPERS ===== */
+        .section { padding: 80px 0; }
+        .section.alt { background: var(--muted); }
+
+        /* ===== WHAT WE DO ===== */
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 56px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 24px;
+        }
+        .feature-chip {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 18px;
+            background: #FFFFFF;
+            border: 1px solid rgba(30,58,138,0.07);
+            border-radius: 12px;
+            transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+        }
+        .feature-chip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(30,58,138,0.08);
+            border-color: rgba(59,130,246,0.22);
+        }
+        .feature-chip .fc-icon {
+            width: 38px; height: 38px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-50);
+            border-radius: 50%;
+            color: var(--blue-800);
+            font-size: 0.95rem;
+        }
+        .feature-chip strong {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--blue-800);
+            margin-bottom: 2px;
+        }
+        .feature-chip p {
+            font-size: 0.78rem;
+            opacity: 0.7;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===== BROWSER + PHONE MOCKUP ===== */
+        .web-showcase { position: relative; }
+
+        .browser-mockup {
+            position: relative;
+            background: var(--blue-900);
+            border-radius: 18px;
+            padding: 14px;
+            box-shadow:
+                0 30px 60px rgba(10, 36, 114, 0.28),
+                0 8px 20px rgba(10, 36, 114, 0.18);
+            overflow: hidden;
+        }
+        .browser-mockup::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 240px; height: 240px;
+            background: radial-gradient(circle, rgba(59,130,246,0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .browser-bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 4px 12px;
+        }
+        .browser-dots {
+            display: flex;
+            gap: 5px;
+            flex-shrink: 0;
+        }
+        .browser-dots span {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+        }
+        .browser-dots span:nth-child(1) { background: #FF5F57; }
+        .browser-dots span:nth-child(2) { background: #FEBC2E; }
+        .browser-dots span:nth-child(3) { background: #28C840; }
+
+        .browser-url {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.10);
+            color: rgba(255,255,255,0.75);
+            font-size: 0.68rem;
+            letter-spacing: 0.3px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            min-width: 0;
+        }
+        .browser-url i { font-size: 0.6rem; opacity: 0.65; }
+
+        .browser-actions {
+            flex-shrink: 0;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        .browser-viewport {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow: hidden;
+        }
+
+        /* ---- Mini site inside the browser ---- */
+        .mini-site {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex: 1;
+        }
+
+        .mini-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(30,58,138,0.08);
+        }
+        .mini-logo {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-800));
+            flex-shrink: 0;
+        }
+        .mini-nav-links {
+            display: flex;
+            gap: 8px;
+            flex: 1;
+            justify-content: center;
+        }
+        .mini-nav-links span {
+            width: 26px;
+            height: 5px;
+            border-radius: 3px;
+            background: rgba(30,58,138,0.15);
+        }
+        .mini-nav-cta {
+            width: 54px;
+            height: 20px;
+            border-radius: 5px;
+            background: var(--blue-800);
+            flex-shrink: 0;
+        }
+
+        .mini-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 14px;
+            align-items: center;
+            padding: 4px 0;
+        }
+        .mini-hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .mini-line { display: block; border-radius: 4px; }
+        .mini-line.lg { height: 12px; width: 92%; background: var(--blue-800); }
+        .mini-line.md { height: 8px;  width: 68%; background: rgba(30,58,138,0.32); }
+        .mini-line.sm { height: 6px;  width: 52%; background: rgba(30,58,138,0.18); }
+        .mini-buttons { display: flex; gap: 6px; margin-top: 6px; }
+        .mini-btn-fill {
+            width: 52px; height: 18px;
+            border-radius: 5px;
+            background: var(--blue-800);
+        }
+        .mini-btn-outline {
+            width: 52px; height: 18px;
+            border-radius: 5px;
+            background: transparent;
+            border: 1.5px solid rgba(30,58,138,0.4);
+        }
+
+        .mini-hero-visual {
+            aspect-ratio: 4 / 3;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-800));
+            position: relative;
+            overflow: hidden;
+        }
+        .mini-hero-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 60%);
+        }
+        .mini-hero-visual::before {
+            content: '';
+            position: absolute;
+            inset: 20% 15% 25% 15%;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .mini-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-top: auto;
+        }
+        .mini-cards span {
+            height: 42px;
+            border-radius: 6px;
+            background: #F0F4FA;
+            border: 1px solid rgba(30,58,138,0.06);
+        }
+        .mini-cards span:nth-child(1) { background: linear-gradient(135deg, var(--blue-100), var(--blue-50)); }
+        .mini-cards span:nth-child(3) { background: linear-gradient(135deg, var(--blue-50), var(--blue-100)); }
+
+        /* ---- Floating phone ---- */
+        .phone-mockup {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 96px;
+            background: var(--blue-900);
+            border-radius: 16px;
+            padding: 5px;
+            z-index: 3;
+            box-shadow:
+                0 16px 36px rgba(10, 36, 114, 0.30),
+                0 4px 12px rgba(10, 36, 114, 0.20);
+        }
+        .phone-notch {
+            display: block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: rgba(255,255,255,0.5);
+            margin: 4px auto 5px;
+        }
+        .phone-screen {
+            background: #FFFFFF;
+            border-radius: 11px;
+            padding: 10px 9px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            aspect-ratio: 9 / 15;
+        }
+        .phone-screen .mini-line.lg { height: 9px; width: 85%; background: var(--blue-800); }
+        .phone-screen .mini-line.md { height: 6px; width: 65%; background: rgba(30,58,138,0.3); }
+        .phone-screen .mini-line.sm { height: 5px; width: 45%; background: rgba(30,58,138,0.18); }
+
+        .phone-img {
+            flex: 1;
+            border-radius: 6px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-800));
+            min-height: 55px;
+            position: relative;
+            overflow: hidden;
+        }
+        .phone-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 40% 30%, rgba(255,255,255,0.32), transparent 65%);
+        }
+
+        /* ===== WHY WE'RE DIFFERENT ===== */
+        .different-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 32px;
+        }
+        .different-card {
+            position: relative;
+            overflow: hidden;
+            padding: 26px 22px;
+            background: #FFFFFF;
+            border: 1px solid rgba(30,58,138,0.06);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(30,58,138,0.04);
+            transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+        }
+        .different-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-800));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease);
+        }
+        .different-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(30,58,138,0.08); }
+        .different-card:hover::before { transform: scaleX(1); }
+        .different-card .icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-50);
+            border-radius: 50%;
+            color: var(--blue-800);
+            font-size: 1.35rem;
+            margin-bottom: 14px;
+            transition: transform 0.4s var(--ease), background 0.4s var(--ease), color 0.4s var(--ease);
+        }
+        .different-card:hover .icon {
+            transform: translateY(-3px) scale(1.05);
+            background: var(--blue-100);
+            color: var(--blue-900);
+        }
+        .different-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue-800); margin-bottom: 6px; font-family: 'Poppins', sans-serif; }
+        .different-card p { font-size: 0.88rem; opacity: 0.75; line-height: 1.6; }
+
+        .pull-quote {
+            max-width: 760px;
+            margin: 40px auto 0;
+            padding: 24px 28px 24px 34px;
+            background: #FFFFFF;
+            border-left: 4px solid var(--blue-500);
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 6px 24px rgba(30,58,138,0.06);
+            font-style: italic;
+            color: var(--ink);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            position: relative;
+        }
+        .pull-quote::before {
+            content: '\201C';
+            position: absolute;
+            top: -8px;
+            left: 14px;
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--blue-500);
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        /* ===== WHAT YOU GET ===== */
+        .deliverables-card {
+            max-width: 940px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 16px;
+            border: 1px solid rgba(30,58,138,0.07);
+            box-shadow: 0 10px 40px rgba(30,58,138,0.06);
+            padding: 40px 44px;
+            position: relative;
+            overflow: hidden;
+        }
+        .deliverables-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-800));
+        }
+        .deliverables-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 32px;
+            margin-top: 20px;
+        }
+        .deliverable {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(30,58,138,0.06);
+        }
+        .deliverable:last-child, .deliverable:nth-last-child(2) { border-bottom: none; }
+        .deliverable i {
+            color: var(--blue-500);
+            font-size: 1.05rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .deliverable strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--blue-800);
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .deliverable span { font-size: 0.88rem; opacity: 0.75; }
+
+        /* ===== OUR PROCESS ===== */
+        .process-timeline {
+            max-width: 780px;
+            margin: 20px auto 0;
+            position: relative;
+        }
+        .process-item {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 24px;
+            padding-bottom: 32px;
+            position: relative;
+        }
+        .process-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 35px;
+            top: 72px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--blue-500), rgba(59,130,246,0.15));
+        }
+        .process-num {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 2px solid var(--blue-500);
+            color: var(--blue-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.4rem;
+            box-shadow: 0 6px 20px rgba(59,130,246,0.15);
+            transition: transform 0.4s var(--ease), background 0.4s var(--ease), color 0.4s var(--ease);
+            z-index: 1;
+        }
+        .process-item:hover .process-num {
+            background: var(--blue-800);
+            color: #FFFFFF;
+            border-color: var(--blue-800);
+            transform: scale(1.05);
+        }
+        .process-body { padding-top: 12px; }
+        .process-body h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--blue-800);
+            margin-bottom: 6px;
+        }
+        .process-body p { font-size: 0.95rem; opacity: 0.78; line-height: 1.7; }
+
+        /* ===== SHOWCASE (real work) ===== */
+        .showcase-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .showcase-image {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: zoom-in;
+            box-shadow:
+                0 20px 50px rgba(30,58,138,0.14),
+                0 6px 16px rgba(30,58,138,0.08);
+            border: 1px solid rgba(30,58,138,0.06);
+            transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+        }
+        .showcase-image:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 30px 60px rgba(30,58,138,0.18),
+                0 10px 22px rgba(30,58,138,0.10);
+        }
+        .showcase-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Hover overlay like homepage portfolio */
+        .showcase-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(30,58,138,0) 0%, rgba(30,58,138,0.75) 100%);
+            opacity: 0;
+            transition: opacity 0.4s var(--ease);
+            pointer-events: none;
+        }
+        .showcase-image::before {
+            content: 'View Full Image  →';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0;
+            z-index: 2;
+            transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+            pointer-events: none;
+            white-space: nowrap;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .showcase-image:hover::after { opacity: 1; }
+        .showcase-image:hover::before { opacity: 1; transform: translate(-50%, -50%); }
+
+        .showcase-caption {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.92rem;
+            color: var(--ink);
+            opacity: 0.75;
+            font-style: italic;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list { max-width: 800px; margin: 20px auto 0; }
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid rgba(30,58,138,0.08);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+        }
+        .faq-item[open] {
+            box-shadow: 0 8px 28px rgba(30,58,138,0.08);
+            border-color: rgba(59,130,246,0.22);
+        }
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--blue-800);
+            transition: background 0.3s var(--ease);
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary:hover { background: var(--blue-50); }
+        .faq-item summary .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--blue-50);
+            color: var(--blue-800);
+            font-size: 0.75rem;
+            transition: transform 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease);
+        }
+        .faq-item[open] summary .faq-icon {
+            transform: rotate(180deg);
+            background: var(--blue-800);
+            color: #FFFFFF;
+        }
+        .faq-answer {
+            padding: 18px 24px 22px;
+            font-size: 0.95rem;
+            opacity: 0.82;
+            line-height: 1.75;
+            color: var(--ink);
+            border-top: 1px solid rgba(30,58,138,0.05);
+        }
 
         /* ===== LIGHTBOX ===== */
         .lightbox-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            inset: 0;
             background: rgba(0, 0, 0, 0.92);
             z-index: 9999;
             display: none;
@@ -171,77 +1061,164 @@
             justify-content: center;
             cursor: pointer;
             z-index: 10000;
-            transition: background 0.2s;
+            transition: background 0.25s var(--ease);
             font-weight: 300;
             line-height: 1;
         }
         .lightbox-close:hover { background: rgba(255,255,255,0.25); }
 
-        /* CTA */
-        .cta-section { padding: 70px 0; background: #1E3A8A; color: #FFFFFF; text-align: center; }
-        .cta-section h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 70px 0;
+            background: var(--blue-800);
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none;
+        }
+        .cta-section > .container { position: relative; z-index: 1; }
+        .cta-section h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; font-family: 'Poppins', sans-serif; }
         .cta-section p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 28px; }
-        .cta-section .btn-primary { background: #FFFFFF; color: #1E3A8A; }
-        .cta-section .btn-primary:hover { background: #e8edf5; transform: translateY(-2px); }
+        .cta-section .btn-primary { background: #FFFFFF; color: var(--blue-800); }
+        .cta-section .btn-primary:hover { background: var(--blue-50); transform: translateY(-2px); }
 
         /* ===== FOOTER ===== */
-        footer { background: #1E3A8A; color: #FFFFFF; padding: 48px 0 32px; margin-top: 0; }
-        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+        footer {
+            background: var(--blue-800);
+            color: #FFFFFF;
+            padding: 48px 0 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none;
+        }
+        footer > .container { position: relative; z-index: 1; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; font-family: 'Poppins', sans-serif; }
         .footer-brand img { height: 34px; width: auto; display: block; }
         .footer-links { display: flex; gap: 28px; font-weight: 400; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
-        .footer-links a { transition: color 0.2s; }
+        .footer-links a { transition: color 0.25s var(--ease); }
         .footer-links a:hover { color: #93BBFC; }
         .footer-social { display: flex; gap: 14px; }
-        .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: rgba(255,255,255,0.10); border-radius: 50%; color: #FFFFFF; font-size: 1rem; transition: background 0.25s, transform 0.2s; }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.10);
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 1rem;
+            transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+        }
         .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
-        .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
+        .footer-copy {
+            width: 100%;
+            text-align: center;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.10);
+            font-size: 0.9rem;
+            opacity: 0.75;
+            font-weight: 300;
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .service-section .grid-2 { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            .process-grid { grid-template-columns: repeat(2, 1fr); }
-            .service-section h2 { text-align: center; }
+            .what-grid { grid-template-columns: 1fr; gap: 40px; }
+            .different-grid { grid-template-columns: repeat(2, 1fr); }
+            .page-hero h1 { font-size: 2.5rem; }
+            .page-hero::before { clip-path: polygon(0 72%, 50% 84%, 100% 72%, 100% 100%, 0 100%); }
+            .page-hero-grid { top: 66%; }
+            .web-showcase { max-width: 620px; margin: 0 auto; }
         }
         @media (max-width: 768px) {
-            .nav-menu { display: none; flex-direction: column; width: 100%; gap: 12px; padding: 16px 0 8px; border-top: 1px solid rgba(30,58,138,0.06); order: 10; }
+            .nav-menu { display: none; flex-direction: column; width: 100%; gap: 12px; padding: 16px 0 8px; border-top: 1px solid rgba(30,58,138,0.06); }
             .nav-menu.open { display: flex; }
             .hamburger { display: flex; }
-            .header-inner { flex-wrap: wrap; }
-            .header-actions .btn-primary { padding: 8px 16px; font-size: 0.8rem; white-space: nowrap; }
-            .page-hero h1 { font-size: 2.2rem; }
-            .page-hero p { font-size: 1rem; }
-            .service-section { padding: 50px 0; }
-            .service-section h2 { font-size: 1.8rem; }
-            .process-grid { grid-template-columns: 1fr; }
+            .header-actions .btn-header-cta { padding: 8px 16px; font-size: 0.8rem; }
+            .page-hero { padding: 40px 0 140px; }
+            .page-hero h1 { font-size: 2rem; }
+            .page-hero > .container > p { font-size: 1rem; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 1.8rem; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .different-grid { grid-template-columns: 1fr; }
+            .deliverables-card { padding: 28px 24px; }
+            .deliverables-list { grid-template-columns: 1fr; }
+            .deliverable:last-child, .deliverable:nth-last-child(2) { border-bottom: 1px solid rgba(30,58,138,0.06); }
+            .deliverable:last-child { border-bottom: none; }
+            .process-item { grid-template-columns: 56px 1fr; gap: 18px; padding-bottom: 26px; }
+            .process-num { width: 56px; height: 56px; font-size: 1.15rem; }
+            .process-item:not(:last-child)::before { left: 27px; top: 56px; }
+            .faq-item summary { padding: 16px 18px; font-size: 0.95rem; }
+            .faq-answer { padding: 16px 18px 18px; }
+            .cta-section h2 { font-size: 1.75rem; }
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; }
             .footer-social { justify-content: center; }
-            .cta-section h2 { font-size: 1.8rem; }
+            .browser-viewport { min-height: 280px; }
+            .phone-mockup { width: 82px; bottom: 12px; right: 12px; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 16px; }
-            .page-hero h1 { font-size: 1.8rem; }
-            .header-actions .btn-primary { padding: 6px 12px; font-size: 0.75rem; }
+            .page-hero { padding: 30px 0 120px; }
+            .page-hero h1 { font-size: 1.75rem; }
+            .section-title { font-size: 1.55rem; }
             .logo { font-size: 1.2rem; }
             .logo img { height: 32px; }
-            .service-section h2 { font-size: 1.5rem; }
-            .cta-section h2 { font-size: 1.5rem; }
+            .header-actions .btn-header-cta { padding: 6px 12px; font-size: 0.75rem; }
+            .browser-mockup { padding: 10px; border-radius: 14px; }
+            .browser-viewport { padding: 12px; min-height: 230px; }
+            .browser-url { font-size: 0.6rem; padding: 4px 8px; }
+            .mini-hero { grid-template-columns: 1fr; }
+            .mini-hero-visual { max-width: 120px; margin: 0 auto; }
+            .phone-mockup { width: 68px; bottom: 10px; right: 10px; padding: 4px; border-radius: 12px; }
+            .phone-screen { padding: 7px 6px; gap: 4px; border-radius: 9px; }
+            .phone-notch { width: 20px; height: 2px; margin-bottom: 3px; }
         }
 
-        /* ===== UTILITY ===== */
         .text-center { text-align: center; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== STICKY WHATSAPP ===== -->
+    <a href="https://wa.me/2348145669035?text=Hi%20VisOut%2C%20I%27d%20like%20to%20talk%20about%20a%20website%20project."
+       class="whatsapp-float"
+       id="whatsappFloat"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with VisOut on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-label">Chat with us</span>
+    </a>
+
     <!-- ===== HEADER ===== -->
     <header>
-        <div class="header-inner">
+        <div class="container header-inner">
             <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="40" height="40" loading="eager" />
+                <img src="https://visout.com.ng/IMG_20260520_153947_814.webp" alt="VisOut Logo" width="40" height="40" loading="eager" />
                 <span>VisOut</span>
             </a>
             <nav class="nav-menu" id="navMenu">
@@ -254,7 +1231,7 @@
                 <a href="https://visout.com.ng/#contact">Contact</a>
             </nav>
             <div class="header-actions">
-                <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us</a>
+                <a href="https://visout.com.ng/#contact" class="btn-header-cta">Contact Us</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
                     <span></span><span></span><span></span>
                 </button>
@@ -262,214 +1239,386 @@
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Web Design That Brings Your Brand to Life</h1>
-            <p>Beautiful, fast, SEO-optimized, brand-focused websites that tell your story and convert visitors. We build websites that work as hard as your brand.</p>
-        </div>
-    </section>
+    <main>
 
-    <!-- ===== WHAT WE DO ===== -->
-    <section class="service-section">
-        <div class="container">
-            <div class="grid-2">
-                <div>
-                    <h2>What We Do</h2>
-                    <p>We build websites that are more than just pretty faces. Every site we create is designed to reflect your brand, engage your audience, and drive results — whether that's leads, sales, or brand awareness.</p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px;">
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-paint-brush" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">Brand-Focused Design</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Websites that look and feel like your brand.</p></div>
-                        </div>
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-rocket" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">Fast & Responsive</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Lightning-fast loading on all devices.</p></div>
-                        </div>
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-search" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">SEO-Optimized</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Built to rank well on search engines.</p></div>
-                        </div>
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-code" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">Clean Code</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Semantic, maintainable code that performs.</p></div>
-                        </div>
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-mobile-alt" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">Mobile-First</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">Optimized for phones, tablets, and desktops.</p></div>
-                        </div>
-                        <div style="background: #F0F4FA; padding: 14px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                            <i class="fas fa-cog" style="color: #1E3A8A; font-size: 1.2rem;"></i>
-                            <div><strong style="font-size: 0.85rem;">Easy to Update</strong><p style="font-size: 0.75rem; opacity: 0.7; margin: 0;">You don't need a developer to make changes.</p></div>
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="page-hero-grid"></div>
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="https://visout.com.ng/">Home</a>
+                    <span class="sep">/</span>
+                    <a href="https://visout.com.ng/#services">Services</a>
+                    <span class="sep">/</span>
+                    <span class="current">Web Design</span>
+                </nav>
+                <span class="section-eyebrow">Web Design</span>
+                <h1>Websites That Bring Your Brand to Life.<br /><span>Built to Perform, Designed to Convert.</span></h1>
+                <p>Beautiful, fast, SEO-optimized websites that reflect your brand, engage your audience, and drive real business results — from first impression to final conversion.</p>
+                <div class="page-hero-actions">
+                    <a href="https://visout.com.ng/#contact" class="btn-primary">Start a Project</a>
+                    <a href="#process" class="btn-secondary">See Our Process</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHAT WE DO ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="what-grid">
+                    <div class="reveal">
+                        <span class="section-eyebrow">What We Do</span>
+                        <h2 class="section-title" style="font-size: 2.2rem;">Websites That Are More Than Just Pretty Faces</h2>
+                        <p style="font-size: 1.05rem; opacity: 0.85; line-height: 1.8;">
+                            Every site we build is designed to reflect your brand, engage your audience, and drive measurable results — whether that's leads, sales, or brand awareness. Clean code, fast performance, and a design language that feels unmistakably yours.
+                        </p>
+                        <div class="feature-grid">
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-paint-brush"></i></div>
+                                <div><strong>Brand-Focused Design</strong><p>Websites that look and feel like your brand.</p></div>
+                            </div>
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-rocket"></i></div>
+                                <div><strong>Fast &amp; Responsive</strong><p>Lightning-fast loading on all devices.</p></div>
+                            </div>
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-search"></i></div>
+                                <div><strong>SEO-Optimized</strong><p>Built to rank well on search engines.</p></div>
+                            </div>
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-code"></i></div>
+                                <div><strong>Clean Code</strong><p>Semantic, maintainable code that performs.</p></div>
+                            </div>
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div><strong>Mobile-First</strong><p>Perfect on phones, tablets, and desktops.</p></div>
+                            </div>
+                            <div class="feature-chip">
+                                <div class="fc-icon"><i class="fas fa-cog"></i></div>
+                                <div><strong>Easy to Update</strong><p>Make changes without needing a developer.</p></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div style="background: linear-gradient(135deg, #1E3A8A, #3B82F6); border-radius: 16px; padding: 40px; color: #FFFFFF; text-align: center; min-height: 260px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <i class="fas fa-code" style="font-size: 4rem; opacity: 0.5; margin-bottom: 12px;"></i>
-                        <p style="font-size: 1.2rem; font-weight: 600; opacity: 0.8;">Your brand, beautifully built.</p>
-                        <p style="font-size: 0.95rem; opacity: 0.6; max-width: 300px;">We turn your brand identity into a powerful digital presence.</p>
+
+                    <!-- BROWSER + PHONE MOCKUP -->
+                    <div class="reveal">
+                        <div class="web-showcase">
+                            <div class="browser-mockup">
+                                <div class="browser-bar">
+                                    <div class="browser-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="browser-url">
+                                        <i class="fas fa-lock"></i>
+                                        visout.com.ng
+                                    </div>
+                                    <div class="browser-actions">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                                <div class="browser-viewport">
+                                    <div class="mini-site">
+                                        <div class="mini-nav">
+                                            <span class="mini-logo"></span>
+                                            <div class="mini-nav-links">
+                                                <span></span><span></span><span></span><span></span>
+                                            </div>
+                                            <span class="mini-nav-cta"></span>
+                                        </div>
+                                        <div class="mini-hero">
+                                            <div class="mini-hero-text">
+                                                <span class="mini-line lg"></span>
+                                                <span class="mini-line md"></span>
+                                                <span class="mini-line sm"></span>
+                                                <div class="mini-buttons">
+                                                    <span class="mini-btn-fill"></span>
+                                                    <span class="mini-btn-outline"></span>
+                                                </div>
+                                            </div>
+                                            <div class="mini-hero-visual"></div>
+                                        </div>
+                                        <div class="mini-cards">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Floating phone preview -->
+                                    <div class="phone-mockup" aria-hidden="true">
+                                        <span class="phone-notch"></span>
+                                        <div class="phone-screen">
+                                            <span class="mini-line lg"></span>
+                                            <span class="mini-line md"></span>
+                                            <span class="phone-img"></span>
+                                            <span class="mini-line sm"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== WHY WE'RE DIFFERENT ===== -->
-    <section class="service-section" style="background: #F0F4FA;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="margin-bottom: 50px;">
-                    <h2 style="text-align: center;">Why We're Different</h2>
-                    <p style="text-align: center; max-width: 700px; margin: 0 auto 16px;">Most agencies build websites that look good but don't perform. We build websites that are designed to grow with your business and make you money.</p>
-                    <div class="highlight" style="text-align: center;">
-                        "We don't just build websites — we build digital experiences that reflect your brand's soul and drive measurable results."
+        <!-- ===== WHY WE'RE DIFFERENT ===== -->
+        <section class="section alt">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-eyebrow">Why We're Different</span>
+                </div>
+                <h2 class="section-title centered">Most Agencies Build Sites That Look Good. We Build Sites That Perform.</h2>
+                <p class="section-subtitle centered">A website should grow your business, not just sit there. Every design decision we make is grounded in strategy, speed, and conversion.</p>
+
+                <div class="different-grid">
+                    <div class="different-card reveal">
+                        <div class="icon"><i class="fas fa-user-check"></i></div>
+                        <h3>Brand-First</h3>
+                        <p>Your brand identity drives every design, layout, and interaction decision we make.</p>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
-                            <i class="fas fa-user-check" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                            <strong style="font-size: 0.9rem;">Brand-First</strong>
-                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">Your brand identity drives every decision.</p>
-                        </div>
-                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
-                            <i class="fas fa-bolt" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                            <strong style="font-size: 0.9rem;">Performance Obsessed</strong>
-                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">Speed and SEO are built in, not afterthoughts.</p>
-                        </div>
-                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
-                            <i class="fas fa-hand-holding-heart" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                            <strong style="font-size: 0.9rem;">Collaborative</strong>
-                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">You're involved at every stage of the process.</p>
-                        </div>
-                        <div style="background: #FFFFFF; padding: 16px 20px; border-radius: 8px; border: 1px solid rgba(30,58,138,0.06); text-align: center;">
-                            <i class="fas fa-sync-alt" style="color: #1E3A8A; font-size: 1.5rem; display: block; margin-bottom: 8px;"></i>
-                            <strong style="font-size: 0.9rem;">Ongoing Support</strong>
-                            <p style="font-size: 0.8rem; opacity: 0.7; margin: 0;">We're here to help even after launch.</p>
-                        </div>
+                    <div class="different-card reveal">
+                        <div class="icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Performance Obsessed</h3>
+                        <p>Speed, accessibility, and SEO are built in from day one — never bolted on later.</p>
+                    </div>
+                    <div class="different-card reveal">
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Collaborative</h3>
+                        <p>You're part of the process from discovery through launch — no black boxes.</p>
+                    </div>
+                    <div class="different-card reveal">
+                        <div class="icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3>Ongoing Support</h3>
+                        <p>We stay available after launch for updates, new features, and design iterations.</p>
                     </div>
                 </div>
 
-                <div style="background: #FFFFFF; padding: 40px 48px; border-radius: 12px; border: 1px solid rgba(30,58,138,0.06);">
-                    <h2 style="text-align: center; margin-top: 0;">What You Get</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; max-width: 700px; margin: 0 auto;">
-                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px; word-wrap: break-word;">
-                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem; flex-shrink: 0;"></i>
-                            <span style="word-break: break-word;"><strong>Custom Website</strong> – Tailored to your brand identity.</span>
+                <div class="pull-quote reveal">
+                    "We don't just build websites — we build digital experiences that reflect your brand's soul and drive measurable results."
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHAT YOU GET ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-eyebrow">Deliverables</span>
+                </div>
+                <h2 class="section-title centered">What You Get</h2>
+                <p class="section-subtitle centered">Every project ships with the essentials — no surprises, no missing pieces.</p>
+
+                <div class="deliverables-card reveal">
+                    <div class="deliverables-list">
+                        <div class="deliverable">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Custom Website</strong>
+                                <span>Tailored to your brand identity, not a template.</span>
+                            </div>
                         </div>
-                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px; word-wrap: break-word;">
-                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem; flex-shrink: 0;"></i>
-                            <span style="word-break: break-word;"><strong>SEO Setup</strong> – Optimized structure and meta tags.</span>
+                        <div class="deliverable">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>SEO Setup</strong>
+                                <span>Optimized structure, meta tags, and technical foundation.</span>
+                            </div>
                         </div>
-                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px; word-wrap: break-word;">
-                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem; flex-shrink: 0;"></i>
-                            <span style="word-break: break-word;"><strong>Mobile Responsive</strong> – Perfect on every device.</span>
+                        <div class="deliverable">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Mobile Responsive</strong>
+                                <span>Perfect on phones, tablets, and desktops.</span>
+                            </div>
                         </div>
-                        <div style="padding: 10px 0; border-bottom: 1px solid rgba(30,58,138,0.04); display: flex; align-items: center; gap: 12px; word-wrap: break-word;">
-                            <i class="fas fa-check-circle" style="color: #1E3A8A; font-size: 1.1rem; flex-shrink: 0;"></i>
-                            <span style="word-break: break-word;"><strong>Deployment & Hosting</strong> – Deployed and ready to go.</span>
+                        <div class="deliverable">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Deployment &amp; Hosting</strong>
+                                <span>Domain, hosting, SSL — set up and ready to go.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== OUR PROCESS ===== -->
-    <section class="service-section">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 2rem;">Our Process</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">We follow a structured process to ensure your website is delivered on time, on budget, and on brand.</p>
-            <div class="process-grid">
-                <div class="process-step reveal">
-                    <div class="step-number">1</div>
-                    <h4>Discovery</h4>
-                    <p>We learn about your brand, audience, goals, and requirements for the website.</p>
+        <!-- ===== OUR PROCESS ===== -->
+        <section class="section alt" id="process">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-eyebrow">How We Work</span>
                 </div>
-                <div class="process-step reveal">
-                    <div class="step-number">2</div>
-                    <h4>Design</h4>
-                    <p>We create a visual design that reflects your brand identity and user experience.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">3</div>
-                    <h4>Development</h4>
-                    <p>We build the website with clean, responsive code that performs beautifully.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">4</div>
-                    <h4>Launch</h4>
-                    <p>We deploy your site, set up hosting, and make sure everything works perfectly.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">5</div>
-                    <h4>Ongoing Support</h4>
-                    <p>We're always available for updates, changes, and new features as your business grows.</p>
+                <h2 class="section-title centered">Our Process</h2>
+                <p class="section-subtitle centered">Five steps from first conversation to launch day — structured, collaborative, and on-schedule.</p>
+
+                <div class="process-timeline">
+                    <div class="process-item reveal">
+                        <div class="process-num">1</div>
+                        <div class="process-body">
+                            <h4>Discovery</h4>
+                            <p>We learn about your brand, audience, goals, and requirements so every decision that follows is grounded in strategy.</p>
+                        </div>
+                    </div>
+                    <div class="process-item reveal">
+                        <div class="process-num">2</div>
+                        <div class="process-body">
+                            <h4>Design</h4>
+                            <p>We create a visual design that reflects your brand identity, prioritizes user experience, and sets the tone for the entire build.</p>
+                        </div>
+                    </div>
+                    <div class="process-item reveal">
+                        <div class="process-num">3</div>
+                        <div class="process-body">
+                            <h4>Development</h4>
+                            <p>We build the site with clean, responsive code — fast, accessible, and optimized for search from the first line.</p>
+                        </div>
+                    </div>
+                    <div class="process-item reveal">
+                        <div class="process-num">4</div>
+                        <div class="process-body">
+                            <h4>Launch</h4>
+                            <p>We deploy your site, configure hosting and domain, and make sure every page, form, and link works perfectly.</p>
+                        </div>
+                    </div>
+                    <div class="process-item reveal">
+                        <div class="process-num">5</div>
+                        <div class="process-body">
+                            <h4>Ongoing Support</h4>
+                            <p>We're always available for updates, changes, and new features as your business grows.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== SHOWCASE (UPDATED) ===== -->
-    <section class="service-section" style="background: #F0F4FA;">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 2rem;">What We Can Build for You</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 30px; opacity: 0.7;">Every website we create is crafted to reflect your brand's unique identity and drive real results.</p>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="showcase-image" onclick="openLightbox('https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg')" style="cursor: pointer;">
-                    <img src="https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg" alt="Example of a brand-focused website design" width="800" height="450" loading="lazy" />
+        <!-- ===== SHOWCASE (real work) ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-eyebrow">Recent Work</span>
                 </div>
-                <p class="showcase-caption">An example of what we can build for your brand — clean, modern, and designed to convert.</p>
+                <h2 class="section-title centered">What We Can Build for Your Brand</h2>
+                <p class="section-subtitle centered">A real example of a brand-focused website we designed and built — clean, modern, and engineered to convert.</p>
+
+                <div class="showcase-wrap reveal">
+                    <div class="showcase-image" onclick="openLightbox('https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg')" role="button" tabindex="0" aria-label="View full size image of example website design" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg');}">
+                        <img src="https://i.ibb.co/N63PHkjf/IMG-20260521-111650-084.jpg" alt="Example of a brand-focused website design built by VisOut" width="1200" height="675" loading="lazy" />
+                    </div>
+                    <p class="showcase-caption">An example of what we can build for your brand — clean layout, clear hierarchy, and designed to convert.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== CTA ===== -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Build a Website That Works for Your Brand?</h2>
-            <p>Let's create a digital presence that captures your brand's essence and drives real results.</p>
-            <a href="https://visout.com.ng/#contact" class="btn-primary">Contact Us Now</a>
-        </div>
-    </section>
+        <!-- ===== FAQ ===== -->
+        <section class="section alt">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-eyebrow">FAQ</span>
+                </div>
+                <h2 class="section-title centered">Questions, Answered</h2>
+                <p class="section-subtitle centered">The things clients ask us most before starting a web design project.</p>
 
-    <!-- ===== LIGHTBOX OVERLAY ===== -->
-    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image">&times;</button>
+                <div class="faq-list">
+                    <details class="faq-item reveal">
+                        <summary>
+                            <span>How long does it take to build a website?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            A typical business website takes 3–6 weeks from discovery to launch. Larger, multi-page sites or e-commerce builds take 6–12 weeks depending on scope.
+                        </div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>
+                            <span>Do you build on WordPress or custom code?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            Both. We recommend the right platform based on your goals — WordPress or a CMS for content-heavy sites, and hand-coded HTML/CSS for high-performance marketing sites.
+                        </div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>
+                            <span>Will my website work on mobile devices?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            Every site we build is mobile-first and tested across phones, tablets, and desktops. Over 70% of your visitors will be on mobile — we design for them first.
+                        </div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>
+                            <span>Do you handle hosting and domain setup?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            Yes. We handle domain configuration, hosting setup, SSL, and deployment. Your site goes live ready to use, with no technical work on your end.
+                        </div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>
+                            <span>Can I update the website myself after launch?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-answer">
+                            Absolutely. We build with easy-to-edit CMS options and give you a walkthrough so you can update content, images, and pages without touching code.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Build a Website That Works as Hard as You Do?</h2>
+                <p>Let's create a digital presence that captures your brand's essence and drives measurable results.</p>
+                <a href="https://visout.com.ng/#contact" class="btn-primary">Start a Conversation</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
         <img id="lightboxImage" src="" alt="Enlarged view" />
     </div>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <img src="https://i.ibb.co/xS06C097/IMG-20260520-153947-814.jpg" alt="VisOut Logo" width="34" height="34" loading="lazy" />
-                VisOut
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="https://visout.com.ng/IMG_20260520_153947_814.webp" alt="VisOut Logo" width="34" height="34" loading="lazy" />
+                    VisOut
+                </div>
+                <div class="footer-links">
+                    <a href="https://visout.com.ng/#home">Home</a>
+                    <a href="https://visout.com.ng/#services">Services</a>
+                    <a href="https://visout.com.ng/#about">About</a>
+                    <a href="https://visout.com.ng/#why-choose">Why Us</a>
+                    <a href="https://visout.com.ng/#portfolio">Work</a>
+                    <a href="https://visout.com.ng/#testimonials">Testimonials</a>
+                    <a href="https://visout.com.ng/blog/">Blog</a>
+                    <a href="https://visout.com.ng/case-studies/">Case Studies</a>
+                    <a href="https://visout.com.ng/#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="https://visout.com.ng/#home">Home</a>
-                <a href="https://visout.com.ng/#services">Services</a>
-                <a href="https://visout.com.ng/#about">About</a>
-                <a href="https://visout.com.ng/#why-choose">Why Us</a>
-                <a href="https://visout.com.ng/#portfolio">Work</a>
-                <a href="https://visout.com.ng/#testimonials">Testimonials</a>
-                <a href="https://visout.com.ng/blog/">Blog</a>
-                <a href="https://visout.com.ng/case-studies/">Case Studies</a>
-                <a href="https://visout.com.ng/#contact">Contact</a>
+            <div class="footer-copy">
+                &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout.com.ng/">VisOut Brand Identity Agency</a>
             </div>
-            <div class="footer-social">
-                <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-        <div class="footer-copy">
-            &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout.com.ng/">VisOut Brand Identity Agency</a>
         </div>
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Hamburger toggle
+        // Hamburger
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         hamburger.addEventListener('click', () => {
@@ -483,45 +1632,104 @@
             });
         });
 
-        // Scroll reveal
+        // Reveal on scroll
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
         revealElements.forEach(el => revealObserver.observe(el));
 
-        // ===== LIGHTBOX FUNCTIONS =====
+        // Scroll progress
+        const scrollProgress = document.getElementById('scrollProgress');
+        let progressTicking = false;
+        window.addEventListener('scroll', function() {
+            if (!progressTicking) {
+                window.requestAnimationFrame(function() {
+                    const scrollTop = window.pageYOffset;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    scrollProgress.style.width = pct + '%';
+                    progressTicking = false;
+                });
+                progressTicking = true;
+            }
+        }, { passive: true });
+
+        // Sticky WhatsApp
+        (function() {
+            const wa = document.getElementById('whatsappFloat');
+            if (!wa) return;
+            function toggleWa() {
+                if (window.pageYOffset > 220) wa.classList.add('visible');
+                else wa.classList.remove('visible');
+            }
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() { toggleWa(); ticking = false; });
+                    ticking = true;
+                }
+            }, { passive: true });
+            window.addEventListener('resize', toggleWa);
+            toggleWa();
+        })();
+
+        // ===== LIGHTBOX =====
         const overlay = document.getElementById('lightboxOverlay');
         const lightboxImg = document.getElementById('lightboxImage');
+        const closeBtn = document.getElementById('lightboxClose');
+        let firstFocusable = null;
+        let lastFocusable = null;
 
-        function openLightbox(src) {
-            lightboxImg.src = src;
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+            trapFocus(true);
         }
 
-        function closeLightbox(e) {
-            // Only close if clicking the overlay background or the close button
-            if (e.target === overlay || e.target.tagName === 'BUTTON') {
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            // Prevent closing when clicking the image itself
-            if (e.target === lightboxImg) {
-                e.stopPropagation();
+        function closeLightbox() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            const trigger = document.querySelector('.showcase-image');
+            if (trigger) trigger.focus();
+            trapFocus(false);
+        }
+
+        function trapFocus(enable) {
+            if (enable) {
+                const focusable = overlay.querySelectorAll('button, [tabindex="0"]');
+                if (focusable.length > 0) {
+                    firstFocusable = focusable[0];
+                    lastFocusable = focusable[focusable.length - 1];
+                }
+                overlay.addEventListener('keydown', trapKeydown);
+            } else {
+                overlay.removeEventListener('keydown', trapKeydown);
             }
         }
 
-        // Keyboard escape
+        function trapKeydown(e) {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) { e.preventDefault(); lastFocusable.focus(); }
+                } else {
+                    if (document.activeElement === lastFocusable) { e.preventDefault(); firstFocusable.focus(); }
+                }
+            }
+            if (e.key === 'Escape') { closeLightbox(); }
+        }
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeLightbox();
+        });
+        closeBtn.addEventListener('click', closeLightbox);
+
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+            if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
         });
     </script>
 
