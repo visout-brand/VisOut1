@@ -683,11 +683,17 @@
             background-color: transparent !important;
             box-shadow: none !important;
         }
-        #sib-form input {
+        #sib-form input, #sib-form input[type="text"] {
             border-radius: 8px !important;
             border: 1px solid rgba(30,58,138,0.2) !important;
             padding: 12px 16px !important;
             font-family: inherit !important;
+            color: #1E2A3A !important; /* Fixes invisible text */
+            background-color: #FFFFFF !important; 
+        }
+        #sib-form input::placeholder {
+            color: #8390A4 !important; /* Fixes placeholder color */
+            opacity: 1; 
         }
         #sib-form input:focus {
             border-color: var(--blue-500) !important;
@@ -1049,7 +1055,7 @@
                                             <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" />
                                             <span class="checkbox checkbox_tick_positive" style="margin-left:"></span>
                                             <span style="font-family:Helvetica, sans-serif; font-size:12px; text-align:left; color:#3C4858; background-color:transparent;">
-                                              <p>I agree to receive emails from VisOut and confirm that I have read the privacy policy.</p>
+                                              <p>I agree to receive email updates from VisOut.</p>
                                             </span>
                                           </label>
                                         </div>
@@ -1067,11 +1073,6 @@
                                       </svg>
                                       SUBSCRIBE
                                     </button>
-                                  </div>
-                                </div>
-                                <div style="padding: 8px 0;">
-                                  <div class="sib-form__declaration" style="direction:ltr; display: none;">
-                                    <!-- Hidden Brevo legal text since we replaced it with a cleaner inline version -->
                                   </div>
                                 </div>
                                 <input type="text" name="email_address_check" value="" class="input--hidden">
