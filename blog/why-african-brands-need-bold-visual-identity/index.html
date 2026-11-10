@@ -40,7 +40,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Why African Brands Need Bold Visual Identity",
-      "description": "African brands face unique challenges in standing out globally. Discover why bold visual identity is essential for capturing attention, building trust, and competing internationally.",
+      "description": "African brands face unique challenges in standing out globally. Discover why bold visual identity is essential.",
       "author": {
         "@type": "Organization",
         "name": "VisOut"
@@ -108,7 +108,7 @@
         }
 
         h1, h2, h3, h4, h5, h6,
-        .logo, .btn-primary, .btn-secondary, .btn-header-cta,
+        .logo, .btn-primary, .btn-secondary,
         .nav-menu a, .footer-brand, .meta, .share span, 
         .author-box h4, .cta-box h3, .read-next-card h4 {
             font-family: 'Poppins', sans-serif;
@@ -219,6 +219,22 @@
             font-family: 'Poppins', sans-serif;
         }
         .btn-primary:hover { background: var(--blue-900); transform: translateY(-2px); }
+        
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--blue-800);
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid var(--blue-800);
+            cursor: pointer;
+            transition: background 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-secondary:hover { background: var(--blue-800); color: #FFFFFF; transform: translateY(-2px); }
 
         /* ===== HEADER ===== */
         header {
@@ -235,28 +251,36 @@
         .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
         .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; color: var(--blue-800); letter-spacing: -0.5px; }
         .logo img { height: 36px; width: auto; display: block; }
+        
         .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: var(--ink); }
         .nav-menu a { transition: color 0.25s var(--ease); }
         .nav-menu a:hover { color: var(--blue-500); }
-        .back-link { color: var(--blue-800); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; font-family: 'Poppins', sans-serif; }
-        .back-link:hover { color: var(--blue-500); }
-        .back-link i { margin-right: 6px; }
+        
+        .mobile-nav-cta { display: none; }
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { display: block; width: 26px; height: 3px; background: var(--blue-800); border-radius: 4px; transition: 0.25s; }
 
-        /* ===== ARTICLE HERO ===== */
+        /* ===== ARTICLE HEADER ===== */
         .article-header {
             padding: 60px 0 40px;
             text-align: center;
         }
         .meta {
-            font-size: 0.85rem;
-            color: var(--blue-500);
+            font-size: 0.8rem;
+            color: var(--blue-800);
             font-weight: 600;
             margin-bottom: 16px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
+        .meta span { opacity: 0.8; }
+        .meta .dot { color: var(--blue-500); opacity: 1; }
+        
         .article-header h1 {
             font-size: 2.8rem;
             font-weight: 800;
@@ -284,7 +308,6 @@
             line-height: 1.9;
         }
         
-        /* Drop cap for the first paragraph */
         .article-body > p:first-of-type::first-letter {
             float: left;
             font-size: 4.5rem;
@@ -317,7 +340,6 @@
         .article-body ul li { margin-bottom: 12px; padding-left: 8px; }
         .article-body ul li::marker { color: var(--blue-500); font-weight: bold; }
 
-        /* Pull Quote */
         .pull-quote {
             margin: 40px 0;
             padding: 30px 40px;
@@ -330,27 +352,6 @@
             color: var(--blue-900);
             line-height: 1.6;
         }
-
-        /* Stats/Scenario Block */
-        .scenario-block {
-            margin: 40px 0;
-            background: #FFFFFF;
-            border: 1px solid rgba(30,58,138,0.1);
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 10px 30px rgba(30,58,138,0.05);
-        }
-        .scenario-block h4 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            color: var(--blue-800);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .scenario-block h4 i { color: var(--blue-500); }
-        .scenario-block p { font-size: 1rem; margin-bottom: 0; opacity: 0.85; }
 
         /* ===== AUTHOR BOX ===== */
         .author-box {
@@ -411,14 +412,6 @@
             position: relative;
             overflow: hidden;
         }
-        .write-for-us-section::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
-            pointer-events: none;
-        }
         .write-for-us-section > * { position: relative; z-index: 1; }
         .write-for-us-section h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
         .write-for-us-section p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -471,7 +464,7 @@
         .read-next-card img { height: 180px; width: 100%; object-fit: cover; }
         .read-next-card .rn-body { padding: 20px; }
         .read-next-card h4 { font-size: 1.05rem; color: var(--blue-800); line-height: 1.4; margin: 0; }
-
+        
         /* ===== FOOTER ===== */
         footer {
             background: var(--blue-800);
@@ -493,20 +486,39 @@
         .footer-links { display: flex; gap: 28px; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
         .footer-links a { transition: color 0.25s var(--ease); }
         .footer-links a:hover { color: #93BBFC; }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a {
+            display: flex; align-items: center; justify-content: center;
+            width: 38px; height: 38px; background: rgba(255,255,255,0.10);
+            border-radius: 50%; color: #FFFFFF; font-size: 1rem;
+            transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+        .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
         .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
+            .article-header { padding: 40px 0 24px; }
             .article-header h1 { font-size: 2.2rem; }
+            .meta { font-size: 0.7rem; gap: 6px; }
             .article-body { font-size: 1.05rem; }
             .article-body > p:first-of-type::first-letter { font-size: 3.5rem; }
             .article-body h2 { font-size: 1.5rem; }
             .pull-quote { padding: 20px 24px; font-size: 1.1rem; }
-            .scenario-block { padding: 24px; }
             .write-for-us-section { padding: 32px 24px; }
             .read-next-grid { grid-template-columns: 1fr; }
-            .nav-menu { display: none; }
+            
+            /* Mobile Menu Adjustments */
+            .nav-menu { 
+                display: none; flex-direction: column; width: 100%; gap: 16px; 
+                padding: 24px 0 16px; border-top: 1px solid rgba(30,58,138,0.06);
+                margin-top: 16px;
+            }
+            .nav-menu.open { display: flex; }
             .hamburger { display: flex; }
+            .mobile-nav-cta { display: block; width: 100%; margin-top: 8px; }
+            .mobile-nav-cta .btn-primary { width: 100%; border-radius: 50px; }
+            
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
         }
@@ -536,26 +548,36 @@
                 <img src="https://visout.com.ng/IMG_20260520_153947_814.webp" alt="VisOut Logo" width="36" height="36" loading="eager" />
                 VisOut
             </a>
+            
             <nav class="nav-menu" id="navMenu">
                 <a href="https://visout.com.ng/#services">Services</a>
                 <a href="https://visout.com.ng/#about">About</a>
                 <a href="https://visout.com.ng/#portfolio">Work</a>
                 <a href="https://visout.com.ng/blog/">Blog</a>
                 <a href="https://visout.com.ng/#contact">Contact</a>
+                
+                <!-- Mobile-only "Back to Blogs" Button inside the menu -->
+                <div class="mobile-nav-cta">
+                    <a href="https://visout.com.ng/blog/" class="btn-primary">Back to Blogs</a>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a href="https://visout.com.ng/blog/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
     <main>
         <!-- ===== ARTICLE HEADER ===== -->
         <header class="article-header container">
-            <div class="meta"><i class="far fa-calendar-alt"></i> June 29, 2026 &nbsp;•&nbsp; <i class="far fa-clock"></i> 5 min read &nbsp;•&nbsp; Branding</div>
+            <div class="meta">
+                <span><i class="far fa-calendar-alt"></i> June 29, 2026</span>
+                <span class="dot">•</span>
+                <span><i class="far fa-clock"></i> 5 min read</span>
+                <span class="dot">•</span>
+                <span>Branding</span>
+            </div>
             <h1>Why African Brands Need Bold Visual Identity</h1>
         </header>
 
@@ -565,9 +587,9 @@
 
         <!-- ===== ARTICLE CONTENT ===== -->
         <article class="article-body container">
-            <p>Walk into any bustling tech hub in Lagos or a design studio in Nairobi. You’ll see incredible innovation, relentless ambition, and founders solving real problems. But when you step back and look at how these same businesses present themselves online, a different story emerges.</p>
+            <p>Walk into any growing business hub today. You’ll see incredible innovation, relentless ambition, and founders solving real problems. But when you step back and look at how these same businesses present themselves online, a different story emerges.</p>
             
-            <p>Too many African brands look exactly the same. Generic logos, tired corporate blue color palettes, and stock imagery that feels entirely disconnected from the vibrant reality of the continent. In a crowded global marketplace, this "sea of sameness" is costing businesses real money.</p>
+            <p>Too many brands look exactly the same. Generic logos, tired corporate color palettes, and stock imagery that feels entirely disconnected from reality. In a crowded global marketplace, this "sea of sameness" is costing businesses real money.</p>
 
             <p>Because <strong>visual identity is your first—and often only—chance to make an impression.</strong></p>
 
@@ -581,13 +603,19 @@
                 "Your visual identity is your brand's handshake. If it's weak, no one trusts you. If it's bold, people remember you."
             </div>
 
+            <h2>The AI Paradox: Why Templates Make You Invisible</h2>
+
+            <p>Here is the modern dilemma: artificial intelligence has democratized design. Today, anyone can use AI to generate a logo, a website, or a brand kit in minutes. On the surface, that sounds incredible.</p>
+            
+            <p>But it has created a massive problem. Because everyone is using the same AI tools, fed with the same prompts, they are ending up with the exact same generic outputs. The AI strips away the nuance, the culture, and the human story—leaving behind a sterile, "perfect" but entirely forgettable brand.</p>
+
+            <p>AI is a brilliant tool, but it cannot replace strategy. True visual identity requires human insight to uncover what makes your business unique and translate that into a bold, distinctive design that AI could never guess.</p>
+
             <h2>The African Advantage</h2>
 
             <p>Here is the good news: African brands possess something their global competitors desperately want—<strong>authentic cultural richness.</strong></p>
 
-            <p>Yet, many brands try to "play it safe" by mimicking Western or European design trends. They strip away their heritage in a bid to look "international," ending up with a diluted identity that resonates with no one.</p>
-
-            <p>Global consumers are exhausted by generic design. They crave authenticity. African brands that unapologetically embrace their unique cultural identity—while applying world-class design principles—stand out instantly.</p>
+            <p>Global consumers are exhausted by generic, AI-generated design. They crave authenticity. Brands that unapologetically embrace their unique cultural identity—while applying world-class design principles—stand out instantly. They don't just look different; they feel real.</p>
 
             <h3>What Bold Visual Identity Looks Like</h3>
 
@@ -598,13 +626,10 @@
                 <li><strong>Consistent brand language:</strong> Every visual touchpoint (website, social, packaging) feels like part of the same family.</li>
             </ul>
 
-            <div class="scenario-block">
-                <h4><i class="fas fa-lightbulb"></i> The Scenario: Two Brands, One Market</h4>
-                <p>Imagine two real estate companies in Abuja targeting the same diaspora audience. Brand A uses a basic template, standard fonts, and low-quality renders. Brand B uses a bold, modern visual identity with deep, purposeful colors, clear typography, and high-fidelity imagery that speaks to their specific clientele. Even if their houses are identical, Brand B will command premium pricing and higher trust. <strong>That is the power of visual strategy.</strong></p>
-            </div>
-
             <h2>The Business Impact</h2>
 
+            <p>Consider two businesses competing for the exact same high-end client. One relies on a generic, AI-generated template. The other invests in a bold, purposeful visual identity with deep, intentional colors and clear typography that speaks directly to their specific clientele. Even if their products or services are identical, the second brand will command premium pricing and higher trust. <strong>That is the power of visual strategy.</strong></p>
+            
             <p>Bold visual identity isn't just about aesthetics—it drives measurable business results:</p>
 
             <ul>
@@ -618,7 +643,7 @@
 
             <p>At VisOut, we don't just design logos. We build <strong>brand identities that work.</strong> We study why brands fail, not just how to decorate. Our approach combines bold visuals with smart strategy to make sure your brand doesn't just look good—it gets noticed.</p>
 
-            <p>We work with African businesses to uncover their unique story and translate it into a visual language that resonates with their audience. Whether you need a complete rebrand, a new logo, or a comprehensive brand kit, we help you <strong>see beyond the ordinary and stand out.</strong></p>
+            <p>We work with businesses to uncover their unique story and translate it into a visual language that resonates with their audience. Whether you need a complete rebrand, a new logo, or a comprehensive brand kit, we help you <strong>see beyond the ordinary and stand out.</strong></p>
             
             <p>Your brand deserves to be seen. Your story deserves to be told. And your visual identity should be bold enough to leave a mark.</p>
 
@@ -629,7 +654,7 @@
                 </div>
                 <div class="info">
                     <h4>Written by the VisOut Team</h4>
-                    <p>We help African brands break through digital noise with bold visuals, AI video creation, web design, and smart strategy.</p>
+                    <p>We help brands break through digital noise with bold visuals, AI video creation, web design, and smart strategy.</p>
                 </div>
             </div>
 
@@ -745,6 +770,11 @@
                     </div>
                 </a>
             </div>
+            
+            <!-- NEW BUTTON TO VIEW ALL ARTICLES -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://visout.com.ng/blog/" class="btn-secondary">View All Articles</a>
+            </div>
         </section>
 
     </main>
@@ -778,7 +808,7 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Hamburger
+        // Hamburger Menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
         if (hamburger) {
