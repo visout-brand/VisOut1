@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="mobile-web-app-capable" content="no">
+    
+    <!-- ===== PRIMARY SEO TAGS ===== -->
+    <title>Write For Us - VisOut Brand Identity Agency</title>
+    <meta name="description" content="Submit a guest post to VisOut. Share your unique perspective on branding, design, and digital growth to gain recognition and visibility." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visout.com.ng/write-for-us/" />
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- ===== FONTS & ICONS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
+    
+    <style>
+        /* ===== RESET & TOKENS ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        :root {
+            --blue-900: #0A2472;
+            --blue-800: #1E3A8A;
+            --blue-700: #1E40AF;
+            --blue-500: #3B82F6;
+            --blue-100: #DBEAFE;
+            --blue-50: #EEF2FF;
+            --ink: #1E2A3A;
+            --muted: #F0F4FA;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            --error-red: #DC2626;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            background-color: #F8FAFC;
+            background-image: radial-gradient(circle at 10% 20%, rgba(219, 234, 254, 0.4) 0%, transparent 40%);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        body.modal-open { overflow: hidden; }
+
+        h1, h2, h3, h4, h5, h6,
+        .logo, .btn-primary, .btn-secondary, .btn-header-cta,
+        .nav-menu a, .footer-brand, .section-title, .form-label {
+            font-family: 'Poppins', sans-serif;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; height: auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .form-container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== HEADER ===== */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; color: var(--blue-800); letter-spacing: -0.5px; }
+        .logo img { height: 36px; width: auto; display: block; }
+        
+        .nav-menu { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 0.95rem; color: var(--ink); }
+        .nav-menu a { transition: color 0.25s var(--ease); }
+        .nav-menu a:hover { color: var(--blue-500); }
+        
+        .mobile-nav-cta { display: none; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 26px; height: 3px; background: var(--blue-800); border-radius: 4px; transition: 0.25s; }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--blue-800);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--ink);
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== FORM CARD ===== */
+        .form-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(30,58,138,0.08);
+            border: 1px solid rgba(30,58,138,0.05);
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .form-step { display: none; animation: fadeIn 0.4s ease; }
+        .form-step.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-indicator {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(30,58,138,0.08);
+        }
+        .step-badge {
+            background: var(--blue-50);
+            color: var(--blue-800);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blue-800);
+        }
+
+        /* ===== FORM ELEMENTS ===== */
+        .form-group { margin-bottom: 24px; }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        .form-label .required { color: var(--error-red); margin-left: 2px; }
+        .form-label .optional { color: #6B7280; font-weight: 400; font-size: 0.85rem; margin-left: 6px; }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(30,58,138,0.15);
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--ink);
+            background-color: #FFFFFF;
+            transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--blue-500);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+        textarea.form-control { min-height: 120px; resize: vertical; }
+        
+        .info-text {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: #6B7280;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+        .info-text i { color: var(--blue-500); font-size: 0.9rem; margin-top: 2px; }
+
+        .char-counter {
+            display: block;
+            text-align: right;
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-top: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .char-counter.limit-reached { color: var(--error-red); }
+
+        /* Custom Select */
+        select.form-control { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E3A8A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em; padding-right: 2.5rem; }
+
+        /* Custom File Upload */
+        .file-upload-wrapper {
+            position: relative;
+            border: 2px dashed rgba(30,58,138,0.2);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            background: var(--blue-50);
+            transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+            cursor: pointer;
+        }
+        .file-upload-wrapper:hover {
+            border-color: var(--blue-500);
+            background: #E0E7FF;
+        }
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file-upload-wrapper i { font-size: 1.5rem; color: var(--blue-800); margin-bottom: 8px; display: block; }
+        .file-upload-wrapper span { font-size: 0.9rem; font-weight: 600; color: var(--blue-800); }
+        .file-upload-wrapper p { font-size: 0.75rem; color: #6B7280; margin-top: 4px; margin-bottom: 0; }
+        
+        .file-name-display {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--blue-500);
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(30,58,138,0.08);
+            gap: 16px;
+        }
+        .btn-primary, .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s var(--ease);
+            font-family: 'Poppins', sans-serif;
+            border: none;
+        }
+        .btn-primary { background: var(--blue-800); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--blue-900); transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--blue-800); border: 2px solid rgba(30,58,138,0.2); }
+        .btn-secondary:hover { background: var(--blue-50); border-color: var(--blue-800); }
+        
+        .btn-submit { width: 100%; font-size: 1.1rem; padding: 16px; }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 36, 114, 0.75);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s var(--ease);
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .modal-content {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            transform: translateY(20px);
+            transition: transform 0.3s var(--ease);
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        
+        .modal-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            color: var(--blue-800);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .modal-content h2 i { color: var(--blue-500); }
+        
+        .modal-content p { font-size: 0.95rem; color: var(--ink); margin-bottom: 16px; }
+        
+        .terms-list {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .terms-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 14px;
+            font-size: 0.9rem;
+            color: var(--ink);
+            opacity: 0.9;
+        }
+        .terms-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--blue-500);
+            font-size: 0.8rem;
+        }
+        
+        .modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        .btn-accept { width: 100%; padding: 16px; font-size: 1rem; }
+        .btn-decline { background: transparent; color: #6B7280; padding: 12px; font-weight: 600; font-family: 'Poppins', sans-serif; border: none; cursor: pointer; transition: color 0.2s; }
+        .btn-decline:hover { color: var(--error-red); }
+
+        /* ===== SUCCESS MESSAGE ===== */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        .success-message i {
+            font-size: 4rem;
+            color: #10B981;
+            margin-bottom: 20px;
+        }
+        .success-message h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: var(--blue-800);
+            margin-bottom: 12px;
+        }
+        .success-message p { font-size: 1rem; color: #6B7280; max-width: 400px; margin: 0 auto; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--blue-800);
+            color: #FFFFFF;
+            padding: 48px 0 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 24px 24px; pointer-events: none;
+        }
+        footer > .container { position: relative; z-index: 1; }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.4rem; font-family: 'Poppins', sans-serif; }
+        .footer-brand img { height: 34px; width: auto; }
+        .footer-links { display: flex; gap: 28px; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
+        .footer-links a { transition: color 0.25s var(--ease); }
+        .footer-links a:hover { color: #93BBFC; }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a {
+            display: flex; align-items: center; justify-content: center;
+            width: 38px; height: 38px; background: rgba(255,255,255,0.10);
+            border-radius: 50%; color: #FFFFFF; font-size: 1rem;
+            transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+        .footer-social a:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+        .footer-copy { width: 100%; text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); font-size: 0.9rem; opacity: 0.75; font-weight: 300; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; flex-direction: column; width: 100%; gap: 16px; padding: 24px 0 16px; border-top: 1px solid rgba(30,58,138,0.06); margin-top: 16px; }
+            .nav-menu.open { display: flex; }
+            .hamburger { display: flex; }
+            .mobile-nav-cta { display: block; width: 100%; margin-top: 8px; }
+            .mobile-nav-cta a { display: block; text-align: center; background: var(--blue-800); color: #FFF; padding: 12px; border-radius: 50px; font-weight: 600; font-family: 'Poppins', sans-serif; }
+            
+            .hero h1 { font-size: 2rem; }
+            .form-card { padding: 24px; margin-bottom: 40px; }
+            .modal-content { padding: 24px; }
+            .modal-content h2 { font-size: 1.3rem; }
+            .form-actions { flex-direction: column-reverse; }
+            .form-actions button { width: 100%; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+        @media (max-width: 480px) {
+            .container, .form-container { padding: 0 16px; }
+            .hero h1 { font-size: 1.7rem; }
+            .step-title { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body class="modal-open">
+
+    <!-- ===== TERMS MODAL ===== -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal-content">
+            <h2><i class="fas fa-file-signature"></i> Guest Post Guidelines</h2>
+            <p>VisOut is creating an avenue for interested individuals and businesses to publish their posts on our blog. This is a great opportunity to gain recognition and visibility.</p>
+            <p><strong>Terms and Conditions:</strong><br>Before submitting an application, the following terms must be accepted and all conditions strictly followed.</p>
+            
+            <ul class="terms-list">
+                <li>That my name/business name and all other relevant information submitted through this medium, which may include a short bio, images, and social media handles will be published publicly. This is to ensure that all authors are appropriate credibility.</li>
+                <li>That all posts submitted through this medium must be authentic. Hence, plagiarism and improper use of AI tools are highly prohibited. You must only reproduce a person's work with appropriate citations.</li>
+                <li>That submitting a post through this medium does not guarantee it will be published, as all posts will undergo careful scrutiny to ensure they follow our requirements.</li>
+            </ul>
+            
+            <div class="modal-actions">
+                <button class="btn-primary btn-accept" id="acceptTermsBtn">I Understand</button>
+                <button class="btn-decline" id="declineTermsBtn">Decline &amp; Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-inner">
+            <a href="https://visout.com.ng/" class="logo" aria-label="VisOut Home">
+                <img src="https://visout.com.ng/IMG_20260520_153947_814.webp" alt="VisOut Logo" width="36" height="36" loading="eager" />
+                VisOut
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="https://visout.com.ng/#services">Services</a>
+                <a href="https://visout.com.ng/#about">About</a>
+                <a href="https://visout.com.ng/#portfolio">Work</a>
+                <a href="https://visout.com.ng/blog/">Blog</a>
+                <a href="https://visout.com.ng/#contact">Contact</a>
+                
+                <div class="mobile-nav-cta">
+                    <a href="https://visout.com.ng/blog/">Back to Blogs</a>
+                </div>
+            </nav>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero container">
+        <h1>Write For VisOut</h1>
+        <p>Have a unique perspective on branding, design, or digital growth? We feature insights from industry experts and rising voices. Submit your pitch below.</p>
+    </section>
+
+    <!-- ===== FORM SECTION ===== -->
+    <div class="form-container">
+        <div class="form-card" id="formCard">
+            
+            <form id="guestPostForm" action="https://formsubmit.co/hello@visout.com.ng" method="POST" enctype="multipart/form-data">
+                
+                <!-- Hidden FormSubmit Config -->
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" id="formSubject" value="New Guest Post Submission">
+                <input type="hidden" name="_next" value="https://visout.com.ng/write-for-us/">
+
+                <!-- ================= STEP 1: BLOG INFO ================= -->
+                <div class="form-step active" id="step1">
+                    <div class="step-indicator">
+                        <span class="step-badge">Step 1 of 2</span>
+                        <span class="step-title">Blog Information</span>
+                    </div>
+
+                    <!-- Blog Name -->
+                    <div class="form-group">
+                        <label class="form-label" for="blogName">Blog Name <span class="required">*</span></label>
+                        <input type="text" id="blogName" name="Blog Name" class="form-control" placeholder="Enter the name of your article" required />
+                    </div>
+
+                    <!-- Blog Category -->
+                    <div class="form-group">
+                        <label class="form-label" for="blogCategory">Blog Category <span class="optional">(Optional)</span></label>
+                        <select id="blogCategory" name="Blog Category" class="form-control">
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="AI">AI</option>
+                            <option value="Motions">Motions</option>
+                            <option value="Branding">Branding</option>
+                            <option value="Strategy">Strategy</option>
+                            <option value="Others">Others</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>If you are not sure of the category, select "Not Sure" and our team will do the categorization.</span></div>
+                        
+                        <!-- Dynamic "Others" Input -->
+                        <div id="otherCategoryWrapper" style="display: none; margin-top: 12px;">
+                            <input type="text" id="otherCategory" name="Specified Category" class="form-control" placeholder="Please specify your category" />
+                        </div>
+                    </div>
+
+                    <!-- Blog Description -->
+                    <div class="form-group">
+                        <label class="form-label" for="blogDescription">Blog Description <span class="optional">(Optional)</span></label>
+                        <textarea id="blogDescription" name="Blog Description" class="form-control" placeholder="Give the reader an idea of what your post is about" maxlength="150" oninput="updateCounter(this, 'descCounter')"></textarea>
+                        <span class="char-counter" id="descCounter">0 / 150</span>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>You can leave this blank if you don't have any. Our team can help create one.</span></div>
+                    </div>
+
+                    <!-- Cover Image -->
+                    <div class="form-group">
+                        <label class="form-label" for="coverImage">Cover Image <span class="required">*</span></label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="coverImage" name="Cover Image" accept="image/*" required onchange="displayFileName(this, 'coverImageName')" />
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Click to upload cover image</span>
+                            <p>PNG, JPG, or WEBP (Max 10MB)</p>
+                            <span class="file-name-display" id="coverImageName"></span>
+                        </div>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>We recommend webp formats for faster loading.</span></div>
+                    </div>
+
+                    <!-- Link to Blog Post -->
+                    <div class="form-group">
+                        <label class="form-label" for="blogLink">Link to Blog Post <span class="required">*</span></label>
+                        <input type="url" id="blogLink" name="Blog Link" class="form-control" placeholder="https://" required />
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>It can be a doc link, a drive link, or a website URL. Any link at all, provided it can access your blog post.</span></div>
+                    </div>
+
+                    <!-- Who are you writing as -->
+                    <div class="form-group">
+                        <label class="form-label" for="writingAs">Who are you writing as? <span class="required">*</span></label>
+                        <select id="writingAs" name="Writing As" class="form-control" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="individual">Individual</option>
+                            <option value="business">Business</option>
+                        </select>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>This helps us know what kind of information to collect from you.</span></div>
+                    </div>
+
+                    <!-- Next Button -->
+                    <div class="form-actions" style="justify-content: flex-end;">
+                        <button type="button" class="btn-primary" id="nextBtn">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- ================= STEP 2: DYNAMIC INFO ================= -->
+                <div class="form-step" id="step2">
+                    <div class="step-indicator">
+                        <span class="step-badge">Step 2 of 2</span>
+                        <span class="step-title" id="step2Title">Personal Information</span>
+                    </div>
+                    
+                    <!-- Dynamic Content will be injected here by JS -->
+                    <div id="dynamicFields"></div>
+
+                    <!-- Action Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="backBtn"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="submit" class="btn-primary btn-submit" id="submitBtn">Submit Application <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- Success Message (Hidden initially) -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h2>Application Received!</h2>
+                <p>Thank you for your submission. Our editorial team will review your pitch and get back to you within 5-7 business days.</p>
+                <div style="margin-top: 30px;">
+                    <a href="https://visout.com.ng/blog/" class="btn-primary" style="text-decoration: none;">Back to Blog</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="https://visout.com.ng/IMG_20260520_153947_814.webp" alt="VisOut Logo" width="34" height="34" loading="lazy" />
+                    VisOut
+                </div>
+                <div class="footer-links">
+                    <a href="https://visout.com.ng/#home">Home</a>
+                    <a href="https://visout.com.ng/#services">Services</a>
+                    <a href="https://visout.com.ng/#about">About</a>
+                    <a href="https://visout.com.ng/blog/">Blog</a>
+                    <a href="https://visout.com.ng/#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://facebook.com/visoutbrand" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/visoutbrand" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348145669035" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 VisOut – See Beyond. Stand Out. | <a href="https://visout.com.ng/">VisOut Brand Identity Agency</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ==========================================
+        // 1. TERMS MODAL LOGIC
+        // ==========================================
+        const termsModal = document.getElementById('termsModal');
+        const acceptTermsBtn = document.getElementById('acceptTermsBtn');
+        const declineTermsBtn = document.getElementById('declineTermsBtn');
+        
+        // Check if user already accepted terms
+        if (localStorage.getItem('visout_terms_accepted') === 'true') {
+            termsModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        } else {
+            termsModal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        acceptTermsBtn.addEventListener('click', () => {
+            localStorage.setItem('visout_terms_accepted', 'true');
+            termsModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        });
+
+        declineTermsBtn.addEventListener('click', () => {
+            // Redirect back to previous page, fallback to blog home
+            if (document.referrer) {
+                window.location.href = document.referrer;
+            } else {
+                window.location.href = 'https://visout.com.ng/blog/';
+            }
+        });
+
+        // ==========================================
+        // 2. HAMBURGER MENU
+        // ==========================================
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+            });
+        }
+
+        // ==========================================
+        // 3. FORM LOGIC (STEPS & DYNAMIC FIELDS)
+        // ==========================================
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const nextBtn = document.getElementById('nextBtn');
+        const backBtn = document.getElementById('backBtn');
+        const writingAsSelect = document.getElementById('writingAs');
+        const dynamicFields = document.getElementById('dynamicFields');
+        const step2Title = document.getElementById('step2Title');
+        
+        // Category "Others" Logic
+        const blogCategory = document.getElementById('blogCategory');
+        const otherCategoryWrapper = document.getElementById('otherCategoryWrapper');
+        const otherCategoryInput = document.getElementById('otherCategory');
+
+        blogCategory.addEventListener('change', (e) => {
+            if (e.target.value === 'Others') {
+                otherCategoryWrapper.style.display = 'block';
+                otherCategoryInput.setAttribute('required', 'required');
+            } else {
+                otherCategoryWrapper.style.display = 'none';
+                otherCategoryInput.removeAttribute('required');
+            }
+        });
+
+        // File Upload Name Display
+        function displayFileName(input, displayId) {
+            const display = document.getElementById(displayId);
+            if (input.files && input.files.length > 0) {
+                display.textContent = "Selected: " + input.files[0].name;
+            } else {
+                display.textContent = "";
+            }
+        }
+
+        // Character Counters
+        function updateCounter(input, counterId) {
+            const counter = document.getElementById(counterId);
+            const length = input.value.length;
+            const max = input.getAttribute('maxlength');
+            counter.textContent = `${length} / ${max}`;
+            
+            if (length >= max) {
+                counter.classList.add('limit-reached');
+            } else {
+                counter.classList.remove('limit-reached');
+            }
+        }
+
+        // Move to Step 2
+        nextBtn.addEventListener('click', () => {
+            // Validate Step 1 fields natively
+            const step1Inputs = step1.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+            
+            step1Inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    input.reportValidity();
+                }
+            });
+
+            if (!isValid) return;
+
+            const writingAs = writingAsSelect.value;
+            dynamicFields.innerHTML = ''; // Clear previous
+
+            if (writingAs === 'individual') {
+                step2Title.textContent = 'Personal Information';
+                dynamicFields.innerHTML = `
+                    <!-- Your Name -->
+                    <div class="form-group">
+                        <label class="form-label" for="yourName">Your Name <span class="required">*</span></label>
+                        <input type="text" id="yourName" name="Author Name" class="form-control" placeholder="What name should appear next to your post?" required />
+                    </div>
+
+                    <!-- Personal Bio -->
+                    <div class="form-group">
+                        <label class="form-label" for="personalBio">Personal Bio <span class="required">*</span></label>
+                        <textarea id="personalBio" name="Personal Bio" class="form-control" placeholder="Tell us a little about yourself" maxlength="150" required oninput="updateCounter(this, 'bioCounter')"></textarea>
+                        <span class="char-counter" id="bioCounter">0 / 150</span>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>We will publish this next to your name.</span></div>
+                    </div>
+
+                    <!-- Photograph -->
+                    <div class="form-group">
+                        <label class="form-label" for="photograph">Photograph <span class="optional">(Optional)</span></label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="photograph" name="Photograph" accept="image/*" onchange="displayFileName(this, 'photoName')" />
+                            <i class="fas fa-user-circle"></i>
+                            <span>Upload a headshot</span>
+                            <p>JPG, PNG, or WEBP</p>
+                            <span class="file-name-display" id="photoName"></span>
+                        </div>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>The photograph provided will appear next to your name.</span></div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="form-label" for="authorEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="authorEmail" name="Email Address" class="form-control" placeholder="your@email.com" required />
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>We need this to contact you regarding your submission.</span></div>
+                    </div>
+                `;
+            } else if (writingAs === 'business') {
+                step2Title.textContent = 'Business Information';
+                dynamicFields.innerHTML = `
+                    <!-- Brand Name -->
+                    <div class="form-group">
+                        <label class="form-label" for="brandName">Brand Name <span class="required">*</span></label>
+                        <input type="text" id="brandName" name="Brand Name" class="form-control" placeholder="Enter your business name" required />
+                    </div>
+
+                    <!-- Business Description -->
+                    <div class="form-group">
+                        <label class="form-label" for="businessDesc">Business Description <span class="required">*</span></label>
+                        <textarea id="businessDesc" name="Business Description" class="form-control" placeholder="Tell us a bit about your business" maxlength="150" required oninput="updateCounter(this, 'bizCounter')"></textarea>
+                        <span class="char-counter" id="bizCounter">0 / 150</span>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>We will publish this next to your brand name.</span></div>
+                    </div>
+
+                    <!-- Business Logo -->
+                    <div class="form-group">
+                        <label class="form-label" for="businessLogo">Business Logo <span class="optional">(Optional)</span></label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="businessLogo" name="Business Logo" accept="image/*" onchange="displayFileName(this, 'logoName')" />
+                            <i class="fas fa-building"></i>
+                            <span>Upload your brand logo</span>
+                            <p>PNG, JPG, or WEBP</p>
+                            <span class="file-name-display" id="logoName"></span>
+                        </div>
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>This will appear next to your brand name.</span></div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="form-label" for="bizEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="bizEmail" name="Email Address" class="form-control" placeholder="business@email.com" required />
+                        <div class="info-text"><i class="fas fa-info-circle"></i> <span>We need this to contact you regarding your submission.</span></div>
+                    </div>
+                `;
+            }
+
+            step1.classList.remove('active');
+            step2.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Move back to Step 1
+        backBtn.addEventListener('click', () => {
+            step2.classList.remove('active');
+            step1.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ==========================================
+        // 4. FORM SUBMISSION (AJAX)
+        // ==========================================
+        const form = document.getElementById('guestPostForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const formCard = document.getElementById('formCard');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Final check for validity
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Change button state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+
+            // Update subject dynamically with the blog name
+            const blogNameValue = document.getElementById('blogName').value;
+            document.getElementById('formSubject').value = `New Guest Post Submission: ${blogNameValue}`;
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Hide the form, show success message
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert('Oops! Something went wrong. Please try again later.');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
