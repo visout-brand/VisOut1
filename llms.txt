@@ -1,15 +1,25 @@
-# VisOut – Brand Identity Agency
+# VisOut
 
-> VisOut helps African businesses stand out with AI video creation, brand consulting, graphic design, and web design. We build brands that get noticed.
+> VisOut is a brand identity agency based in Nigeria. We help African businesses
+> stand out through graphic design, AI video creation, brand consulting, and web
+> design. Tagline: "See Beyond. Stand Out."
 
-## Core Services
-- [Graphic Design](https://visout.com.ng/services/graphic-design/) – Logos, brand kits, and social templates.
-- [AI Video Creation](https://visout.com.ng/services/ai-video/) – Short-form videos and AI avatars.
-- [Brand Consulting](https://visout.com.ng/services/brand-consulting/) – Positioning, messaging, and strategy.
-- [Web Design](https://visout.com.ng/services/web-design/) – Fast, SEO-optimized websites.
+VisOut works with startups and SMEs in tech, lifestyle, professional services, and
+real estate, primarily across Nigeria and Africa, with remote clients worldwide.
+Founder: Triumph M. C. Contact: hello@visout.com.ng.
 
-## Key Pages
-- [About VisOut](https://visout.com.ng/#about) – Our mission and team.
-- [Portfolio](https://visout.com.ng/portfolio/) – Recent design projects.
-- [Blog](https://visout.com.ng/blog/) – Branding insights and strategies.
-- [Contact](https://visout.com.ng/#contact) – Get in touch.
+## Services
+- [Graphic Design](https://visout.com.ng/services/graphic-design/): Logos, brand kits, flyers, print stationery, and social templates.
+- [AI Video Creation](https://visout.com.ng/services/ai-video/): Short-form video, explainers, and AI avatars for brand storytelling.
+- [Brand Consulting](https://visout.com.ng/services/brand-consulting/): Positioning, messaging strategy, and identity workshops.
+- [Web Design](https://visout.com.ng/services/web-design/): Fast, SEO-optimised, brand-focused websites.
+
+## Pages
+- [Portfolio](https://visout.com.ng/portfolio/): Selected logo, flyer, stationery, and social design work.
+- [Case Studies](https://visout.com.ng/case-studies/): Client results and project breakdowns.
+- [Blog](https://visout.com.ng/blog/): Branding, AI video, and visual identity insights.
+- [Contact](https://visout.com.ng/#contact): Enquiry form, email, and WhatsApp.
+
+## Optional
+- [Facebook](https://facebook.com/visoutbrand)
+- [Instagram](https://instagram.com/visoutbrand)
