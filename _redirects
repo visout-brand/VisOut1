@@ -1,1 +1,12 @@
+# Redirect old /approach/ → /scenario/ (merged)
+/approach    /scenario/  301
+/approach/   /scenario/  301
+/approach/*  /scenario/  301
+
+# Redirect old /case-studies/ → /scenario/ (replaced by named teardowns)
+/case-studies    /scenario/  301
+/case-studies/   /scenario/  301
+/case-studies/*  /scenario/  301
+
+# Preview domain → live domain
 https://visout1.pages.dev/* https://visout.com.ng/$1 301
