@@ -583,12 +583,17 @@
         .service-learn-more:hover i { transform: translate(3px, -3px); }
 
         /* ABOUT */
+        .about { padding: 80px 0 90px; background: var(--muted); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-size: 2.4rem; font-weight: 700; color: var(--blue-800); margin-bottom: 16px; }
+        .about-text p { font-size: 1.05rem; color: var(--ink); opacity: 0.85; line-height: 1.8; }
+        .about-visual { display: flex; justify-content: center; align-items: center; border-radius: 16px; padding: 8px; }
         .about-visual img {
             width: 100%;
             max-width: 460px;
-            aspect-ratio: 4 / 5; /* Creates a perfect portrait crop */
-            object-fit: cover; /* Ensures the face stays centered and nothing stretches */
-            object-position: center 20%; /* Keeps the crop focused on your face/upper chest */
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center 20%;
             border-radius: 16px;
             display: block;
             box-shadow: 0 8px 30px rgba(30,58,138,0.10);
@@ -964,6 +969,7 @@
                 <a href="#about" title="Learn about VisOut">About</a>
                 <a href="#why-choose" title="Why choose VisOut">Why Us</a>
                 <a href="#portfolio" title="View our portfolio">Work</a>
+                <a href="https://visout.com.ng/scenario/" title="View our teardowns">Scenario</a>
                 <a href="#blog" title="Read our blog">Blog</a>
                 <a href="#faq" title="Frequently asked questions">FAQ</a>
                 <a href="#contact" title="Contact VisOut">Contact</a>
@@ -1180,7 +1186,7 @@
         <section class="scenario reveal">
             <div class="container">
                 <p class="cta-text">
-    Want to see how we think? <a href="https://visout.com.ng/scenario/" class="highlight-link">Read our teardowns</a>.
+                    Want to see how we think? <a href="https://visout.com.ng/scenario/" class="highlight-link">Read our teardowns</a>.
                 </p>
             </div>
         </section>
