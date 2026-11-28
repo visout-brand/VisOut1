@@ -16,7 +16,7 @@ Founder: Triumph M. C. Contact: hello@visout.com.ng.
 
 ## Pages
 - [Portfolio](https://visout.com.ng/portfolio/): Selected logo, flyer, stationery, and social design work.
-- [Case Studies](https://visout.com.ng/case-studies/): Client results and project breakdowns.
+- [Scenario](https://visout.com.ng/scenario/): A teardown of selected brands
 - [Blog](https://visout.com.ng/blog/): Branding, AI video, and visual identity insights.
 - [Contact](https://visout.com.ng/#contact): Enquiry form, email, and WhatsApp.
 
